@@ -1,0 +1,19 @@
+<!-- Language Switch Component -->
+<!-- Usage: {% include lang-switch.html %} -->
+
+<div class="lang-switch" style="margin: 1em 0; padding: 0.5em; background: #f8f8f8; border-radius: 4px;">
+  <span style="font-size: 0.9em; color: #666;">Language:</span>
+  
+  {% if page.lang == "fr" %}
+    <!-- French page: show link to English/Chinese -->
+    <a href="/" style="margin-left: 0.5em; text-decoration: none;">English</a>
+    <span style="color: #999;">|</span>
+    <a href="/knowledge/" style="margin-left: 0.5em; text-decoration: none;">中文</a>
+  {% elsif page.lang == "zh" or page.lang == "en" %}
+    <!-- English/Chinese page: show link to French -->
+    <a href="/fr/" style="margin-left: 0.5em; text-decoration: none;">Français</a>
+  {% else %}
+    <!-- Default: show link to French -->
+    <a href="/fr/" style="margin-left: 0.5em; text-decoration: none;">Français</a>
+  {% endif %}
+</div>

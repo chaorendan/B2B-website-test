@@ -1,0 +1,31 @@
+main:
+  - title: "Google Ads"
+    url: /google-ads/
+    children:
+      - title: "基础篇"
+        url: /knowledge/google-ads/01-fundamentals/
+      - title: "搜索广告"
+        url: /knowledge/google-ads/02-search-campaigns/
+      - title: "展示与再营销"
+        url: /knowledge/google-ads/03-display-remarketing/
+      - title: "视频广告"
+        url: /knowledge/google-ads/04-video-youtube/
+      - title: "Performance Max"
+        url: /knowledge/google-ads/05-performance-max/
+      - title: "B2B 策略"
+        url: /knowledge/google-ads/06-b2b-strategies/
+      - title: "追踪分析"
+        url: /knowledge/google-ads/07-tracking-analytics/
+      - title: "优化技巧"
+        url: /knowledge/google-ads/08-optimization/
+      - title: "故障排除"
+        url: /knowledge/google-ads/09-troubleshooting/
+
+  - title: "GA4"
+    url: /ga4/
+
+  - title: "Projects"
+    url: /projects/
+
+  - title: "About"
+    url: /about/

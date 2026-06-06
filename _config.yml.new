@@ -1,0 +1,131 @@
+# Jekyll 配置 - Google Ads B2B 知识库
+# 版本: v1.0
+# 说明: 此文件为新版配置示例，确认后可替换 _config.yml
+
+# ===== 站点基础设置 =====
+title: "B2B Growth Knowledge Base"
+description: "Google Ads & GA4 知识库 - B2B 企业数字营销实战指南"
+url: "https://your-domain.com"  # 生产环境域名
+baseurl: ""  # 如部署在子目录，填写 "/blog"
+
+# ===== 主题与布局 =====
+theme: minima
+locale: zh-CN
+timezone: Asia/Shanghai
+
+# ===== 作者信息 =====
+author:
+  name: "B2B Growth Expert"
+  email: "contact@your-domain.com"
+
+# ===== Collections 配置 =====
+collections:
+  knowledge:
+    output: true
+    permalink: /knowledge/:path/
+
+# ===== 默认 Front Matter =====
+defaults:
+  # 知识库文章默认配置
+  - scope:
+      path: "_knowledge"
+      type: "knowledge"
+    values:
+      layout: "knowledge-article"
+      author: "B2B Growth Expert"
+      published: true
+      sitemap: true
+  
+  # 分类首页默认配置
+  - scope:
+      path: "_knowledge/google-ads/*/index.md"
+      type: "knowledge"
+    values:
+      layout: "knowledge-category"
+
+# ===== 插件配置 =====
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# ===== SEO 配置 =====
+seo:
+  title_separator: " | "
+  description_max_length: 160
+
+# ===== 社交媒体 =====
+social:
+  name: B2B Growth Knowledge Base
+  links:
+    - https://github.com/yourusername
+    # - https://twitter.com/yourhandle
+    # - https://linkedin.com/in/yourprofile
+
+# ===== 导航配置 =====
+header_pages:
+  - google-ads.md
+  - about.md
+  - projects.md
+
+# ===== 构建设置 =====
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# ===== 分页设置 =====
+paginate: 10
+paginate_path: "/page/:num/"
+
+# ===== 包含/排除 =====
+include:
+  - _pages
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - "*.new"  # 排除备份文件
+  - _ARCHITECTURE_DESIGN.md
+  - _TEMPLATE.md
+
+# ===== 知识库特定配置 =====
+knowledge_base:
+  google_ads:
+    title: "Google Ads"
+    description: "B2B Google Ads 广告投放完全指南"
+    categories:
+      - id: "01-fundamentals"
+        name: "基础篇"
+        icon: "📚"
+      - id: "02-search-campaigns"
+        name: "搜索广告"
+        icon: "🔍"
+      - id: "03-display-remarketing"
+        name: "展示与再营销"
+        icon: "🎯"
+      - id: "04-video-youtube"
+        name: "视频广告"
+        icon: "📺"
+      - id: "05-performance-max"
+        name: "Performance Max"
+        icon: "⚡"
+      - id: "06-b2b-strategies"
+        name: "B2B 专项策略"
+        icon: "🏢"
+      - id: "07-tracking-analytics"
+        name: "追踪与分析"
+        icon: "📊"
+      - id: "08-optimization"
+        name: "优化技巧"
+        icon: "🚀"
+      - id: "09-troubleshooting"
+        name: "故障排除"
+        icon: "🔧"

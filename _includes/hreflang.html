@@ -1,0 +1,18 @@
+<!-- hreflang Tags for SEO -->
+<!-- Usage: Include in <head> section -->
+<!-- Generates hreflang link tags based on page.alternate front matter -->
+
+{% if page.alternate %}
+  {% for alt in page.alternate %}
+    <link rel="alternate" hreflang="{{ alt.lang }}" href="{{ alt.url | absolute_url }}" />
+  {% endfor %}
+{% endif %}
+
+{% if page.hreflang %}
+  {% for lang in page.hreflang %}
+    <link rel="alternate" hreflang="{{ lang[0] }}" href="{{ lang[1] | absolute_url }}" />
+  {% endfor %}
+{% endif %}
+
+<!-- Always add x-default for the main language -->
+<link rel="alternate" hreflang="x-default" href="{{ '/' | absolute_url }}" />

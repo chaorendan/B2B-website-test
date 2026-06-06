@@ -1,0 +1,26 @@
+# Navigation Française
+# Pour les pages en français (/fr/)
+
+main:
+  - title: "Accueil"
+    url: /fr/
+  
+  - title: "Google Ads"
+    url: /fr/google-ads/keyword-research/
+  
+  - title: "Correspondance Présidentielle"
+    url: /fr/special/presidential-email/
+
+  - title: "Version Anglaise"
+    url: /
+
+# Language switch configuration
+lang_switch:
+  current: "fr"
+  alternate:
+    - lang: "en"
+      label: "English"
+      url: /
+    - lang: "zh"
+      label: "中文"
+      url: /

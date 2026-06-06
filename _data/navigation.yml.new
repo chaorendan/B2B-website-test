@@ -1,0 +1,94 @@
+# Google Ads B2B 知识库导航配置
+# 版本: v1.0
+# 说明: 此文件为新版导航配置示例，确认后可替换 navigation.yml
+
+main:
+  - title: "Google Ads"
+    url: /google-ads/
+    children:
+      - title: "📚 基础篇"
+        url: /knowledge/google-ads/01-fundamentals/
+        description: "账户结构、广告系列类型、质量得分"
+      
+      - title: "🔍 搜索广告"
+        url: /knowledge/google-ads/02-search-campaigns/
+        description: "关键词研究、匹配类型、出价策略"
+      
+      - title: "🎯 展示与再营销"
+        url: /knowledge/google-ads/03-display-remarketing/
+        description: "展示广告、再营销策略、受众定位"
+      
+      - title: "📺 视频广告"
+        url: /knowledge/google-ads/04-video-youtube/
+        description: "YouTube 广告、视频格式、创意制作"
+      
+      - title: "⚡ Performance Max"
+        url: /knowledge/google-ads/05-performance-max/
+        description: "PMax 设置、Feed 优化、受众信号"
+      
+      - title: "🏢 B2B 专项策略"
+        url: /knowledge/google-ads/06-b2b-strategies/
+        description: "线索生成、长销售周期、ABM 策略"
+      
+      - title: "📊 追踪与分析"
+        url: /knowledge/google-ads/07-tracking-analytics/
+        description: "转化追踪、增强型转化、归因模型"
+      
+      - title: "🚀 优化技巧"
+        url: /knowledge/google-ads/08-optimization/
+        description: "A/B 测试、自动化规则、脚本"
+      
+      - title: "🔧 故障排除"
+        url: /knowledge/google-ads/09-troubleshooting/
+        description: "常见问题诊断与解决方案"
+
+  - title: "GA4"
+    url: /ga4/
+
+  - title: "Projects"
+    url: /projects/
+
+  - title: "About"
+    url: /about/
+
+# 面包屑导航配置（用于模板生成）
+breadcrumb:
+  home:
+    title: "首页"
+    url: /
+  
+  google-ads:
+    title: "Google Ads"
+    url: /google-ads/
+
+# 侧边栏导航配置
+sidebar:
+  01-fundamentals:
+    title: "基础篇"
+    articles:
+      - title: "账户结构搭建"
+        url: /knowledge/google-ads/01-fundamentals/account-structure/
+      - title: "广告系列类型"
+        url: /knowledge/google-ads/01-fundamentals/campaign-types/
+      - title: "计费与预算"
+        url: /knowledge/google-ads/01-fundamentals/billing-budget/
+      - title: "质量得分"
+        url: /knowledge/google-ads/01-fundamentals/quality-score/
+  
+  02-search-campaigns:
+    title: "搜索广告"
+    articles:
+      - title: "搜索广告基础"
+        url: /knowledge/google-ads/02-search-campaigns/search-campaign-basics/
+      - title: "关键词研究"
+        url: /knowledge/google-ads/02-search-campaigns/keyword-research/
+      - title: "匹配类型详解"
+        url: /knowledge/google-ads/02-search-campaigns/match-types-guide/
+      - title: "广告文案撰写"
+        url: /knowledge/google-ads/02-search-campaigns/ad-copywriting/
+      - title: "落地页优化"
+        url: /knowledge/google-ads/02-search-campaigns/landing-page-optimization/
+      - title: "出价策略"
+        url: /knowledge/google-ads/02-search-campaigns/bidding-strategies/
+      - title: "否定关键词"
+        url: /knowledge/google-ads/02-search-campaigns/negative-keywords/

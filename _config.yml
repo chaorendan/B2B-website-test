@@ -1,0 +1,86 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: "B2B Growth Knowledge Base"
+description: "Google Ads & GA4 Knowledge Hub - B2B Digital Marketing Guide"
+url: "https://chaorendan.github.io"
+baseurl: "/google-ads-b2b-knowledge-base"
+theme: minima
+locale: zh-CN
+timezone: Asia/Shanghai
+
+header_pages:
+  - google-ads.md
+  - about.md
+  - projects.md
+
+collections:
+  knowledge:
+    output: true
+    permalink: /knowledge/:path/
+  fr:
+    output: true
+
+defaults:
+  - scope:
+      path: "_knowledge"
+      type: "knowledge"
+    values:
+      layout: "page"
+      author: "B2B Growth Expert"
+      published: true
+      lang: "en"
+  - scope:
+      path: "_fr"
+      type: "fr"
+    values:
+      layout: "page"
+      author: "B2B Growth Expert"
+      published: true
+      lang: "fr"
+
+# Multi-language settings
+languages:
+  - code: "en"
+    name: "English"
+    default: true
+  - code: "fr"
+    name: "French"
+    url_prefix: "/fr/"
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - "*.backup"
+  - "*.new"
+  - _ARCHITECTURE_DESIGN.md
+  - _TEMPLATE.md
