@@ -26,6 +26,9 @@ theme: minima
 locale: zh-CN
 timezone: Asia/Shanghai
 
+# Google Tag Manager
+gtm_container_id: "GTM-XXXXXXX"
+
 header_pages:
   - google-ads.md
   - about.md
