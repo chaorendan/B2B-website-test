@@ -28,11 +28,11 @@
           <!-- Language Switch -->
           <span class="page-link lang-switch-nav" style="border-left: 1px solid #bbb; margin-left: 0.5em; padding-left: 0.5em;">
             {% if page.lang == "fr" %}
-              <a href="/" title="English">EN</a> | <a href="/knowledge/" title="中文">中文</a>
+              <a href="{{ '/' | relative_url }}" title="English">EN</a> | <a href="{{ '/knowledge/' | relative_url }}" title="中文">中文</a>
             {% elsif page.lang == "zh" %}
-              <a href="/fr/" title="Français">FR</a>
+              <a href="{{ '/fr/' | relative_url }}" title="Français">FR</a>
             {% else %}
-              <a href="/fr/" title="Français">FR</a>
+              <a href="{{ '/fr/' | relative_url }}" title="Français">FR</a>
             {% endif %}
           </span>
         </div>

@@ -3,6 +3,8 @@ layout: home
 title: Home
 lang: "en"
 alternate:
+  - lang: "en"
+    url: /
   - lang: "fr"
     url: /fr/
 ---

@@ -21,7 +21,7 @@
 title: "B2B Growth Knowledge Base"
 description: "Google Ads & GA4 Knowledge Hub - B2B Digital Marketing Guide"
 url: "https://chaorendan.github.io"
-baseurl: "/google-ads-b2b-knowledge-base"
+baseurl: "/B2B-website-test"
 theme: minima
 locale: zh-CN
 timezone: Asia/Shanghai
@@ -68,6 +68,7 @@ languages:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 exclude:
   - .sass-cache/
