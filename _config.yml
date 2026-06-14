@@ -18,8 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "B2B Growth Knowledge Base"
-description: "Google Ads & GA4 Knowledge Hub - B2B Digital Marketing Guide"
+title: "Digital Marketing Knowledge Base"
+description: "全渠道数字营销知识库 - 搜索广告、社媒运营、数据分析、增长策略"
 url: "https://chaorendan.github.io"
 baseurl: "/B2B-website-test"
 theme: minima

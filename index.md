@@ -9,16 +9,17 @@ alternate:
     url: /fr/
 ---
 
-# Google Ads B2B Knowledge Base
+# Digital Marketing Knowledge Base
 
-## Knowledge Areas
+## 知识领域
 
-- [Google Ads]({{ site.baseurl }}/google-ads/)
-- [GA4]()
-- [Conversion Tracking]()
-- [B2B Lead Generation]()
+- [搜索广告]({{ site.baseurl }}/search-ads/) - Google Ads, Microsoft Ads, Baidu
+- [社交媒体]({{ site.baseurl }}/social-media/) - Meta, LinkedIn, TikTok
+- [数据分析]({{ site.baseurl }}/analytics/) - GA4, GTM, 数据可视化
+- [内容营销]({{ site.baseurl }}/content-marketing/) - SEO, 内容策略
+- [自动化工具]({{ site.baseurl }}/automation/) - Zapier, Make, n8n
 
-## French Experimental Layer
+## 法语实验层
 
-This site includes an experimental French version for multilingual SEO testing:
-- [Version Française]({{ site.baseurl }}/fr/) - French experimental layer
+本站点包含实验性法语版本，用于多语言 SEO 测试：
+- [Version Française]({{ site.baseurl }}/fr/) - 法语实验层
