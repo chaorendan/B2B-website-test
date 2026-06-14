@@ -30,9 +30,9 @@ timezone: Asia/Shanghai
 gtm_container_id: "GTM-M2XCSSGJ"
 
 header_pages:
-  - google-ads.md
+  - search-ads.md
+  - analytics.md
   - about.md
-  - projects.md
 
 collections:
   knowledge:
