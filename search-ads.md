@@ -48,6 +48,14 @@ A/B 测试、自动化规则、脚本、效果分析。
 ### [故障排除](09-troubleshooting/)
 低展示量诊断、高 CPC 解决方案、政策违规处理。
 
+### [API 与自动化](10-api-automation/)
+Google Ads API 概述、认证配置、常用操作、Python 自动化脚本开发。
+
+- [API 概述](10-api-automation/api-overview/)
+- [认证与权限](10-api-automation/api-authentication/)
+- [常用操作](10-api-automation/api-common-operations/)
+- [Python 自动化](10-api-automation/python-automation/)
+
 ---
 
 ## 学习路径
