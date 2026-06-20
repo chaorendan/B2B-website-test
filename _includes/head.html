@@ -38,6 +38,18 @@
   {% assign canonical_url = page.url | absolute_url | replace: '/index.html', '/' %}
   <link rel="canonical" href="{{ canonical_url }}">
 
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ page.title | default: site.title | escape }}" />
+  <meta property="og:description" content="{{ page.description | default: site.description | escape }}" />
+  <meta property="og:type" content="{% if page.layout == 'home' %}website{% else %}article{% endif %}" />
+  <meta property="og:url" content="{{ canonical_url }}" />
+  <meta property="og:site_name" content="{{ site.title | escape }}" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="{{ page.title | default: site.title | escape }}" />
+  <meta name="twitter:description" content="{{ page.description | default: site.description | escape }}" />
+
   <!-- hreflang for multilingual SEO -->
   {% if page.alternate %}
     {% for alt in page.alternate %}
