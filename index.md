@@ -18,6 +18,7 @@ alternate:
 - [数据分析]({{ site.baseurl }}/analytics/) - GA4, GTM, 数据可视化
 - [内容营销]({{ site.baseurl }}/content-marketing/) - SEO, 内容策略
 - [自动化工具]({{ site.baseurl }}/automation/) - Zapier, Make, n8n
+- [GEO 地理本地化]({{ site.baseurl }}/geo/) - 地域定向、地图运营、本地化获客
 
 ## 法语实验层
 
