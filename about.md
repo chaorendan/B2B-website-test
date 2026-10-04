@@ -1,18 +1,64 @@
 ---
 layout: page
-title: About
+title: 关于我
+seo_title: "关于彭俊超 | GIS × 数字营销 × SEO"
+description: "彭俊超的个人介绍：长江大学地理信息科学在读，专注 GIS 空间分析、数字营销与 SEO，寻找数字营销 / 增长分析方向实习机会。"
 permalink: /about/
+lang: "zh"
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+# 关于我
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+> **忍受寂寞，努力拼搏，坚持不懈** —— 所谓普通人，都是还没破壳的超人蛋。
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+我是 **彭俊超**，长江大学地理信息科学（产业计划）在读本科生。
+我的方向，是把 **GIS 的空间分析思维**带进 **数字营销与增长决策** —— 用地理和数据去回答「谁、在哪里、为什么」。
 
+## 教育背景
 
-[jekyll-organization]: https://github.com/jekyll
+**长江大学** · 地理信息科学（产业计划） · 本科 | 2023.09 – 至今
+
+主修：GIS 系统原理、数据结构、Web 开发、C#、数据库应用、人文地理与经济地理学
+
+## 荣誉与奖项
+
+- 第十七届全国高校 GIS 技能大赛（高级开发组）· **全国一等奖**（2025.10）
+- 第七届全国高校计算机能力挑战赛（Office 高级应用）· 省级三等奖（2025.12）
+- 第十五届大学生计算机应用能力与数字素养大赛（数据分析与可视化）· 省级三等奖（2025.05）
+
+## 项目与研究经历
+
+**注采系统知识图谱构建及智能预警诊断技术研究**（科研横向项目）| 2025.06 – 2025.09
+
+- 数据处理：原始数据筛选、清洗、分类整合；MySQL / PostgreSQL 数据库搭建与优化
+- 前端开发：Vue + HTML + JavaScript 实现数据统计报表的网页展示
+- 文档复盘：编写技术 / 开发 / 帮助文档，负责每周复盘汇报与演示视频剪辑
+
+**「大学生返家乡」社会实践 · 梧州市交通运输局运输科** | 2026.01 – 2026.02
+
+- 通用事务：Office 台账整理与公文撰写
+- 春运专项：负责 2026 年全市「春运」专班数据收集、统计与汇总，联络二十余个部门，用 Excel 完成数据分析与春运简报排版
+
+**数字营销与 SEO 自学项目** | 2026.04 – 至今
+
+- 系统学习 Google Ads 官方文档与《Google Ads Workbook》，提炼「质量得分效率补贴」「80/20 关键词分层」「用户意图三阶段」等核心框架
+- 独立站 SEO 模拟实操：关键词分层调研、TDK 优化、GSC 数据复盘、站内优化、本地化搜索（GEO）逻辑
+- 本网站即该项目的实战场
+
+## 技能与证书
+
+- **数据分析**：Excel、SQL（MySQL / PostgreSQL）、GA4、数据可视化
+- **开发 / GIS**：PostGIS（ST_Intersects / ST_Contains / Buffer 分析）、HTML / CSS / JavaScript、Vue、C#
+- **营销**：Google Ads（搜索 / 展示 / AI / 效果广告认证）、SEO、Google Search Console
+- **语言**：CET-6；粤语流利；自学法语
+
+## 我在找什么
+
+**数字营销 / SEO / 增长分析方向的实习机会** —— 希望把 GIS 的空间分析能力，用在真实的增长业务里。
+
+## 联系我
+
+- 📮 邮箱：pengjunchao.ads@gmail.com
+- 💻 GitHub：[chaorendan](https://github.com/chaorendan)
+
+*如果你也在做 SEO / 增长 / GIS 相关的事，欢迎来聊。*

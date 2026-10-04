@@ -1,26 +1,45 @@
 ---
 layout: home
-title: Home
-lang: "en"
+title: 首页
+seo_title: "彭俊超 | GIS 空间分析 × 数字营销 × SEO"
+description: "彭俊超的个人主页：把 GIS 的空间分析思维带进数字营销与 SEO，用地理和数据做增长实验。"
+lang: "zh"
 alternate:
-  - lang: "en"
+  - lang: "zh"
     url: /
   - lang: "fr"
     url: /fr/
 ---
 
-# Digital Marketing Knowledge Base
+# 你好，我是彭俊超 👋
 
-## 知识领域
+> **忍受寂寞，努力拼搏，坚持不懈** —— 所谓普通人，都是还没破壳的超人蛋。
 
-- [搜索广告]({{ site.baseurl }}/search-ads/) - Google Ads, Microsoft Ads, Baidu
-- [社交媒体]({{ site.baseurl }}/social-media/) - Meta, LinkedIn, TikTok
-- [数据分析]({{ site.baseurl }}/analytics/) - GA4, GTM, 数据可视化
-- [内容营销]({{ site.baseurl }}/content-marketing/) - SEO, 内容策略
-- [自动化工具]({{ site.baseurl }}/automation/) - Zapier, Make, n8n
-- [GEO 地理本地化]({{ site.baseurl }}/geo/) - 地域定向、地图运营、本地化获客
+长江大学 · 地理信息科学（产业计划）在读。
+把 **GIS 的空间分析思维**带进 **数字营销与 SEO** —— 用地理和数据回答「谁、在哪里、为什么」。
 
-## 法语实验层
+---
 
-本站点包含实验性法语版本，用于多语言 SEO 测试：
-- [Version Française]({{ site.baseurl }}/fr/) - 法语实验层
+## 为什么叫 chaorendan：一颗还没破壳的蛋
+
+`chaorendan` = **超人蛋**。
+
+每个还没被看见的普通人，都是一颗还没破壳的蛋。
+**忍受寂寞**是孵化，**努力拼搏**是攒劲，**坚持不懈**才是破壳的那一下。
+这个站点，就是我破壳过程的公开记录 —— 慢一点没关系，别停下来。
+
+## 我在做什么
+
+- **GIS 空间分析** —— PostGIS 空间查询与缓冲区分析、空间数据可视化（全国高校 GIS 技能大赛全国一等奖）
+- **数字营销 / SEO** —— Google Ads 体系、关键词分层调研、TDK 优化、GSC 数据复盘、本地化搜索（GEO）
+- **增长实验室（Growth Lab）** —— 一个真实运营的实验场：自己搭站、自己埋点、自己看数据、自己做决策
+
+## 从这里开始
+
+- 📚 **[知识库 /kb/](/kb/)** —— 搜索广告、数据分析、内容营销、自动化工具的整理笔记
+- 🧭 **[项目与案例 /projects/](/projects/)** —— 正在进行的实验与复盘
+- 👤 **[关于我 /about/](/about/)** —— 更完整的经历、技能与联系方式
+
+---
+
+*本站由我自己搭建与维护（Jekyll + GitHub Pages + GTM / GA4）。内容持续更新，欢迎交流。*
