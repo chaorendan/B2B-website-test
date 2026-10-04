@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://chaorendan.github.io/B2B-website-test/sitemap.xml
+Sitemap: https://chaorendan.top/sitemap.xml
