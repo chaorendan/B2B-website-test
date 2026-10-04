@@ -3,3 +3,9 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+
+# Bundler local config is machine-specific. On this machine it points the
+# rubygems.org source at a China mirror (gems.ruby-china.com) for local speed,
+# but GitHub Actions runners cannot reach that host, which broke the build.
+# Keep the file on disk; never commit it.
+.bundle/

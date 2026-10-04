@@ -38,6 +38,11 @@ jobs:
       - name: Install dependencies
         run: |
           bundle config set --local path 'vendor/bundle'
+          # Print effective settings so the log shows whether any gem-source
+          # mirror is in play. A committed .bundle/config once pointed
+          # rubygems.org at a China mirror this runner cannot reach, which
+          # made `bundle install` die with Bundler::HTTPError (exit 17).
+          bundle config list
           bundle install
 
       - name: Build Jekyll site
