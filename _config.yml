@@ -80,3 +80,4 @@ exclude:
   - "*.new"
   - _ARCHITECTURE_DESIGN.md
   - _TEMPLATE.md
+  - growth-lab/
