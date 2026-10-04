@@ -7,7 +7,7 @@ description: "B2B 企业 Google Ads 实战知识库，涵盖搜索广告、Perfo
 lang: "zh"
 alternate:
   - lang: "fr"
-    url: {{ site.baseurl }}/fr/
+    url: /fr/
 ---
 
 # Google Ads B2B 知识库
