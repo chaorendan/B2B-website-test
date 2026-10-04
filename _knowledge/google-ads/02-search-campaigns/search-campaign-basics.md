@@ -16,20 +16,20 @@ time_to_read: 6
 prerequisites: []
 next_steps:
   - title: "关键词研究方法"
-    url: {{ site.baseurl }}/knowledge/google-ads/02-search-campaigns/keyword-research/
+    url: /knowledge/google-ads/02-search-campaigns/keyword-research/
   - title: "匹配类型详解"
-    url: {{ site.baseurl }}/knowledge/google-ads/02-search-campaigns/match-types-guide/
+    url: /knowledge/google-ads/02-search-campaigns/match-types-guide/
 related:
   - title: "否定关键词策略"
-    url: {{ site.baseurl }}/knowledge/google-ads/02-search-campaigns/negative-keywords/
+    url: /knowledge/google-ads/02-search-campaigns/negative-keywords/
   - title: "出价策略优化"
-    url: {{ site.baseurl }}/knowledge/google-ads/02-search-campaigns/bidding-strategies/
+    url: /knowledge/google-ads/02-search-campaigns/bidding-strategies/
 tools:
   - name: "Google Ads"
     url: "https://ads.google.com/"
     description: "Google Ads 官方平台"
 featured_image:
-  path: {{ site.baseurl }}/assets/images/certifications/my-google-ads-certification.png
+  path: /assets/images/certifications/my-google-ads-certification.png
   alt: "Google Ads 认证证书"
 ---
 

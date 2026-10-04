@@ -28,21 +28,21 @@ keywords: "B2B关键词研究, Google Ads关键词, 搜索意图分析, 长尾�
 # ===== 关联文章 =====
 prerequisites:
   - title: "Google Ads 账户结构搭建"
-    url: {{ site.baseurl }}/knowledge/google-ads/01-fundamentals/account-structure/
+    url: /knowledge/google-ads/01-fundamentals/account-structure/
   - title: "广告系列类型详解"
-    url: {{ site.baseurl }}/knowledge/google-ads/01-fundamentals/campaign-types/
+    url: /knowledge/google-ads/01-fundamentals/campaign-types/
 
 next_steps:
   - title: "关键词匹配类型详解"
-    url: {{ site.baseurl }}/knowledge/google-ads/02-search-campaigns/match-types-guide/
+    url: /knowledge/google-ads/02-search-campaigns/match-types-guide/
   - title: "出价策略优化指南"
-    url: {{ site.baseurl }}/knowledge/google-ads/02-search-campaigns/bidding-strategies/
+    url: /knowledge/google-ads/02-search-campaigns/bidding-strategies/
 
 related:
   - title: "否定关键词策略"
-    url: {{ site.baseurl }}/knowledge/google-ads/02-search-campaigns/negative-keywords/
+    url: /knowledge/google-ads/02-search-campaigns/negative-keywords/
   - title: "搜索广告基础"
-    url: {{ site.baseurl }}/knowledge/google-ads/02-search-campaigns/search-campaign-basics/
+    url: /knowledge/google-ads/02-search-campaigns/search-campaign-basics/
 
 # ===== 资源与工具 =====
 tools:
@@ -53,12 +53,12 @@ tools:
     url: "https://www.semrush.com/"
     description: "专业 SEO/SEM 分析工具，支持竞争对手关键词分析"
   - name: "关键词研究模板"
-    url: "{{ site.baseurl }}/assets/templates/keyword-research-template.xlsx"
+    url: "/assets/templates/keyword-research-template.xlsx"
     description: "Excel 模板，包含关键词分类、优先级评分、意图标注"
 
 # ===== 图片配置 =====
 featured_image:
-  path: {{ site.baseurl }}/assets/images/google-ads/og-images/keyword-research-og.jpg
+  path: /assets/images/google-ads/og-images/keyword-research-og.jpg
   alt: "B2B 关键词研究方法示意图，展示从搜索意图到关键词分类的完整流程"
   width: 1200
   height: 630
