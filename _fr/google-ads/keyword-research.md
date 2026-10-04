@@ -29,14 +29,14 @@ keywords: "recherche keywords B2B, Google Ads keywords, analyse intention recher
 lang: "fr"
 translated_from:
   title: "B2B 关键词研究方法"
-  url: /knowledge/google-ads/02-search-campaigns/keyword-research/
+  url: /kb/google-ads/02-search-campaigns/keyword-research/
   lang: "zh"
   date: 2026-05-22
 hreflang:
-  zh: /knowledge/google-ads/02-search-campaigns/keyword-research/
+  zh: /kb/google-ads/02-search-campaigns/keyword-research/
 alternate:
   - lang: "zh"
-    url: /knowledge/google-ads/02-search-campaigns/keyword-research/
+    url: /kb/google-ads/02-search-campaigns/keyword-research/
 
 # ===== Articles Associés =====
 prerequisites: []
@@ -249,7 +249,7 @@ Une recherche de keywords B2B efficace nécessite :
 ## Version Originale
 
 Cet article est une traduction de :
-- [B2B 关键词研究方法]({{ site.baseurl }}/knowledge/google-ads/02-search-campaigns/keyword-research/) (中文版)
+- [B2B 关键词研究方法]({{ site.baseurl }}/kb/google-ads/02-search-campaigns/keyword-research/) (中文版)
 
 ---
 

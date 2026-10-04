@@ -2,7 +2,7 @@
 layout: page
 title: "基础篇"
 seo_title: "Google Ads 基础篇 | 账户结构与核心概念"
-permalink: /knowledge/google-ads/01-fundamentals/
+permalink: /kb/google-ads/01-fundamentals/
 description: "Google Ads 基础知识，包括账户结构、广告系列类型、质量得分、计费预算等核心概念。"
 date: 2026-05-22
 ---
@@ -39,4 +39,4 @@ date: 2026-05-22
 
 ## 下一步
 
-掌握基础概念后，建议进入 [搜索广告]({{ site.baseurl }}/knowledge/google-ads/02-search-campaigns/) 学习具体的投放技巧。
+掌握基础概念后，建议进入 [搜索广告]({{ site.baseurl }}/kb/google-ads/02-search-campaigns/) 学习具体的投放技巧。

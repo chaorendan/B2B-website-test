@@ -2,7 +2,7 @@
 layout: page
 title: "搜索广告基础"
 seo_title: "Google Ads 搜索广告基础：B2B 企业入门指南 | B2B Growth Knowledge Base"
-permalink: /knowledge/google-ads/02-search-campaigns/search-campaign-basics/
+permalink: /kb/google-ads/02-search-campaigns/search-campaign-basics/
 category: "02-search-campaigns"
 tags:
   - search-campaigns
@@ -16,14 +16,14 @@ time_to_read: 6
 prerequisites: []
 next_steps:
   - title: "关键词研究方法"
-    url: /knowledge/google-ads/02-search-campaigns/keyword-research/
+    url: /kb/google-ads/02-search-campaigns/keyword-research/
   - title: "匹配类型详解"
-    url: /knowledge/google-ads/02-search-campaigns/match-types-guide/
+    url: /kb/google-ads/02-search-campaigns/match-types-guide/
 related:
   - title: "否定关键词策略"
-    url: /knowledge/google-ads/02-search-campaigns/negative-keywords/
+    url: /kb/google-ads/02-search-campaigns/negative-keywords/
   - title: "出价策略优化"
-    url: /knowledge/google-ads/02-search-campaigns/bidding-strategies/
+    url: /kb/google-ads/02-search-campaigns/bidding-strategies/
 tools:
   - name: "Google Ads"
     url: "https://ads.google.com/"

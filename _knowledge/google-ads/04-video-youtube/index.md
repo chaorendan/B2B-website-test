@@ -2,7 +2,7 @@
 layout: page
 title: "视频广告"
 seo_title: "Google Ads 视频广告 | YouTube B2B 营销"
-permalink: /knowledge/google-ads/04-video-youtube/
+permalink: /kb/google-ads/04-video-youtube/
 description: "YouTube 广告投放指南，包括视频广告格式、创意制作、B2B 视频营销策略。"
 date: 2026-05-22
 ---
@@ -35,4 +35,4 @@ date: 2026-05-22
 
 ## 下一步
 
-- [Performance Max]({{ site.baseurl }}/knowledge/google-ads/05-performance-max/) - 跨渠道自动化投放
+- [Performance Max]({{ site.baseurl }}/kb/google-ads/05-performance-max/) - 跨渠道自动化投放

@@ -127,5 +127,5 @@ Google Ads API **本身免费**，但：
 
 ## 下一步
 
-- [配置 OAuth 2.0 认证]({{ site.baseurl }}/knowledge/google-ads/10-api-automation/api-authentication/)
-- [运行第一个 Python 脚本]({{ site.baseurl }}/knowledge/google-ads/10-api-automation/python-automation/)
+- [配置 OAuth 2.0 认证]({{ site.baseurl }}/kb/google-ads/10-api-automation/api-authentication/)
+- [运行第一个 Python 脚本]({{ site.baseurl }}/kb/google-ads/10-api-automation/python-automation/)

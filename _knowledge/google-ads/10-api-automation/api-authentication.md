@@ -214,5 +214,5 @@ client = GoogleAdsClient.load_from_dict({
 
 ## 下一步
 
-- [常用 API 操作示例]({{ site.baseurl }}/knowledge/google-ads/10-api-automation/api-common-operations/)
-- [Python 自动化脚本]({{ site.baseurl }}/knowledge/google-ads/10-api-automation/python-automation/)
+- [常用 API 操作示例]({{ site.baseurl }}/kb/google-ads/10-api-automation/api-common-operations/)
+- [Python 自动化脚本]({{ site.baseurl }}/kb/google-ads/10-api-automation/python-automation/)

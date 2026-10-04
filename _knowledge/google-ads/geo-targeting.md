@@ -2,7 +2,7 @@
 layout: page
 title: "地域定向投放策略"
 seo_title: "Google Ads 地域定向投放策略 | 区域出价调整与优化"
-permalink: /knowledge/google-ads/geo-targeting/
+permalink: /kb/google-ads/geo-targeting/
 description: "Google Ads 地域定向投放完整策略：地域设置、区域出价调整、地域报告分析、GEO 与 SEM 协同优化。"
 lang: "zh"
 ---
@@ -276,7 +276,7 @@ Google Ads 半径投放最小 1km，最大 800km。建议：
 - [GEO 地理本地化概述]({{ site.baseurl }}/geo/)
 - [GEO 专属投放优化]({{ site.baseurl }}/geo/geo-ad-optimization/)
 - [关键词本地化优化]({{ site.baseurl }}/geo/keyword-localization/)
-- [API 常用操作]({{ site.baseurl }}/knowledge/google-ads/10-api-automation/api-common-operations/)
+- [API 常用操作]({{ site.baseurl }}/kb/google-ads/10-api-automation/api-common-operations/)
 
 ---
 

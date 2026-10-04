@@ -408,4 +408,4 @@ except GoogleAdsException as ex:
 
 ## 下一步
 
-- [Python 自动化脚本实战]({{ site.baseurl }}/knowledge/google-ads/10-api-automation/python-automation/)
+- [Python 自动化脚本实战]({{ site.baseurl }}/kb/google-ads/10-api-automation/python-automation/)

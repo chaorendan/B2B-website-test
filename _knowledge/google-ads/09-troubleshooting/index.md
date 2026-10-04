@@ -2,7 +2,7 @@
 layout: page
 title: "故障排除"
 seo_title: "Google Ads 故障排除 | 常见问题诊断与解决"
-permalink: /knowledge/google-ads/09-troubleshooting/
+permalink: /kb/google-ads/09-troubleshooting/
 description: "Google Ads 常见问题诊断与解决方案，包括低展示量、高 CPC、政策违规等问题处理。"
 date: 2026-05-22
 ---

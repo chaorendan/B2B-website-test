@@ -3,7 +3,7 @@
 layout: page
 title: "B2B 关键词研究方法"
 seo_title: "B2B 关键词研究方法：高意向客户获取策略与工具推荐 | B2B Growth Knowledge Base"
-permalink: /knowledge/google-ads/02-search-campaigns/keyword-research/
+permalink: /kb/google-ads/02-search-campaigns/keyword-research/
 
 # ===== 分类与标签 =====
 category: "02-search-campaigns"
@@ -28,21 +28,21 @@ keywords: "B2B关键词研究, Google Ads关键词, 搜索意图分析, 长尾�
 # ===== 关联文章 =====
 prerequisites:
   - title: "Google Ads 账户结构搭建"
-    url: /knowledge/google-ads/01-fundamentals/account-structure/
+    url: /kb/google-ads/01-fundamentals/account-structure/
   - title: "广告系列类型详解"
-    url: /knowledge/google-ads/01-fundamentals/campaign-types/
+    url: /kb/google-ads/01-fundamentals/campaign-types/
 
 next_steps:
   - title: "关键词匹配类型详解"
-    url: /knowledge/google-ads/02-search-campaigns/match-types-guide/
+    url: /kb/google-ads/02-search-campaigns/match-types-guide/
   - title: "出价策略优化指南"
-    url: /knowledge/google-ads/02-search-campaigns/bidding-strategies/
+    url: /kb/google-ads/02-search-campaigns/bidding-strategies/
 
 related:
   - title: "否定关键词策略"
-    url: /knowledge/google-ads/02-search-campaigns/negative-keywords/
+    url: /kb/google-ads/02-search-campaigns/negative-keywords/
   - title: "搜索广告基础"
-    url: /knowledge/google-ads/02-search-campaigns/search-campaign-basics/
+    url: /kb/google-ads/02-search-campaigns/search-campaign-basics/
 
 # ===== 资源与工具 =====
 tools:
@@ -87,8 +87,8 @@ schema_type: "TechArticle"
 ## 前置知识
 
 在开始关键词研究之前，建议先了解以下基础概念：
-- [Google Ads 账户结构搭建]({{ site.baseurl }}/knowledge/google-ads/01-fundamentals/account-structure/) - 理解广告系列、广告组、关键词的层级关系
-- [广告系列类型详解]({{ site.baseurl }}/knowledge/google-ads/01-fundamentals/campaign-types/) - 不同类型广告系列的关键词策略差异
+- [Google Ads 账户结构搭建]({{ site.baseurl }}/kb/google-ads/01-fundamentals/account-structure/) - 理解广告系列、广告组、关键词的层级关系
+- [广告系列类型详解]({{ site.baseurl }}/kb/google-ads/01-fundamentals/campaign-types/) - 不同类型广告系列的关键词策略差异
 
 ---
 
@@ -294,7 +294,7 @@ schema_type: "TechArticle"
 
 ### Q4: 关键词研究后如何应用到广告系列？
 
-**A:** 参考 [关键词匹配类型详解]({{ site.baseurl }}/knowledge/google-ads/02-search-campaigns/match-types-guide/) 和 [广告组结构优化]({{ site.baseurl }}/knowledge/google-ads/02-search-campaigns/ad-group-structure/) 进行下一步设置。
+**A:** 参考 [关键词匹配类型详解]({{ site.baseurl }}/kb/google-ads/02-search-campaigns/match-types-guide/) 和 [广告组结构优化]({{ site.baseurl }}/kb/google-ads/02-search-campaigns/ad-group-structure/) 进行下一步设置。
 
 ---
 
@@ -312,14 +312,14 @@ schema_type: "TechArticle"
 ## 进阶阅读
 
 掌握关键词研究后，建议继续学习：
-- [关键词匹配类型详解]({{ site.baseurl }}/knowledge/google-ads/02-search-campaigns/match-types-guide/) - 了解精确、词组、广泛匹配的应用场景
-- [出价策略优化指南]({{ site.baseurl }}/knowledge/google-ads/02-search-campaigns/bidding-strategies/) - 根据关键词价值设置合理出价
-- [否定关键词策略]({{ site.baseurl }}/knowledge/google-ads/02-search-campaigns/negative-keywords/) - 排除无效流量，提升广告效率
+- [关键词匹配类型详解]({{ site.baseurl }}/kb/google-ads/02-search-campaigns/match-types-guide/) - 了解精确、词组、广泛匹配的应用场景
+- [出价策略优化指南]({{ site.baseurl }}/kb/google-ads/02-search-campaigns/bidding-strategies/) - 根据关键词价值设置合理出价
+- [否定关键词策略]({{ site.baseurl }}/kb/google-ads/02-search-campaigns/negative-keywords/) - 排除无效流量，提升广告效率
 
 ## 相关资源
 
-- [搜索广告基础]({{ site.baseurl }}/knowledge/google-ads/02-search-campaigns/search-campaign-basics/) - 搜索广告系列设置入门
-- [广告文案撰写技巧]({{ site.baseurl }}/knowledge/google-ads/02-search-campaigns/ad-copywriting/) - 为高意图关键词撰写高转化文案
+- [搜索广告基础]({{ site.baseurl }}/kb/google-ads/02-search-campaigns/search-campaign-basics/) - 搜索广告系列设置入门
+- [广告文案撰写技巧]({{ site.baseurl }}/kb/google-ads/02-search-campaigns/ad-copywriting/) - 为高意图关键词撰写高转化文案
 
 ## 推荐工具
 

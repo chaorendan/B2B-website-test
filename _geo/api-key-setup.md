@@ -214,11 +214,11 @@ Google Ads API 本身免费，但需要开发者令牌和 OAuth 2.0 配置。
 
 ### 1. 获取开发者令牌
 
-详见 [API 概述]({{ site.baseurl }}/knowledge/google-ads/10-api-automation/api-overview/#申请开发者令牌)
+详见 [API 概述]({{ site.baseurl }}/kb/google-ads/10-api-automation/api-overview/#申请开发者令牌)
 
 ### 2. OAuth 2.0 凭据
 
-详见 [API 认证与权限]({{ site.baseurl }}/knowledge/google-ads/10-api-automation/api-authentication/)
+详见 [API 认证与权限]({{ site.baseurl }}/kb/google-ads/10-api-automation/api-authentication/)
 
 ### 3. 完整配置文件
 
@@ -318,7 +318,7 @@ client_secret_*.json
 - [GIS 特色板块]({{ site.baseurl }}/geo/gis-toolkit/)
 - [Mapbox 地图可视化]({{ site.baseurl }}/geo/gis-toolkit/mapbox-integration/)
 - [提示词模板库]({{ site.baseurl }}/geo/gis-toolkit/prompt-templates/)
-- [API 认证与权限]({{ site.baseurl }}/knowledge/google-ads/10-api-automation/api-authentication/)
+- [API 认证与权限]({{ site.baseurl }}/kb/google-ads/10-api-automation/api-authentication/)
 
 ---
 

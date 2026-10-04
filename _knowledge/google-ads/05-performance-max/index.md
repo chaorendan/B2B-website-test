@@ -2,7 +2,7 @@
 layout: page
 title: "Performance Max"
 seo_title: "Google Ads Performance Max | PMax B2B 投放指南"
-permalink: /knowledge/google-ads/05-performance-max/
+permalink: /kb/google-ads/05-performance-max/
 description: "Performance Max 广告系列设置与优化，包括 Feed 配置、受众信号、效果优化策略。"
 date: 2026-05-22
 ---
@@ -34,4 +34,4 @@ Performance Max 是 Google 的全渠道自动化广告解决方案，利用机�
 
 ## 下一步
 
-- [B2B 策略]({{ site.baseurl }}/knowledge/google-ads/06-b2b-strategies/) - B2B 专项投放技巧
+- [B2B 策略]({{ site.baseurl }}/kb/google-ads/06-b2b-strategies/) - B2B 专项投放技巧

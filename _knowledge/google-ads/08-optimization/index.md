@@ -2,7 +2,7 @@
 layout: page
 title: "优化技巧"
 seo_title: "Google Ads 优化技巧 | A/B 测试与自动化"
-permalink: /knowledge/google-ads/08-optimization/
+permalink: /kb/google-ads/08-optimization/
 description: "Google Ads 高级优化技巧，包括 A/B 测试、自动化规则、脚本、效果分析方法。"
 date: 2026-05-22
 ---
@@ -38,4 +38,4 @@ date: 2026-05-22
 
 ## 下一步
 
-- [故障排除]({{ site.baseurl }}/knowledge/google-ads/09-troubleshooting/) - 解决常见投放问题
+- [故障排除]({{ site.baseurl }}/kb/google-ads/09-troubleshooting/) - 解决常见投放问题

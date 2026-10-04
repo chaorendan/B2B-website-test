@@ -2,7 +2,7 @@
 layout: page
 title: "展示与再营销"
 seo_title: "Google Ads 展示与再营销 | B2B 受众策略"
-permalink: /knowledge/google-ads/03-display-remarketing/
+permalink: /kb/google-ads/03-display-remarketing/
 description: "Google Ads 展示广告和再营销策略，包括受众定位、自适应展示广告、再营销列表设置等。"
 date: 2026-05-22
 ---
@@ -38,5 +38,5 @@ date: 2026-05-22
 
 ## 下一步
 
-- [搜索广告]({{ site.baseurl }}/knowledge/google-ads/02-search-campaigns/) - 高意图流量获取
-- [视频广告]({{ site.baseurl }}/knowledge/google-ads/04-video-youtube/) - 视频形式品牌传播
+- [搜索广告]({{ site.baseurl }}/kb/google-ads/02-search-campaigns/) - 高意图流量获取
+- [视频广告]({{ site.baseurl }}/kb/google-ads/04-video-youtube/) - 视频形式品牌传播

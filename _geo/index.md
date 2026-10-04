@@ -121,7 +121,7 @@ GEO 不是独立的学科，而是 **SEO 的地域细分分支**。理解两者�
 | 板块 | GEO 关联内容 |
 |------|-------------|
 | [搜索广告]({{ site.baseurl }}/search-ads/) | 地域定向投放策略、区域出价调整 |
-| [API 与自动化]({{ site.baseurl }}/knowledge/google-ads/10-api-automation/) | Google Ads API 与地理数据协同 |
+| [API 与自动化]({{ site.baseurl }}/kb/google-ads/10-api-automation/) | Google Ads API 与地理数据协同 |
 
 ---
 

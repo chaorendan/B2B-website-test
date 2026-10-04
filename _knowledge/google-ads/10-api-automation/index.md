@@ -2,7 +2,7 @@
 layout: page
 title: "API 与自动化"
 seo_title: "Google Ads API 完全指南 | 自动化与脚本"
-permalink: /knowledge/google-ads/10-api-automation/
+permalink: /kb/google-ads/10-api-automation/
 description: "Google Ads API 实战指南，涵盖 API 概述、认证配置、常用操作、Python 自动化脚本，帮助你实现广告投放的规模化自动化管理。"
 lang: "zh"
 ---

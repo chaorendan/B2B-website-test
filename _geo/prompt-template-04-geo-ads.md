@@ -114,7 +114,7 @@ region,location_id,potential_score,tier,current_bid_multiplier,current_cost,curr
 
 ### 2. 配置 Google Ads API
 
-参考 [API 认证与权限]({{ site.baseurl }}/knowledge/google-ads/10-api-automation/api-authentication/)。
+参考 [API 认证与权限]({{ site.baseurl }}/kb/google-ads/10-api-automation/api-authentication/)。
 
 ### 3. 执行
 
@@ -133,4 +133,4 @@ python geo_ads_optimizer.py --input region_potential_score.csv --customer-id 123
 - [模板1：地理编码批量转换]({{ site.baseurl }}/geo/gis-toolkit/prompt-templates/01-geocoding/)
 - [模板2：热力图可视化]({{ site.baseurl }}/geo/gis-toolkit/prompt-templates/02-heatmap/)
 - [GEO 专属投放优化]({{ site.baseurl }}/geo/geo-ad-optimization/)
-- [API 常用操作]({{ site.baseurl }}/knowledge/google-ads/10-api-automation/api-common-operations/)
+- [API 常用操作]({{ site.baseurl }}/kb/google-ads/10-api-automation/api-common-operations/)

@@ -101,23 +101,23 @@ main:
     url: /google-ads/
     children:
       - title: "基础篇"
-        url: /knowledge/google-ads/01-fundamentals/
+        url: /kb/google-ads/01-fundamentals/
       - title: "搜索广告"
-        url: /knowledge/google-ads/02-search-campaigns/
+        url: /kb/google-ads/02-search-campaigns/
       - title: "展示与再营销"
-        url: /knowledge/google-ads/03-display-remarketing/
+        url: /kb/google-ads/03-display-remarketing/
       - title: "视频广告"
-        url: /knowledge/google-ads/04-video-youtube/
+        url: /kb/google-ads/04-video-youtube/
       - title: "PMax 广告"
-        url: /knowledge/google-ads/05-performance-max/
+        url: /kb/google-ads/05-performance-max/
       - title: "B2B 策略"
-        url: /knowledge/google-ads/06-b2b-strategies/
+        url: /kb/google-ads/06-b2b-strategies/
       - title: "追踪分析"
-        url: /knowledge/google-ads/07-tracking-analytics/
+        url: /kb/google-ads/07-tracking-analytics/
       - title: "优化技巧"
-        url: /knowledge/google-ads/08-optimization/
+        url: /kb/google-ads/08-optimization/
       - title: "故障排除"
-        url: /knowledge/google-ads/09-troubleshooting/
+        url: /kb/google-ads/09-troubleshooting/
 
   - title: "GA4"
     url: /ga4/
@@ -231,7 +231,7 @@ keyword-research.md
 layout: knowledge-article          # 使用知识库专用布局
 title: "文章标题"                   # H1 标题，SEO 重要
 seo_title: "SEO 优化标题 | B2B Growth Knowledge Base"  # <title> 标签
-permalink: /knowledge/google-ads/XX-category/article-slug/  # 固定 URL
+permalink: /kb/google-ads/XX-category/article-slug/  # 固定 URL
 
 # ===== 分类与标签 =====
 category: "02-search-campaigns"    # 所属分类目录名
@@ -256,19 +256,19 @@ canonical_url: ""                   # 规范 URL（如有重复内容）
 # ===== 关联文章 =====
 prerequisites:                     # 前置知识
   - title: "账户结构基础"
-    url: /knowledge/google-ads/01-fundamentals/account-structure/
+    url: /kb/google-ads/01-fundamentals/account-structure/
   - title: "广告系列类型"
-    url: /knowledge/google-ads/01-fundamentals/campaign-types/
+    url: /kb/google-ads/01-fundamentals/campaign-types/
 
 next_steps:                        # 进阶阅读
   - title: "匹配类型详解"
-    url: /knowledge/google-ads/02-search-campaigns/match-types-guide/
+    url: /kb/google-ads/02-search-campaigns/match-types-guide/
   - title: "出价策略优化"
-    url: /knowledge/google-ads/02-search-campaigns/bidding-strategies/
+    url: /kb/google-ads/02-search-campaigns/bidding-strategies/
 
 related:                           # 相关内容
   - title: "否定关键词策略"
-    url: /knowledge/google-ads/02-search-campaigns/negative-keywords/
+    url: /kb/google-ads/02-search-campaigns/negative-keywords/
 
 # ===== 资源与工具 =====
 tools:                             # 推荐工具/模板
@@ -306,7 +306,7 @@ schema_type: "TechArticle"         # Article | TechArticle | HowTo | FAQPage
 layout: knowledge-article
 title: "文章标题"
 seo_title: "SEO 标题 | B2B Growth Knowledge Base"
-permalink: /knowledge/google-ads/XX-category/article-slug/
+permalink: /kb/google-ads/XX-category/article-slug/
 category: "02-search-campaigns"
 tags: [tag1, tag2, tag3]
 difficulty: "intermediate"
@@ -422,8 +422,8 @@ assets/
 
 ```markdown
 <!-- ✅ 好的锚文本 - 描述性强 -->
-[关键词匹配类型](/knowledge/google-ads/02-search-campaigns/match-types-guide/)
-[设置转化追踪](/knowledge/google-ads/07-tracking-analytics/conversion-tracking-setup/)
+[关键词匹配类型](/kb/google-ads/02-search-campaigns/match-types-guide/)
+[设置转化追踪](/kb/google-ads/07-tracking-analytics/conversion-tracking-setup/)
 
 <!-- ❌ 避免的锚文本 -->
 [点击这里](#)
@@ -444,7 +444,7 @@ assets/
 - [ ] 链接到 2-3 篇进阶阅读文章
 - [ ] 文中关键概念首次出现时添加链接
 - [ ] 检查所有链接可正常访问
-- [ ] 使用相对路径 `/knowledge/...` 而非绝对 URL
+- [ ] 使用相对路径 `/kb/...` 而非绝对 URL
 
 ---
 

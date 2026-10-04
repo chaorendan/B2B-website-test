@@ -2,7 +2,7 @@
 layout: page
 title: "追踪与分析"
 seo_title: "Google Ads 追踪与分析 | 转化追踪与归因"
-permalink: /knowledge/google-ads/07-tracking-analytics/
+permalink: /kb/google-ads/07-tracking-analytics/
 description: "Google Ads 效果追踪与分析，包括转化追踪设置、增强型转化、离线转化导入、归因模型。"
 date: 2026-05-22
 ---
@@ -35,4 +35,4 @@ date: 2026-05-22
 
 ## 下一步
 
-- [优化技巧]({{ site.baseurl }}/knowledge/google-ads/08-optimization/) - 基于数据进行广告优化
+- [优化技巧]({{ site.baseurl }}/kb/google-ads/08-optimization/) - 基于数据进行广告优化

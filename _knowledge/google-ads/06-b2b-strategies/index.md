@@ -2,7 +2,7 @@
 layout: page
 title: "B2B 策略"
 seo_title: "Google Ads B2B 策略 | 线索生成与长周期优化"
-permalink: /knowledge/google-ads/06-b2b-strategies/
+permalink: /kb/google-ads/06-b2b-strategies/
 description: "B2B 企业 Google Ads 专项策略，包括线索生成、长销售周期优化、ABM、CRM 集成等。"
 date: 2026-05-22
 ---
@@ -40,4 +40,4 @@ date: 2026-05-22
 
 ## 下一步
 
-- [追踪分析]({{ site.baseurl }}/knowledge/google-ads/07-tracking-analytics/) - 建立完善的效果追踪体系
+- [追踪分析]({{ site.baseurl }}/kb/google-ads/07-tracking-analytics/) - 建立完善的效果追踪体系

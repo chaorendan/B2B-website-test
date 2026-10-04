@@ -2,7 +2,7 @@
 layout: page
 title: "搜索广告"
 seo_title: "Google Ads 搜索广告完全指南 | B2B Growth Knowledge Base"
-permalink: /knowledge/google-ads/02-search-campaigns/
+permalink: /kb/google-ads/02-search-campaigns/
 description: "Google Ads 搜索广告完整教程，涵盖关键词研究、匹配类型、出价策略、广告文案撰写等核心内容。"
 date: 2026-05-22
 ---
@@ -59,7 +59,7 @@ date: 2026-05-22
 
 ## 相关分类
 
-- [基础篇]({{ site.baseurl }}/knowledge/google-ads/01-fundamentals/) - Google Ads 账户搭建与基础概念
-- [展示与再营销]({{ site.baseurl }}/knowledge/google-ads/03-display-remarketing/) - 扩大品牌触达与客户召回
-- [B2B 策略]({{ site.baseurl }}/knowledge/google-ads/06-b2b-strategies/) - B2B 专项投放策略
-- [优化技巧]({{ site.baseurl }}/knowledge/google-ads/08-optimization/) - 高级优化策略与自动化
+- [基础篇]({{ site.baseurl }}/kb/google-ads/01-fundamentals/) - Google Ads 账户搭建与基础概念
+- [展示与再营销]({{ site.baseurl }}/kb/google-ads/03-display-remarketing/) - 扩大品牌触达与客户召回
+- [B2B 策略]({{ site.baseurl }}/kb/google-ads/06-b2b-strategies/) - B2B 专项投放策略
+- [优化技巧]({{ site.baseurl }}/kb/google-ads/08-optimization/) - 高级优化策略与自动化

@@ -228,7 +228,7 @@ def score_keywords(df, search_volume_df, competition_df):
 
 - [GEO 地理本地化概述]({{ site.baseurl }}/geo/)
 - [GEO 专属投放优化]({{ site.baseurl }}/geo/geo-ad-optimization/)
-- [地域定向投放策略]({{ site.baseurl }}/knowledge/google-ads/geo-targeting/)
+- [地域定向投放策略]({{ site.baseurl }}/kb/google-ads/geo-targeting/)
 
 ---
 

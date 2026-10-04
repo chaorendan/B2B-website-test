@@ -8,7 +8,7 @@ permalink: /projects/
 
 ## Google Ads
 
-- [Search Campaign Basics](/knowledge/google-ads/search-campaign-basics)
+- [Search Campaign Basics](/kb/google-ads/search-campaign-basics)
 
 ## GA4
 

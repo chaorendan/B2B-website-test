@@ -346,7 +346,7 @@ print(geo_report.to_string(index=False))
 
 - [GEO 地理本地化概述]({{ site.baseurl }}/geo/)
 - [关键词本地化优化]({{ site.baseurl }}/geo/keyword-localization/)
-- [地域定向投放策略]({{ site.baseurl }}/knowledge/google-ads/geo-targeting/)
+- [地域定向投放策略]({{ site.baseurl }}/kb/google-ads/geo-targeting/)
 
 ---
 

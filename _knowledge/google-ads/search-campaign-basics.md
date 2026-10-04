@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Search Campaign Basics
-permalink: /knowledge/google-ads/search-campaign-basics/
+permalink: /kb/google-ads/search-campaign-basics/
 ---
 
 # Search Campaign Basics

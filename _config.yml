@@ -18,7 +18,7 @@ header_pages:
 collections:
   knowledge:
     output: true
-    permalink: /knowledge/:path/
+    permalink: /kb/:path/
   fr:
     output: true
   geo:

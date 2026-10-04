@@ -3,7 +3,7 @@
 layout: knowledge-article
 title: "文章标题"
 seo_title: "SEO 优化标题 | B2B Growth Knowledge Base"
-permalink: /knowledge/google-ads/XX-category/article-slug/
+permalink: /kb/google-ads/XX-category/article-slug/
 
 # ===== 分类与标签 =====
 category: "02-search-campaigns"    # 所属分类目录名
@@ -26,19 +26,19 @@ keywords: "关键词1, 关键词2, 关键词3"
 # ===== 关联文章 =====
 prerequisites:
   - title: "前置文章1"
-    url: /knowledge/google-ads/XX-category/article-1/
+    url: /kb/google-ads/XX-category/article-1/
   - title: "前置文章2"
-    url: /knowledge/google-ads/XX-category/article-2/
+    url: /kb/google-ads/XX-category/article-2/
 
 next_steps:
   - title: "进阶文章1"
-    url: /knowledge/google-ads/XX-category/article-3/
+    url: /kb/google-ads/XX-category/article-3/
   - title: "进阶文章2"
-    url: /knowledge/google-ads/XX-category/article-4/
+    url: /kb/google-ads/XX-category/article-4/
 
 related:
   - title: "相关文章1"
-    url: /knowledge/google-ads/XX-category/article-5/
+    url: /kb/google-ads/XX-category/article-5/
 
 # ===== 资源与工具 =====
 tools:
@@ -74,8 +74,8 @@ schema_type: "TechArticle"
 ## 前置知识
 
 在开始之前，建议先了解：
-- [前置文章1](/knowledge/google-ads/XX-category/article-1/)
-- [前置文章2](/knowledge/google-ads/XX-category/article-2/)
+- [前置文章1](/kb/google-ads/XX-category/article-1/)
+- [前置文章2](/kb/google-ads/XX-category/article-2/)
 
 ## 正文第一部分
 
@@ -127,12 +127,12 @@ schema_type: "TechArticle"
 ## 进阶阅读
 
 掌握本文内容后，建议继续学习：
-- [进阶文章1](/knowledge/google-ads/XX-category/article-3/)
-- [进阶文章2](/knowledge/google-ads/XX-category/article-4/)
+- [进阶文章1](/kb/google-ads/XX-category/article-3/)
+- [进阶文章2](/kb/google-ads/XX-category/article-4/)
 
 ## 相关资源
 
-- [相关文章1](/knowledge/google-ads/XX-category/article-5/)
+- [相关文章1](/kb/google-ads/XX-category/article-5/)
 
 ## 推荐工具
 
