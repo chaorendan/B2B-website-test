@@ -1,19 +1,20 @@
 ---
 layout: page
-title: Projects
+title: 项目
+seo_title: "项目 | 彭俊超"
+description: "彭俊超的项目与作品集：数字营销知识库、GIS 空间分析、Web 分析与增长实验。"
 permalink: /projects/
+lang: "zh"
 ---
-
-# Knowledge Areas
 
 ## Google Ads
 
-- [Search Campaign Basics](/kb/google-ads/search-campaign-basics)
+- [搜索广告基础](/kb/google-ads/search-campaign-basics/) — 账户结构、投放逻辑与优化
 
 ## GA4
 
-Coming soon.
+整理中。
 
-## Conversion Tracking
+## 转化追踪
 
-Coming soon.
+整理中。

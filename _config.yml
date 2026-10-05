@@ -11,8 +11,8 @@ timezone: Asia/Shanghai
 gtm_container_id: "GTM-M2XCSSGJ"
 
 header_pages:
-  - search-ads.md
-  - analytics.md
+  - kb/index.md
+  - projects.md
   - about.md
 
 collections:
