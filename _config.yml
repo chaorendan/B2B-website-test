@@ -31,15 +31,15 @@ defaults:
       type: "knowledge"
     values:
       layout: "page"
-      author: "Digital Marketing Expert"
+      author: "彭俊超"
       published: true
-      lang: "en"
+      lang: "zh"
   - scope:
       path: "_fr"
       type: "fr"
     values:
       layout: "page"
-      author: "Digital Marketing Expert"
+      author: "彭俊超"
       published: true
       lang: "fr"
   - scope:
@@ -47,7 +47,7 @@ defaults:
       type: "geo"
     values:
       layout: "page"
-      author: "Digital Marketing Expert"
+      author: "彭俊超"
       published: true
       lang: "zh"
 
