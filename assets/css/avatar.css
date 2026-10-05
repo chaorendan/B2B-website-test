@@ -1,0 +1,77 @@
+/* ==========================================================================
+   导航栏头像 + 深色模式
+   引入位置：_includes/head.html （在 minima 的 main.css 之后）
+   ========================================================================== */
+
+/* ---------- 1. 头像与站名并排 ---------- */
+
+.site-title--with-avatar {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; /* 头像与文字的间距 */
+  min-width: 0;
+}
+
+.site-title--with-avatar .site-avatar {
+  flex: 0 0 auto;       /* 不被 flex 压缩变形 */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;   /* 圆形头像 */
+  object-fit: cover;    /* 兜底：若将来换非正方形图也不拉伸 */
+  object-position: center 20%; /* 裁剪时偏向人像上方，避免切到下巴 */
+  background-color: #eee; /* 图片未加载时的占位 */
+  /* 浅色描边：在深色背景上也能看清边界 */
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.site-title--with-avatar .site-title__text {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 高分屏（Retina）下把渲染尺寸提到 48px，srcset 会自动选 128w 那张 */
+@media (min-resolution: 2dppx) {
+  .site-title--with-avatar .site-avatar {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* ---------- 2. 移动端收缩 ---------- */
+
+@media (max-width: 600px) {
+  .site-title--with-avatar .site-avatar {
+    width: 32px;
+    height: 32px;
+  }
+  .site-title--with-avatar {
+    gap: 0.4rem;
+  }
+}
+
+/* ---------- 3. 深色模式：头像描边 + 占位底色 ---------- */
+
+@media (prefers-color-scheme: dark) {
+  .site-title--with-avatar .site-avatar {
+    /* 深色下改用浅色描边，若图片有深色边缘也不会糊进背景 */
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.28);
+    background-color: #2a2a2a;
+  }
+}
+
+/* ---------- 4. 无障碍：键盘聚焦时给出可见轮廓 ---------- */
+
+.site-title--with-avatar:focus-visible .site-avatar {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* 尊重系统「减少动效」偏好（若将来给头像加过渡动画用） */
+@media (prefers-reduced-motion: reduce) {
+  .site-title--with-avatar .site-avatar {
+    transition: none !important;
+    animation: none !important;
+  }
+}

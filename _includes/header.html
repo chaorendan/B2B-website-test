@@ -4,7 +4,21 @@
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
     
-    <a class="site-title" rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
+    <a class="site-title site-title--with-avatar" rel="author" href="{{ '/' | relative_url }}">
+      <img
+        class="site-avatar"
+        src="{{ '/assets/images/profile/avatar-128.png' | relative_url }}"
+        srcset="{{ '/assets/images/profile/avatar-64.png' | relative_url }} 64w,
+                {{ '/assets/images/profile/avatar-128.png' | relative_url }} 128w,
+                {{ '/assets/images/profile/avatar-256.png' | relative_url }} 256w"
+        sizes="40px"
+        width="40" height="40"
+        alt="彭俊超"
+        loading="eager"
+        decoding="async"
+        fetchpriority="high" />
+      <span class="site-title__text">{{ site.title | escape }}</span>
+    </a>
     
     {%- if page_paths -%}
       <nav class="site-nav">
