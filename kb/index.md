@@ -1,9 +1,9 @@
 ---
 layout: page
 title: "知识库"
-seo_title: "数字营销知识库 | Google Ads、GA4、GEO 与营销自动化"
+seo_title: "数字营销知识库 | Google Ads 与 GEO 地理定向"
 permalink: /kb/
-description: "系统化的数字营销知识库，按主题组织：Google Ads 投放、数据分析与追踪、地理定向（GEO）、内容营销、社媒运营与自动化工具。"
+description: "系统化的数字营销知识库，按主题组织：Google Ads 投放（10 个板块）与地理定向（GEO）——含 GIS 工具链、空间分析与地图投放。"
 lang: "zh"
 ---
 
@@ -31,23 +31,15 @@ lang: "zh"
 把 GIS 的空间思维迁移到营销投放：地域定向、地图运营、本地化获客。
 
 - [GEO 概览](/geo/) — 这个方向在做什么
-- [API Key 配置](/geo/api-key-setup/) — Google Maps / Mapbox 密钥与配额
-- [Mapbox 集成](/geo/mapbox-integration/) — 前端地图可视化
+- [API Key 配置](/geo/gis-toolkit/api-key-setup/) — Google Maps / Mapbox 密钥与配额
+- [Mapbox 集成](/geo/gis-toolkit/mapbox-integration/) — 前端地图可视化
 - [地理广告优化](/geo/geo-ad-optimization/) — 按地域调整投放结构
 - [关键词本地化](/geo/keyword-localization/) — 地域词与语言变体
 - [GIS 工具箱](/geo/gis-toolkit/) — 工具选型
-- [Prompt 模板](/geo/prompt-templates/) — 地理数据处理的可复用提示词
-
-## 其他主题
-
-- [搜索广告总览](/search-ads/) — Google / Microsoft / 百度全平台
-- [数据分析](/analytics/) — GA4、GTM、数据可视化与归因
-- [内容营销](/content-marketing/) — SEO 与内容策略
-- [社交媒体](/social-media/) — Meta、LinkedIn、TikTok
-- [自动化工具](/automation/) — Zapier、Make、n8n
+- [Prompt 模板](/geo/gis-toolkit/prompt-templates/) — 地理数据处理的可复用提示词
 
 ## 关于这个知识库的组织方式
 
 内容按**主题**分目录，不按客户类型分目录——同一套 Google Ads 方法在 B2B 和 B2C 场景里都要用，未来新增的消费级、求职向内容会作为新主题加入，URL 结构不变。
 
-> 现状说明：GEO 与其他主题的页面目前位于站点根路径，后续会统一收敛到 `/kb/` 下，届时用 301 跳转保留旧链接。
+> 现状说明：`/kb/` 目前有两条主线——**Google Ads**（`/kb/google-ads/`，10 个板块）与 **GEO / 地理定向**（`/geo/`，GIS 工具链）。数据分析、内容营销、社媒运营、自动化等主题待内容备齐后以 `/kb/<主题>/` 的形式加入。
