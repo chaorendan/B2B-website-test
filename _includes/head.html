@@ -33,6 +33,10 @@
 
   <link rel="icon" href="{{ '/assets/images/brand/firebird-64.png' | relative_url }}" sizes="64x64" type="image/png">
 
+  <!-- Preload critical above-the-fold resources -->
+  <link rel="preload" href="{{ '/assets/images/profile/avatar-256.webp' | relative_url }}" as="image" type="image/webp">
+  <link rel="preload" href="{{ '/assets/css/hero-map.css' | relative_url }}" as="style">
+
   {% if page.seo_title %}
     <title>{{ page.seo_title }}</title>
   {% elsif page.title %}

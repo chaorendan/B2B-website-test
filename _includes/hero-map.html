@@ -21,12 +21,17 @@
 
   <aside class="hero-card">
     <div class="card">
-      <img class="avatar"
-           src="{{ '/assets/images/profile/avatar-256.png' | relative_url }}"
-           srcset="{{ '/assets/images/profile/avatar-128.png' | relative_url }} 128w,
-                   {{ '/assets/images/profile/avatar-256.png' | relative_url }} 256w"
-           sizes="88px" width="88" height="88" alt="彭俊超"
-           loading="eager" decoding="async">
+      <picture>
+        <source srcset="{{ '/assets/images/profile/avatar-128.webp' | relative_url }} 128w,
+                        {{ '/assets/images/profile/avatar-256.webp' | relative_url }} 256w"
+                sizes="88px" type="image/webp">
+        <img class="avatar"
+             src="{{ '/assets/images/profile/avatar-256.png' | relative_url }}"
+             srcset="{{ '/assets/images/profile/avatar-128.png' | relative_url }} 128w,
+                     {{ '/assets/images/profile/avatar-256.png' | relative_url }} 256w"
+             sizes="88px" width="88" height="88" alt="彭俊超"
+             loading="eager" decoding="async">
+      </picture>
       <div class="name">彭俊超<span class="en">Junchao Peng</span></div>
       <div class="meta">长江大学 · 地理信息科学（产业计划）</div>
       <div class="meta">创作，地理，法语。广西梧州人。INTJ。</div>
@@ -38,6 +43,6 @@
   </aside>
 </section>
 
-<script src="{{ '/assets/js/lib/d3.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/lib/topojson-client.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/terminator.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/lib/d3-geo.min.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/lib/topojson-client.min.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/terminator.js' | relative_url }}" defer></script>

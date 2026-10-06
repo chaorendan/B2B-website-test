@@ -16,9 +16,9 @@ alternate:
 <div class="section-title">入口</div>
 
 <div class="grid">
-  <a class="tile" href="{{ '/kb/' | relative_url }}"><b>🛰 知识库 /kb/</b><span>搜索广告、数据分析、内容营销、自动化工具的整理笔记</span></a>
-  <a class="tile" href="{{ '/projects/' | relative_url }}"><b>🧭 项目与案例 /projects/</b><span>正在进行的实验与复盘</span></a>
-  <a class="tile" href="{{ '/about/' | relative_url }}"><b>👤 关于我 /about/</b><span>更完整的经历、技能与联系方式</span></a>
+  <a class="tile" href="{{ '/kb/' | relative_url }}"><b>🛰 知识库</b><span>搜索广告、数据分析、内容营销、自动化工具的整理笔记</span></a>
+  <a class="tile" href="{{ '/projects/' | relative_url }}"><b>🧭 项目与案例</b><span>正在进行的实验与复盘</span></a>
+  <a class="tile" href="{{ '/about/' | relative_url }}"><b>👤 关于我</b><span>更完整的经历、技能与联系方式</span></a>
 </div>
 
 ## 为什么网站域名叫 chaorendan——超人蛋？

@@ -3,7 +3,7 @@
    - 太阳直射点：NOAA 低精度太阳位置方程（赤纬 + 时差 EoT）
    - 夜半球：以反日点 antisolar 为圆心、半径 90° 的球面圆（物理正确）
    - 地图数据：自托管 land-110m（Natural Earth 陆地轮廓，不画国界/行政区界）
-   依赖：assets/js/lib/d3.min.js、assets/js/lib/topojson-client.min.js
+   依赖：assets/js/lib/d3-geo.min.js（自定义构建，仅含 d3-geo + d3-fetch）、assets/js/lib/topojson-client.min.js
    ============================================================ */
 (function(){
   var canvas = document.getElementById('map');

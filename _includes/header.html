@@ -5,19 +5,28 @@
     {%- assign page_paths = site.header_pages | default: default_paths -%}
     
     <a class="site-title site-title--with-avatar" rel="author" href="{{ '/' | relative_url }}">
-      <img
-        class="site-avatar"
-        src="{{ '/assets/images/brand/firebird-128.png' | relative_url }}"
-        srcset="{{ '/assets/images/brand/firebird-64.png' | relative_url }} 64w,
-                {{ '/assets/images/brand/firebird-128.png' | relative_url }} 128w,
-                {{ '/assets/images/brand/firebird-256.png' | relative_url }} 256w"
-        sizes="40px"
-        width="40" height="40"
-        alt="chaorendan 火鸟标志"
-        loading="eager"
-        decoding="async"
-        fetchpriority="high" />
-      <span class="site-title__text">chaorendan</span>
+      <picture>
+        <source srcset="{{ '/assets/images/brand/firebird-64.webp' | relative_url }} 64w,
+                        {{ '/assets/images/brand/firebird-128.webp' | relative_url }} 128w,
+                        {{ '/assets/images/brand/firebird-256.webp' | relative_url }} 256w"
+                sizes="40px" type="image/webp">
+        <img
+          class="site-avatar"
+          src="{{ '/assets/images/brand/firebird-128.png' | relative_url }}"
+          srcset="{{ '/assets/images/brand/firebird-64.png' | relative_url }} 64w,
+                  {{ '/assets/images/brand/firebird-128.png' | relative_url }} 128w,
+                  {{ '/assets/images/brand/firebird-256.png' | relative_url }} 256w"
+          sizes="40px"
+          width="40" height="40"
+          alt="chaorendan 火鸟标志"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high" />
+      </picture>
+      <span class="site-title__block">
+        <span class="site-title__text">chaorendan 超人蛋，我的独立站</span>
+        <span class="site-title__subtitle">忍受寂寞，努力拼搏，坚持不懈，生活里的普通人，其实是还未破壳的超人蛋。</span>
+      </span>
     </a>
     
     {%- if page_paths -%}
