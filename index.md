@@ -13,23 +13,6 @@ alternate:
 
 {% include hero-map.html %}
 
-<div class="card">
-  <img class="avatar"
-       src="{{ '/assets/images/profile/avatar-256.png' | relative_url }}"
-       srcset="{{ '/assets/images/profile/avatar-128.png' | relative_url }} 128w,
-               {{ '/assets/images/profile/avatar-256.png' | relative_url }} 256w"
-       sizes="88px" width="88" height="88" alt="彭俊超"
-       loading="lazy" decoding="async">
-  <div class="name">彭俊超<span class="en">Junchao Peng</span></div>
-  <div class="meta">长江大学 · 地理信息科学（产业计划）</div>
-  <div class="meta">创作，地理，法语。广西梧州人。INTJ。</div>
-  <div class="divider"></div>
-  <div class="meta">发布于 <time id="now">--:--:--</time></div>
-  <div class="card-cta">
-    <a class="btn primary" href="https://sooon.ai/s/r/3KVBGlekVOmXSoSaXOP4lK" target="_blank" rel="noopener">📇 打开我的素问名片</a>
-  </div>
-</div>
-
 <div class="section-title">入口</div>
 
 <div class="grid">

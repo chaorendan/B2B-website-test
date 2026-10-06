@@ -51,13 +51,6 @@
     return { lat: dr*180/Math.PI, lon: lon };
   }
 
-  /* 球面角距（度）：判定某点位于昼/夜半球 */
-  function angDist(a, b){
-    var d = Math.PI/180;
-    var c = Math.sin(a[1]*d)*Math.sin(b[1]*d) + Math.cos(a[1]*d)*Math.cos(b[1]*d)*Math.cos((a[0]-b[0])*d);
-    return Math.acos(Math.min(1, Math.max(-1, c)))/d;
-  }
-
   function resize(){
     var r = canvas.parentElement.getBoundingClientRect();
     var dpr = window.devicePixelRatio || 1;
@@ -123,14 +116,6 @@
     ctx.beginPath(); path(night);
     ctx.strokeStyle = P.term; ctx.lineWidth = 1; ctx.stroke();
 
-    /* 自检徽章：北京此刻位于昼/夜半球（到暗区中心 < 90° = 夜），与图中暗区互证 */
-    var bjNight = angDist(BEIJING, darkCenter) < 90;
-    var badge = document.getElementById('map-check');
-    if(badge){
-      badge.textContent = bjNight ? '🌙 北京 · 此刻黑夜' : '☀️ 北京 · 此刻白天';
-      badge.setAttribute('data-state', bjNight ? 'night' : 'day');
-    }
-
     /* 太阳直射点：暖黄光晕 */
     var s = projection([sun.lon, sun.lat]);
     if(s){
@@ -159,16 +144,6 @@
     }
     ctx.textAlign = 'start';
   }
-
-  /* 卡片「发布于」时间 */
-  var nowEl = document.getElementById('now');
-  function tickNow(){
-    if(!nowEl) return;
-    nowEl.textContent = new Intl.DateTimeFormat('zh-CN',
-      {month:'2-digit', day:'2-digit', hour:'2-digit', minute:'2-digit',
-       second:'2-digit', hour12:false}).format(new Date());
-  }
-  tickNow(); setInterval(tickNow, 1000);
 
   window.addEventListener('resize', resize);
   document.addEventListener('chaorendan:themechange', draw);
