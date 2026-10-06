@@ -1,6 +1,7 @@
 # Site settings
 title: "超人蛋 · 彭俊超"
 description: "GIS 空间分析 × 数字营销 × SEO —— 彭俊超的个人主页与增长知识库"
+email: "pengjunchao.ads@gmail.com"
 url: "https://chaorendan.top"
 baseurl: ""
 theme: minima

@@ -9,3 +9,14 @@ vendor
 # but GitHub Actions runners cannot reach that host, which broke the build.
 # Keep the file on disk; never commit it.
 .bundle/
+
+# ---------- 本地工作区（不发布，勿提交） ----------
+# 仓库是公开的：以下内容含内部策略、实验日志、原型草稿与原图，
+# 一次 `git add -A` 就会永久进入公开历史。见 growth-lab/SECURITY-PRIVACY-PLAN.md P0-3。
+.workbuddy/
+growth-lab/
+image/
+头像.png
+
+# 本地冒烟测试产物（临时 mock 页）
+preview-*.html

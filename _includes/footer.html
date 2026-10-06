@@ -1,0 +1,14 @@
+<footer class="site-footer h-card">
+  <div class="wrapper">
+    <p class="footer-line">
+      <span class="footer-copy">&copy; {{ site.time | date: "%Y" }} {{ site.title | escape }}</span>
+      <span class="footer-dot" aria-hidden="true">&middot;</span>
+      <a href="{{ '/privacy/' | relative_url }}">隐私政策</a>
+      <span class="footer-dot" aria-hidden="true">&middot;</span>
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+    </p>
+    {%- if site.description %}
+    <p class="footer-desc">{{ site.description | escape }}</p>
+    {%- endif %}
+  </div>
+</footer>

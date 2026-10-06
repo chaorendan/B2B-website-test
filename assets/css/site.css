@@ -1,0 +1,58 @@
+/* ---------- 站点级样式：页脚 与 长文页（隐私政策等） ---------- */
+
+/* 页脚：不依赖主题变量，日/夜两种模式下都可读 */
+.site-footer{
+  border-top:1px solid rgba(128,128,128,.28);
+  padding:26px 0;
+  margin-top:0;
+}
+.site-footer .footer-line{
+  margin:0;
+  font-size:14px;
+  line-height:1.9;
+  opacity:.78;
+  display:flex;
+  flex-wrap:wrap;
+  gap:4px 10px;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.site-footer .footer-line a{
+  text-decoration:underline;
+  text-underline-offset:2px;
+}
+.site-footer .footer-dot{opacity:.55}
+.site-footer .footer-copy{white-space:nowrap}
+.site-footer .footer-desc{
+  margin:10px 0 0;
+  font-size:13px;
+  line-height:1.7;
+  opacity:.6;
+  text-align:center;
+}
+
+/* 长文页：标题层级更清晰、表格在窄屏可横向滚动 */
+.page-content .wrapper h2{margin-top:1.9em;line-height:1.4}
+.page-content .wrapper h3{margin-top:1.5em}
+.page-content .wrapper table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+  display:block;
+  overflow-x:auto;
+}
+.page-content .wrapper th,
+.page-content .wrapper td{
+  border:1px solid rgba(128,128,128,.3);
+  padding:8px 10px;
+  text-align:left;
+  vertical-align:top;
+}
+.page-content .wrapper th{white-space:nowrap;font-weight:600}
+.page-content .wrapper hr{margin:2.4em 0;opacity:.4}
+.page-content .wrapper blockquote{
+  border-left:3px solid rgba(128,128,128,.35);
+  padding-left:1em;
+  opacity:.9;
+}
