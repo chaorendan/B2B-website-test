@@ -57,7 +57,7 @@
     canvas.width = r.width * dpr; canvas.height = r.height * dpr;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     projection = d3.geoEquirectangular()
-      .fitExtent([[-r.width*0.06, -r.height*0.52],[r.width*1.06, r.height*1.52]], {type:'Sphere'});
+      .fitExtent([[-r.width*0.06, -r.height*0.35],[r.width*1.06, r.height*1.35]], {type:'Sphere'});
     path = d3.geoPath(projection, ctx);
     draw();
   }
@@ -140,7 +140,7 @@
       ctx.strokeStyle = P.utcStroke; ctx.lineWidth = 3;
       ctx.strokeText(label, p[0], r.height - 10);
       ctx.fillStyle = P.utc;
-      ctx.fillText(label, p[0], r.height - 10);
+      ctx.fillText(label, p[0], r.height - 35);
     }
     ctx.textAlign = 'start';
   }
