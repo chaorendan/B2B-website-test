@@ -70,10 +70,11 @@
   font-weight: 400;
   font-family: var(--font-brand);
   color: var(--muted, #6a7a8a);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 380px;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  max-width: none;
+  line-height: 1.5;
   margin-top: 2px;
 }
 
@@ -100,10 +101,10 @@
   }
 }
 
-/* 中等屏幕收窄副标题宽度 */
+/* 中等屏幕保持副标题可换行，不再限制宽度 */
 @media (max-width: 900px) {
   .site-title--with-avatar .site-title__subtitle {
-    max-width: 220px;
+    max-width: none;
   }
 }
 

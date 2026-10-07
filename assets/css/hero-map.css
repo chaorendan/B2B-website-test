@@ -55,15 +55,18 @@ html[data-theme="night"] td{border-color:#22314a}
   display:inline-flex;align-items:center;justify-content:center;
   transition:transform .2s ease,background-color .35s ease}
 .theme-toggle:hover{transform:scale(1.08)}
-@media (max-width:600px){.theme-toggle{width:34px;height:34px;font-size:15px}}
+.lang-toggle{width:auto;padding:0 12px;border-radius:999px;font-size:13px;font-weight:500;white-space:nowrap}
+@media (max-width:600px){
+  .theme-toggle{width:34px;height:34px;font-size:15px}
+  .lang-toggle{padding:0 10px;font-size:12px}
+}
 
 /* ---------- Hero：晨昏线地图 ----------
-   Hero 需要通栏：从 minima 的 .wrapper（居中）中向左破出到视口边缘。
-   父级左右对称，故 margin-left:calc(50% - 50vw) 恰好把左边缘顶到 0。
-   100vw 含滚动条宽度，用 html{overflow-x:hidden} 兜住（minima 的 header 非 sticky，无副作用）。 */
+   Hero 限制在 .wrapper 内容宽度内，与下方入口磁贴对齐；
+   地图 Canvas 不再通栏出血，避免底部被截断。 */
 html{overflow-x:hidden}
-.hero{position:relative;min-height:70vh;display:flex;align-items:stretch;overflow:hidden;
-  width:100vw;margin-left:calc(50% - 50vw)}
+.hero{position:relative;min-height:clamp(360px, 52vh, 520px);max-height:min(560px, calc(100vh - 240px));
+  display:flex;align-items:stretch;overflow:hidden;width:100%}
 /* 左侧：晨昏线地图舞台（画布铺满舞台，文案与艺术字叠在其上） */
 .hero-stage{position:relative;flex:1 1 auto;min-width:0;display:flex;align-items:center}
 #map{position:absolute;inset:0;width:100%;height:100%;display:block}
@@ -117,9 +120,9 @@ html{overflow-x:hidden}
 
 @media (max-width:860px){.art-title{display:none}}
 @media (max-width:680px){
-  .hero{flex-direction:column;min-height:0}
-  .hero-stage{width:100%;min-height:56vh}
-  .hero-inner{padding:48px 22px 48px 8%}
-  .hero-card{flex:none;width:min(340px,88%);margin:26px auto 40px;background:transparent}
+  .hero{flex-direction:column;min-height:0;max-height:none}
+  .hero-stage{width:100%;min-height:clamp(260px, 42vh, 380px)}
+  .hero-inner{padding:40px 22px 40px 8%}
+  .hero-card{flex:none;width:min(340px,92%);margin:22px auto 36px;background:transparent}
 }
 @media (max-width:600px){.wrap{padding:28px 18px 60px}}

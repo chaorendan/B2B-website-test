@@ -25,7 +25,7 @@
       </picture>
       <span class="site-title__block">
         <span class="site-title__text">chaorendan 超人蛋的独立站</span>
-        <span class="site-title__subtitle">———忍受寂寞，努力拼搏，坚持不懈，生活里的普通人，是尚未破壳的超人蛋。</span>
+        <span class="site-title__subtitle">忍受寂寞，努力拼搏，坚持不懈 —— 所谓普通人，都是还没破壳的超人蛋。</span>
       </span>
     </a>
     
@@ -47,20 +47,18 @@
               <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
             {%- endif -%}
           {%- endfor -%}
-          
-          <!-- Language Switch -->
-          <span class="page-link lang-switch-nav" style="border-left: 1px solid #bbb; margin-left: 0.5em; padding-left: 0.5em;">
-            {% if page.lang == "fr" %}
-              <a href="{{ '/' | relative_url }}" title="English">EN</a> | <a href="{{ '/' | relative_url }}" title="中文">中文</a>
-            {% elsif page.lang == "zh" %}
-              <a href="{{ '/fr/' | relative_url }}" title="Français">FR</a>
-            {% else %}
-              <a href="{{ '/fr/' | relative_url }}" title="Français">FR</a>
-            {% endif %}
-          </span>
         </div>
       </nav>
     {%- endif -%}
+
+    {%- if page.lang == "fr" -%}
+      {%- assign alt_lang_url = "/" | relative_url -%}
+    {%- else -%}
+      {%- assign alt_lang_url = "/fr/" | relative_url -%}
+    {%- endif -%}
+    <button class="theme-toggle lang-toggle" id="lang-toggle" type="button"
+            aria-label="切换语言" title="切换语言"
+            onclick="location.href='{{ alt_lang_url }}'">切换语言</button>
 
     <button class="theme-toggle" id="theme-toggle" type="button"
             aria-label="切换日间/夜间模式" aria-pressed="false" title="切换到夜间模式">🌙</button>

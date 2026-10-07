@@ -56,8 +56,9 @@
     var dpr = window.devicePixelRatio || 1;
     canvas.width = r.width * dpr; canvas.height = r.height * dpr;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    var pad = 12;
     projection = d3.geoEquirectangular()
-      .fitExtent([[-r.width*0.06, -r.height*0.35],[r.width*1.06, r.height*1.35]], {type:'Sphere'});
+      .fitExtent([[pad, pad], [r.width - pad, r.height - pad]], {type:'Sphere'});
     path = d3.geoPath(projection, ctx);
     draw();
   }
