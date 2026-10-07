@@ -3,6 +3,30 @@
    引入位置：_includes/head.html （在 minima 的 main.css 之后）
    ========================================================================== */
 
+/* ---------- 0. 霞鹜文楷 LXGW WenKai（仅标题栏用字子集，自托管 woff2）
+   主标题用 Medium(500)，副标题用 Regular(400)；
+   每档仅含标题实际用字（~41 字形 / 8.8KB），font-display:swap 不阻塞渲染。
+   字体许可：SIL OFL 1.0（https://github.com/lxgw/LxgwWenKai） ---------- */
+@font-face{
+  font-family:"LXGW WenKai";
+  src:url("/assets/fonts/lxgw-wenkai-medium.woff2") format("woff2");
+  font-weight:500;
+  font-style:normal;
+  font-display:swap;
+}
+@font-face{
+  font-family:"LXGW WenKai";
+  src:url("/assets/fonts/lxgw-wenkai-regular.woff2") format("woff2");
+  font-weight:400;
+  font-style:normal;
+  font-display:swap;
+}
+/* 标题栏字体栈：文楷优先，缺字/未加载时回退到系统楷体→无衬线 */
+:root{
+  --font-brand:"LXGW WenKai","KaiTi","STKaiti","楷体","DFKai-SB",
+               "PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+}
+
 /* ---------- 1. 头像与站名并排 ---------- */
 
 .site-title--with-avatar {
@@ -37,11 +61,14 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   font-size: 17px;
-  font-weight: 700;
+  font-weight: 500; /* LXGW WenKai Medium，避免浏览器合成粗体 */
+  font-family: var(--font-brand);
 }
 
 .site-title--with-avatar .site-title__subtitle {
-  font-size: 11.5px;
+  font-size: 12px; /* 文楷笔画较细，小字号需略放大保证可读 */
+  font-weight: 400;
+  font-family: var(--font-brand);
   color: var(--muted, #6a7a8a);
   white-space: nowrap;
   overflow: hidden;

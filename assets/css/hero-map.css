@@ -87,7 +87,7 @@ html{overflow-x:hidden}
 .art-title{position:absolute;z-index:2;left:3.5%;top:50%;transform:translateY(-50%);
   writing-mode:vertical-rl;white-space:nowrap;
   font-family:"KaiTi","STKaiti","楷体","DFKai-SB",serif;
-  font-size:min(4vw, 5.6vh);font-weight:700;color:var(--art);
+  font-size:min(3.2vw, 4.5vh);font-weight:700;color:var(--art);
   letter-spacing:.32em;line-height:1.28;text-shadow:var(--art-shadow);
   display:flex;align-items:flex-start;gap:6px;user-select:none;transition:color .35s ease}
 .art-title .col-a{border-right:1px solid var(--art-line);padding-right:12px}

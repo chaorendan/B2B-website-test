@@ -39,6 +39,9 @@
   <!-- Preload critical above-the-fold resources -->
   <link rel="preload" href="{{ '/assets/images/profile/avatar-256.webp' | relative_url }}" as="image" type="image/webp">
   <link rel="preload" href="{{ '/assets/css/hero-map.css' | relative_url }}" as="style">
+  <!-- 霞鹜文楷标题子集（OFL 1.0），font-display:swap；crossorigin 为字体预加载必需 -->
+  <link rel="preload" href="{{ '/assets/fonts/lxgw-wenkai-medium.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/lxgw-wenkai-regular.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
 
   {% if page.seo_title %}
     <title>{{ page.seo_title }}</title>
