@@ -12,6 +12,8 @@ difficulty: "beginner"
 description: "Google Ads 搜索广告入门指南，涵盖关键词策略、匹配类型、广告系列结构等基础知识，帮助 B2B 企业快速上手搜索广告投放。"
 date: 2026-05-22
 last_modified: 2026-05-22
+featured: true
+featured_order: 1
 time_to_read: 6
 prerequisites: []
 next_steps:
@@ -112,7 +114,7 @@ Google Ads 提供三种主要匹配类型：
 | **词组匹配** | `"keyword"` | 包含关键词的短语 | 平衡流量与精准度 |
 | **广泛匹配** | `keyword` | 相关搜索及同义词 | 探索新关键词，预算充足 |
 
-详细内容请参考 [匹配类型详解](match-types-guide/)。
+各匹配类型的详细拆解正在整理中，发布后会在此补充链接。
 
 ---
 
@@ -198,10 +200,10 @@ Google Ads 提供三种主要匹配类型：
 ## 进阶阅读
 
 掌握基础后，建议继续学习：
-- [关键词研究方法](keyword-research/) - 系统化的 B2B 关键词挖掘
-- [匹配类型详解](match-types-guide/) - 深入理解匹配机制
-- [出价策略优化](bidding-strategies/) - 优化广告投入产出比
-- [否定关键词策略](negative-keywords/) - 排除无效流量
+- [关键词研究方法]({{ site.baseurl }}/kb/google-ads/02-search-campaigns/keyword-research/) - 系统化的 B2B 关键词挖掘
+- 匹配类型详解（整理中） - 深入理解匹配机制
+- 出价策略优化（整理中） - 优化广告投入产出比
+- 否定关键词策略（整理中） - 排除无效流量
 
 ---
 

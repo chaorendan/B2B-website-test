@@ -1,0 +1,38 @@
+{% comment %} 首页「精选内容」：精选知识库条目（front matter 里 featured: true）+ 代表案例 {% endcomment %}
+{% assign kb_featured = site.knowledge | where: "featured", true | sort: "featured_order" %}
+{% assign geo_featured = site.geo | where: "featured", true | sort: "featured_order" %}
+{% assign proj_featured = site.projects | sort: "date" | reverse %}
+
+{% if kb_featured.size > 0 or geo_featured.size > 0 or proj_featured.size > 0 %}
+<section class="featured" aria-label="精选内容">
+  <div class="section-title">精选内容</div>
+  <div class="grid">
+    {% for p in kb_featured limit: 2 %}
+      <a class="tile" href="{{ p.url | relative_url }}">
+        <em class="tag">知识库</em>
+        <b>{{ p.title }}</b>
+        <span>{{ p.description | default: "" | truncate: 68 }}</span>
+      </a>
+    {% endfor %}
+    {% for p in geo_featured limit: 1 %}
+      <a class="tile" href="{{ p.url | relative_url }}">
+        <em class="tag">GEO</em>
+        <b>{{ p.title }}</b>
+        <span>{{ p.description | default: "" | truncate: 68 }}</span>
+      </a>
+    {% endfor %}
+    {% for p in proj_featured limit: 1 %}
+      <a class="tile" href="{{ p.url | relative_url }}">
+        <em class="tag">案例</em>
+        <b>{{ p.title }}</b>
+        <span>{{ p.description | default: "" | truncate: 68 }}</span>
+      </a>
+    {% endfor %}
+  </div>
+  <p class="featured-more">
+    <a href="{{ '/kb/' | relative_url }}">浏览全部知识库 →</a>
+    <span class="featured-sep">·</span>
+    <a href="{{ '/projects/' | relative_url }}">查看全部案例 →</a>
+  </p>
+</section>
+{% endif %}

@@ -15,14 +15,16 @@ date: 2026-05-22
 
 ## 内容导航
 
+> 本板块的子主题正在整理中。**已发布**的页面以链接列出，尚未发布的以纯文本标注，避免跳转到不存在的页面。
+
 ### 线索生成
-- [线索生成策略](lead-generation-tactics/) - 高转化线索获取方法
-- [长销售周期优化](long-sales-cycle-optimization/) - 多触点培育策略
+- 线索生成策略 — 高转化线索获取方法
+- 长销售周期优化 — 多触点培育策略
 
 ### 高级策略
-- [ABM 策略](account-based-marketing/) - 目标客户营销与精准投放
-- [LinkedIn 受众同步](linkedin-audience-sync/) - 跨平台受众数据整合
-- [CRM 集成](crm-integration/) - 广告平台与 CRM 数据打通
+- ABM 策略 — 目标客户营销与精准投放
+- LinkedIn 受众同步 — 跨平台受众数据整合
+- CRM 集成 — 广告平台与 CRM 数据打通
 
 ---
 

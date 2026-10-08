@@ -23,6 +23,8 @@ alternate:
   <a class="tile" href="{{ '/about/' | relative_url }}"><b>👤 关于我</b><span>更完整的经历、技能与联系方式</span></a>
 </div>
 
+{% include featured.html %}
+
 ## 为什么网站域名叫 chaorendan——超人蛋？
 
 `chaorendan` = **超人蛋**。生活的每个的普通人，都是自己的英雄，是尚未破壳的超人蛋

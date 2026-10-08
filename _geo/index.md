@@ -5,6 +5,8 @@ seo_title: "GEO 地理本地化完全指南 | 地域定向流量优化"
 permalink: /geo/
 description: "GEO 地理本地化核心逻辑、价值定义、与 SEO 的核心区分，以及 GIS 专业在数字营销中的差异化优势。"
 lang: "zh"
+featured: true
+featured_order: 1
 ---
 
 # GEO 地理本地化概述

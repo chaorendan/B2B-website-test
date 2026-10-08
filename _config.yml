@@ -20,6 +20,9 @@ collections:
   knowledge:
     output: true
     permalink: /kb/:path/
+  projects:
+    output: true
+    permalink: /projects/:path/
   fr:
     output: true
   geo:
@@ -30,6 +33,14 @@ defaults:
   - scope:
       path: "_knowledge"
       type: "knowledge"
+    values:
+      layout: "page"
+      author: "彭俊超"
+      published: true
+      lang: "zh"
+  - scope:
+      path: "_projects"
+      type: "projects"
     values:
       layout: "page"
       author: "彭俊超"

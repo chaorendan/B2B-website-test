@@ -4,6 +4,8 @@ title: "Google Ads API 概述"
 seo_title: "Google Ads API 概述 | 版本演进与核心能力"
 description: "Google Ads API 与 AdWords API 的区别、版本演进、适用场景与核心能力介绍。"
 lang: "zh"
+featured: true
+featured_order: 2
 ---
 
 # Google Ads API 概述

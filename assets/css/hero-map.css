@@ -151,6 +151,19 @@ html{overflow-x:hidden}
 .tile b{display:block;margin-bottom:6px}
 .tile span{font-size:13.5px;color:var(--muted)}
 
+/* ---------- 首页精选内容（复用 .grid/.tile，仅加类型标签与左侧色条） ---------- */
+.featured{margin-top:6px}
+.featured .grid{grid-template-columns:repeat(2,1fr)}
+.featured .tile{border-left:3px solid var(--accent2)}
+.featured .tile .tag{display:inline-block;font-size:11px;letter-spacing:.1em;color:var(--accent2);
+  border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-bottom:9px;font-style:normal}
+.featured .tile span{display:block;line-height:1.6}
+.featured-more{margin:14px 0 0;font-size:13.5px;color:var(--muted)}
+.featured-more a{color:var(--accent2);text-decoration:none}
+.featured-more a:hover{text-decoration:underline}
+.featured-sep{margin:0 8px;opacity:.5}
+@media (max-width:640px){.featured .grid{grid-template-columns:1fr}}
+
 @media (max-width:860px){
   .art-title{display:none}
   .hero-inner{padding-left:24px}
