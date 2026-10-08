@@ -4,11 +4,6 @@ title: "Couche Expérimentale Française"
 seo_title: "B2B Growth Knowledge Base - Version Française Expérimentale"
 description: "Version expérimentale française du B2B Growth Knowledge Base. Test de SEO multilingue et workflow de localisation AI-assistée."
 lang: "fr"
-alternate:
-  - lang: "fr"
-    url: /fr/
-  - lang: "en"
-    url: /
 ---
 
 # Couche Expérimentale Française
@@ -46,7 +41,7 @@ Cette version française est **expérimentale** et représente une petite fracti
 | Objectif | Statut |
 |----------|--------|
 | Structure URL multilingue | ✅ Implémenté |
-| hreflang tags | ✅ Implémenté |
+| hreflang tags | ⏸ Désactivé (contenu non équivalent) |
 | Navigation multilingue | ✅ Implémenté |
 | Workflow AI-localisation | 🔄 En test |
 | SEO français | 🔄 En test |

@@ -4,11 +4,6 @@ title: 首页
 seo_title: "超人蛋的个人站"
 description: "彭俊超的个人主页：正在探索数字营销与SEO，期待GEO的地理搜索优化的尝试。"
 lang: "zh"
-alternate:
-  - lang: "zh"
-    url: /
-  - lang: "fr"
-    url: /fr/
 ---
 
 {% include hero-map.html %}

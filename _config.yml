@@ -12,6 +12,7 @@ timezone: Asia/Shanghai
 gtm_container_id: "GTM-M2XCSSGJ"
 
 header_pages:
+  - blog/index.md
   - kb/index.md
   - projects.md
   - about.md
@@ -30,6 +31,17 @@ collections:
     permalink: /geo/:path/
 
 defaults:
+  # 博客文章（_posts/）：文件名必须是 ASCII 英文，标题写在 title 里
+  # 原因：Jekyll 默认 slugify 只保留 ASCII，中文文件名会被压成空 slug 导致 URL 异常
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: "/blog/:title/"
+      author: "彭俊超"
+      published: true
+      lang: "zh"
   - scope:
       path: "_knowledge"
       type: "knowledge"

@@ -1,0 +1,30 @@
+{% comment %}
+  页脚常见问题
+  - 数据源：_data/faq.yml（唯一事实来源）
+  - 纯 <details>/<summary>：零 JS、爬虫可读、键盘可达
+  - data 文件不经 Liquid 处理，故联系邮箱在模板侧用 site.email 拼接
+  升级路径：条目 ≥10 条时新增 /faq/ 页复用同一份 faq.yml，页脚改为只留入口链接
+{% endcomment %}
+{%- assign faq_items = site.data.faq.items -%}
+{%- if faq_items and faq_items.size > 0 %}
+<section class="site-faq" aria-labelledby="site-faq-heading">
+  <h2 class="site-faq__heading" id="site-faq-heading">{{ site.data.faq.title | default: "常见问题" }}</h2>
+  <div class="site-faq__list">
+    {%- for item in faq_items %}
+    <details class="site-faq__item">
+      <summary class="site-faq__q">{{ item.q }}</summary>
+      <div class="site-faq__a">
+        <p>{{ item.a }}</p>
+        {%- if item.contact %}
+        <p class="site-faq__contact">
+          <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+          <span class="site-faq__sep" aria-hidden="true">&middot;</span>
+          <a href="{{ '/contact/' | relative_url }}">留言表单</a>
+        </p>
+        {%- endif %}
+      </div>
+    </details>
+    {%- endfor %}
+  </div>
+</section>
+{%- endif %}

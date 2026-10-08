@@ -32,11 +32,6 @@ translated_from:
   url: /kb/google-ads/02-search-campaigns/keyword-research/
   lang: "zh"
   date: 2026-05-22
-hreflang:
-  zh: /kb/google-ads/02-search-campaigns/keyword-research/
-alternate:
-  - lang: "zh"
-    url: /kb/google-ads/02-search-campaigns/keyword-research/
 
 # ===== Articles Associés =====
 prerequisites: []

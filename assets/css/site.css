@@ -56,3 +56,169 @@
   padding-left:1em;
   opacity:.9;
 }
+
+/* ---------- 页脚常见问题（数据源 _data/faq.yml，渲染于 _includes/faq.html） ---------- */
+.site-faq{
+  max-width:640px;
+  margin:0 auto 4px;
+  text-align:left;
+}
+.site-faq__heading{
+  margin:0 0 8px;
+  font-size:14px;
+  font-weight:600;
+  line-height:1.6;
+  text-align:center;
+  opacity:.72;
+}
+.site-faq__list{border-top:1px solid rgba(128,128,128,.2)}
+.site-faq__item{border-bottom:1px solid rgba(128,128,128,.2)}
+.site-faq__q{
+  position:relative;
+  cursor:pointer;
+  list-style:none;
+  padding:11px 26px 11px 2px;
+  font-size:13.5px;
+  line-height:1.7;
+  opacity:.85;
+}
+.site-faq__q::-webkit-details-marker{display:none}
+.site-faq__q::after{
+  content:"+";
+  position:absolute;
+  right:6px;
+  top:10px;
+  font-size:15px;
+  line-height:1;
+  opacity:.5;
+}
+.site-faq__item[open] .site-faq__q::after{content:"–"}
+.site-faq__q:hover{opacity:1}
+.site-faq__a{padding:0 2px 13px}
+.site-faq__a p{
+  margin:0;
+  font-size:13px;
+  line-height:1.8;
+  opacity:.7;
+}
+.site-faq__contact{
+  margin-top:7px !important;
+  opacity:1 !important;
+}
+.site-faq__contact a{text-decoration:underline;text-underline-offset:2px}
+.site-faq__sep{margin:0 8px;opacity:.5}
+.site-faq + .footer-line{
+  margin-top:18px;
+  padding-top:18px;
+  border-top:1px solid rgba(128,128,128,.18);
+}
+
+/* ---------- 留言表单（mailto 提交，见 /contact/） ---------- */
+.contact-hint{
+  max-width:600px;
+  padding:12px 15px;
+  margin:16px 0 24px;
+  font-size:13.5px;
+  line-height:1.8;
+  border:1px solid rgba(128,128,128,.3);
+  border-left-width:3px;
+  border-radius:8px;
+  background:rgba(128,128,128,.05);
+  opacity:.85;
+}
+.contact-form{max-width:600px;margin:0 0 8px}
+.contact-form .field{margin-bottom:15px}
+.contact-form label{
+  display:block;
+  margin-bottom:6px;
+  font-size:13.5px;
+  line-height:1.6;
+  opacity:.8;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea{
+  width:100%;
+  box-sizing:border-box;
+  padding:9px 11px;
+  font:inherit;
+  font-size:14px;
+  line-height:1.7;
+  color:inherit;
+  background:rgba(128,128,128,.06);
+  border:1px solid rgba(128,128,128,.35);
+  border-radius:8px;
+}
+.contact-form textarea{min-height:140px;resize:vertical}
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus{
+  outline:2px solid rgba(128,128,128,.45);
+  outline-offset:1px;
+}
+.contact-form button{
+  padding:9px 22px;
+  font:inherit;
+  font-size:14px;
+  cursor:pointer;
+  color:inherit;
+  background:rgba(128,128,128,.13);
+  border:1px solid rgba(128,128,128,.45);
+  border-radius:8px;
+}
+.contact-form button:hover{background:rgba(128,128,128,.22)}
+.contact-form .field-note{
+  margin:5px 0 0;
+  font-size:12.5px;
+  line-height:1.7;
+  opacity:.6;
+}
+.contact-fallback{
+  max-width:600px;
+  padding:15px 17px;
+  margin:26px 0 0;
+  font-size:13.5px;
+  line-height:1.85;
+  border:1px solid rgba(128,128,128,.3);
+  border-radius:10px;
+  background:rgba(128,128,128,.05);
+  opacity:.88;
+}
+.contact-fallback p{margin:0 0 8px}
+.contact-fallback p:last-child{margin-bottom:0}
+
+/* ---------- 博客列表（/blog/） ---------- */
+.post-list{
+  list-style:none;
+  margin:22px 0 0;
+  padding:0;
+  border-top:1px solid rgba(128,128,128,.2);
+}
+.post-list__item{
+  margin:0;
+  padding:16px 2px;
+  border-bottom:1px solid rgba(128,128,128,.2);
+}
+.post-list__link{
+  font-size:15.5px;
+  line-height:1.6;
+  text-decoration:none;
+}
+.post-list__link:hover{text-decoration:underline;text-underline-offset:3px}
+.post-list__meta{
+  margin:6px 0 0;
+  font-size:13px;
+  line-height:1.75;
+  opacity:.64;
+}
+.post-list__sep{margin:0 8px;opacity:.6}
+
+/* 文章页：标题与日期 */
+.post-header{margin-bottom:1.2em}
+.page-content .wrapper .post-title{margin-bottom:6px;line-height:1.45}
+.page-content .wrapper .post-meta{
+  margin:0;
+  font-size:13px;
+  line-height:1.7;
+  opacity:.64;
+}
