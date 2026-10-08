@@ -13,6 +13,8 @@ alternate:
 
 {% include hero-map.html %}
 
+{% include daily-quote.html %}
+
 <div class="section-title">入口</div>
 
 <div class="grid">

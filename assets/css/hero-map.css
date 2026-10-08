@@ -125,6 +125,23 @@ html{overflow-x:hidden}
 .card .divider{width:56px;height:3px;border-radius:2px;background:var(--accent);opacity:.85;margin:18px auto}
 .card-cta{margin-top:20px}
 
+/* ---------- 每日一言（hero 下方整宽横幅） ---------- */
+.daily-quote{position:relative;width:min(1080px,94vw);left:50%;transform:translateX(-50%);
+  margin:clamp(22px,3.6vh,38px) 0 0}
+.daily-quote .quote{max-width:860px;margin:0 auto;padding:20px 26px 22px;
+  background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent2);
+  border-radius:16px;box-shadow:0 6px 24px rgba(28,43,58,.06);
+  transition:background-color .35s ease,border-color .35s ease}
+.quote-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}
+.quote-tag{font-size:12px;letter-spacing:.18em;color:var(--accent2)}
+.quote-date{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.quote-text{margin:0;font-family:"KaiTi","STKaiti","楷体","DFKai-SB",serif;
+  font-size:clamp(13.5px,1.45vw,16px);line-height:1.7;color:var(--muted);letter-spacing:.02em}
+.quote-text::before{content:"「";color:var(--accent2);opacity:.6;margin-right:2px}
+.quote-text::after{content:"」";color:var(--accent2);opacity:.6;margin-left:2px}
+.quote-tr{margin:6px 0 0;font-size:13.5px;line-height:1.55;color:var(--muted);opacity:.8}
+.quote-tr[lang="fr"]{margin-top:4px}
+
 /* ---------- 入口磁贴 ---------- */
 .section-title{font-size:14px;letter-spacing:.14em;color:var(--muted);margin:44px 0 14px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
