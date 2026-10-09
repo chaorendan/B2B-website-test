@@ -47,7 +47,9 @@ html[data-theme="night"] td{border-color:#22314a}
 
 /* ---------- 主题切换按钮 ---------- */
 /* minima 的 header 用 float 布局，改为 flex 才能让按钮与标题、导航同行 */
-.site-header .wrapper{display:flex;align-items:center;gap:14px}
+/* header 放开为全宽（仿主流工具站排版）：不跟随正文 740px wrapper，
+   标题区与导航各自贴近视口两侧，中间留白全部让给站名与座右铭 */
+.site-header .wrapper{display:flex;align-items:center;gap:14px;max-width:100%}
 .site-header .site-title{float:none;flex:0 1 auto;min-width:0}
 .site-header .site-nav{float:none;margin-left:auto;flex:0 0 auto}
 /* 导航三项强制单行不换行：flex 接管 minima 的 inline+margin 方案 */

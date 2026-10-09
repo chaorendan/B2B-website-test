@@ -72,8 +72,7 @@
   color: var(--muted, #6a7a8a);
   white-space: nowrap;      /* 单行：防止副标题换行撑高 Header 挤掉导航 */
   overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 300px;
+  text-overflow: ellipsis;  /* 仅作空间不足时的兜底；正常宽度下完整展示 */
   line-height: 1.5;
   margin-top: 2px;
 }
@@ -101,19 +100,14 @@
   }
 }
 
-/* 中等屏幕收窄副标题，保证导航三项始终单行 */
+/* ---------- 3. 中等屏幕：副标题完整宽度放不下，直接隐藏（与 ≤600px 行为一致） ---------- */
 @media (max-width: 900px) {
-  .site-title--with-avatar .site-title__subtitle {
-    max-width: 200px;
-  }
-}
-@media (max-width: 680px) {
   .site-title--with-avatar .site-title__subtitle {
     display: none;
   }
 }
 
-/* ---------- 3. 深色模式：头像描边 + 占位底色 ---------- */
+/* ---------- 4. 深色模式：头像描边 + 占位底色 ---------- */
 
 @media (prefers-color-scheme: dark) {
   .site-title--with-avatar .site-avatar {
