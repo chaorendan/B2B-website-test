@@ -31,8 +31,29 @@ collections:
     permalink: /geo/:path/
 
 defaults:
-  # 博客文章（_posts/）：文件名必须是 ASCII 英文，标题写在 title 里
-  # 原因：Jekyll 默认 slugify 只保留 ASCII，中文文件名会被压成空 slug 导致 URL 异常
+  # ---------------------------------------------------------------------------
+  # 博客文章（_posts/）数据结构 —— 唯一事实来源
+  # ---------------------------------------------------------------------------
+  # 必填：
+  #   title        文章标题（中文写这里，不要写进文件名）
+  #   date         发布日期，格式 YYYY-MM-DD HH:MM:SS +0800
+  #   description  一句话摘要（列表卡片、og:description 都用它）
+  # 选填：
+  #   cover         封面图路径，如 /assets/images/blog/xxx.jpg（相对站点根）
+  #                 不填 = 无封面，列表自动降级为「文字优先卡片」，详情页不显示图
+  #   cover_alt     封面替代文本（无障碍 + SEO）；不填则回落到文章标题
+  #   cover_caption 封面图注（可选，显示在封面下方）
+  #   tags          标签数组，如 [SEO, 独立站]；卡片上最多显示 3 个
+  #   categories    分类（暂不做分类归档页，仅作数据保留）
+  #   author        默认 彭俊超
+  #   published     false = 不发布（不进 site.posts、不进 sitemap）
+  #   lang          默认 zh
+  # 约束：
+  #   1. 文件名必须是 ASCII 英文（Jekyll slugify 会把中文压成空 slug）
+  #   2. front matter 是纯 YAML，禁止出现 {{ }} 或 {% %}（会导致整块被丢弃）
+  #   3. 正文用 Markdown，Liquid 标签只在模板里写
+  # 路由：列表 /blog/  ·  详情 /blog/:title/（文件名去掉日期部分即 slug）
+  # ---------------------------------------------------------------------------
   - scope:
       path: ""
       type: "posts"

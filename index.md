@@ -20,6 +20,8 @@ lang: "zh"
 
 {% include featured.html %}
 
+{% include latest-posts.html %}
+
 ## 为什么网站域名叫 chaorendan——超人蛋？
 
 `chaorendan` = **超人蛋**。生活的每个的普通人，都是自己的英雄，是尚未破壳的超人蛋

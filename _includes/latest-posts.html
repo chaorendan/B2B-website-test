@@ -1,0 +1,17 @@
+{%- comment -%}
+  首页「最新博文」条 —— 取最新 3 篇，与 /blog/ 复用 post-card 组件
+  用法：{% include latest-posts.html %}
+{%- endcomment -%}
+{%- if site.posts.size > 0 %}
+<section class="latest-posts">
+  <div class="section-title">最新博文</div>
+  <div class="post-grid">
+    {%- for post in site.posts limit:3 %}
+      {% include post-card.html post=post %}
+    {%- endfor %}
+  </div>
+  <p class="latest-posts__more">
+    <a href="{{ '/blog/' | relative_url }}">查看全部博文 &rarr;</a>
+  </p>
+</section>
+{%- endif %}

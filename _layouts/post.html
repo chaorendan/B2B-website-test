@@ -1,0 +1,69 @@
+---
+layout: default
+---
+{%- comment -%}
+  文章详情页骨架（/blog/:title/）
+  数据来自 _posts/*.md 的 front matter，字段规范见 _config.yml 的 posts defaults
+  与 growth-lab/BLOG-POST-SCHEMA.md
+{%- endcomment -%}
+
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time>
+      {%- if page.author %}
+      <span class="post-meta__sep" aria-hidden="true">&middot;</span>{{ page.author | escape }}
+      {%- endif -%}
+    </p>
+    {%- if page.description %}
+    <p class="post-summary">{{ page.description | escape }}</p>
+    {%- endif %}
+  </header>
+
+  {%- if page.cover %}
+  <figure class="post-cover">
+    <img class="post-cover__img"
+         src="{{ page.cover | relative_url }}"
+         alt="{{ page.cover_alt | default: page.title | escape }}"
+         width="1200" height="675"
+         decoding="async">
+    {%- if page.cover_caption %}
+    <figcaption class="post-cover__caption">{{ page.cover_caption | escape }}</figcaption>
+    {%- endif %}
+  </figure>
+  {%- endif %}
+
+  <div class="post-body">
+    {{ content }}
+  </div>
+
+  <footer class="post-footer">
+    {%- if page.tags %}
+    <p class="post-tags" aria-label="标签">
+      {%- for tag in page.tags %}<span class="post-card__tag">{{ tag | escape }}</span>{% endfor -%}
+    </p>
+    {%- endif %}
+
+    {%- if page.previous or page.next %}
+    <nav class="post-nav" aria-label="文章导航">
+      {%- if page.previous %}
+      <a class="post-nav__item post-nav__prev" href="{{ page.previous.url | relative_url }}">
+        <span class="post-nav__label">上一篇</span>
+        <span class="post-nav__title">{{ page.previous.title | escape }}</span>
+      </a>
+      {%- else %}
+      <span class="post-nav__item post-nav__placeholder" aria-hidden="true"></span>
+      {%- endif %}
+      {%- if page.next %}
+      <a class="post-nav__item post-nav__next" href="{{ page.next.url | relative_url }}">
+        <span class="post-nav__label">下一篇</span>
+        <span class="post-nav__title">{{ page.next.title | escape }}</span>
+      </a>
+      {%- endif %}
+    </nav>
+    {%- endif %}
+
+    <p class="post-back"><a href="{{ '/blog/' | relative_url }}">&larr; 回到博客列表</a></p>
+  </footer>
+</article>
