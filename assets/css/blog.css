@@ -142,6 +142,25 @@
 }
 .post-body{margin-top:2px}
 
+/* 正文内插图（markdown 里的 <figure>/<img>） */
+.post-body figure{margin:26px 0;text-align:center}
+.post-body figure img{
+  display:block;
+  max-width:100%;
+  height:auto;
+  margin:0 auto;
+  border:1px solid var(--line);
+  border-radius:10px;
+}
+.post-body figcaption{
+  margin:8px 0 0;
+  font-size:12.5px;
+  line-height:1.7;
+  color:var(--muted);
+}
+/* 小尺寸插图（如 283px 的地理位置图）：按原始尺寸居中，不放大到全宽 */
+.post-body figure.post-fig--small img{max-width:340px}
+
 .post-footer{
   margin-top:34px;
   padding-top:18px;

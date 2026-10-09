@@ -1,12 +1,10 @@
-{%- comment -%}
-  首页「最新博文」条 —— 取最新 3 篇，与 /blog/ 复用 post-card 组件
-  用法：{% include latest-posts.html %}
-{%- endcomment -%}
-{%- if site.posts.size > 0 %}
+{%- comment -%} 首页「最新博文」条 —— 取最新 3 篇中文文章（英文版在 /en/，lang 过滤防重复） {%- endcomment -%}
+{%- assign zh_posts = site.posts | where: "lang", "zh" -%}
+{%- if zh_posts.size > 0 %}
 <section class="latest-posts">
   <div class="section-title">最新博文</div>
   <div class="post-grid">
-    {%- for post in site.posts limit:3 %}
+    {%- for post in zh_posts limit:3 %}
       {% include post-card.html post=post %}
     {%- endfor %}
   </div>

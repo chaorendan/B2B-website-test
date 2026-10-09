@@ -56,15 +56,15 @@ html[data-theme="night"] td{border-color:#22314a}
 .site-nav .trigger{display:flex;align-items:center;gap:18px;white-space:nowrap}
 .site-nav .page-link{white-space:nowrap}
 .site-nav .trigger .page-link:not(:last-child){margin-right:0}
-/* 语言切换按钮：与导航、主题钮等距，自身不收缩 */
-#lang-toggle{flex:0 0 auto;margin-left:2px}
+/* 语言切换按钮（可能有多枚：中文 / EN / FR）：与导航、主题钮等距，自身不收缩 */
+.lang-toggle{flex:0 0 auto;margin-left:2px}
 /* 夜间模式下汉堡菜单下拉底色与图标跟随主题 */
 html[data-theme="night"] .site-nav{background:var(--panel);border-color:var(--line)}
 html[data-theme="night"] .menu-icon>svg{fill:#dce6f2}
 @media (max-width:600px){
   /* 汉堡键绝对定位在最右，主题钮/语言钮让出 52px 避免重叠 */
   .site-header .theme-toggle{margin-right:52px}
-  #lang-toggle{margin-left:0}
+  .lang-toggle{margin-left:0}
 }
 .theme-toggle{flex:none;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);
   background:var(--btn-bg);color:var(--text);cursor:pointer;font-size:17px;line-height:1;

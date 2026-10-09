@@ -51,14 +51,23 @@
       </nav>
     {%- endif -%}
 
-    {%- if page.lang == "fr" -%}
-      {%- assign alt_lang_url = "/" | relative_url -%}
-    {%- else -%}
-      {%- assign alt_lang_url = "/fr/" | relative_url -%}
+    {%- comment -%}
+      语言切换：按当前语言列出其它语言入口（中文 / EN / FR）。
+      路由：中文 / · 英文 /en/ · 法语 /fr/
+    {%- endcomment -%}
+    {%- assign cur_lang = page.lang | default: "zh" -%}
+    {%- if cur_lang != "zh" -%}
+    <button class="theme-toggle lang-toggle" type="button" title="切换到中文"
+            onclick="location.href='{{ '/' | relative_url }}'">中文</button>
     {%- endif -%}
-    <button class="theme-toggle lang-toggle" id="lang-toggle" type="button"
-            aria-label="切换语言" title="切换语言"
-            onclick="location.href='{{ alt_lang_url }}'" data-page-node-id="63cTwvZt7g88YaCQoe9SzE">切换语言</button>
+    {%- if cur_lang != "en" -%}
+    <button class="theme-toggle lang-toggle" type="button" title="Switch to English"
+            onclick="location.href='{{ '/en/' | relative_url }}'">EN</button>
+    {%- endif -%}
+    {%- if cur_lang != "fr" -%}
+    <button class="theme-toggle lang-toggle" type="button" title="Passer au français"
+            onclick="location.href='{{ '/fr/' | relative_url }}'">FR</button>
+    {%- endif -%}
 
     <button class="theme-toggle" id="theme-toggle" type="button"
             aria-label="切换日间/夜间模式" aria-pressed="false" title="切换到夜间模式" data-page-node-id="uuX1fSDBiAYB6AItzHPYcb">🌙</button>

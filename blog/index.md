@@ -13,9 +13,11 @@ lang: "zh"
 
 要找体系化的方法手册，去 [知识库](/kb/)；要看完整项目复盘，去 [项目与案例](/projects/)。
 
-{%- if site.posts.size > 0 %}
+{%- comment -%} 只列中文文章；英文版在 /en/（lang 过滤，避免双语重复出现） {%- endcomment -%}
+{%- assign zh_posts = site.posts | where: "lang", "zh" %}
+{%- if zh_posts.size > 0 %}
 <div class="post-grid">
-  {%- for post in site.posts %}
+  {%- for post in zh_posts %}
     {% include post-card.html post=post %}
   {%- endfor %}
 </div>
