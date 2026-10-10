@@ -21,7 +21,7 @@ For the structured method library, see the [Chinese knowledge base](/kb/); for f
   {%- endfor %}
 </div>
 {%- else %}
-<p class="post-empty">No English posts yet. Coming soon.</p>
+<p class="post-empty">No posts here yet.</p>
 {%- endif %}
 
 ---

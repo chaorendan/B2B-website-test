@@ -22,5 +22,5 @@ lang: "zh"
   {%- endfor %}
 </div>
 {%- else %}
-<p class="post-empty">还没有发布文章。第一篇正在路上。</p>
+<p class="post-empty">这里还没有文章。</p>
 {%- endif %}
