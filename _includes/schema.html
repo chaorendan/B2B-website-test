@@ -1,0 +1,59 @@
+{%- comment -%}
+  结构化数据（JSON-LD）—— 供搜索引擎与 AI 回答引擎抽取实体、作者与内容。
+  说明：
+    1. 分两个 <script> 块，避免条件分支造成 JSON 尾逗号错误。
+    2. 全站块：WebSite + Person（站点与作者实体，全站唯一）。
+    3. 文章块：仅当 layout == post 时输出 BlogPosting。
+    4. FAQPage 暂不输出：FAQ 目前是「页脚全站共用」的 5 条，若每页都标注 FAQPage 属重复标注；
+       等 FAQ 升级为独立 /faq/ 页后再补（见 ROADMAP A0）。
+{%- endcomment -%}
+{%- assign _base = site.url | append: site.baseurl -%}
+{%- assign _canonical = page.url | absolute_url | replace: '/index.html', '/' -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "{{ _base }}/#website",
+      "url": "{{ _base }}/",
+      "name": {{ site.title | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "inLanguage": {{ site.locale | default: "zh-CN" | jsonify }},
+      "publisher": { "@id": "{{ _base }}/#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": "{{ _base }}/#person",
+      "name": "彭俊超",
+      "alternateName": "chaorendan",
+      "url": "{{ _base }}/about/",
+      "email": "mailto:{{ site.email }}",
+      "jobTitle": "GIS 空间分析 / 数字营销 / SEO",
+      "knowsAbout": ["地理信息系统", "GIS 空间分析", "数字营销", "SEO", "GEO 地理搜索优化", "Google Ads"],
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "长江大学" },
+      "sameAs": ["https://github.com/chaorendan"]
+    }
+  ]
+}
+</script>
+{%- if page.layout == "post" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ _canonical }}" },
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | default: site.description | jsonify }},
+  {%- if page.cover %}
+  "image": {{ page.cover | absolute_url | jsonify }},
+  {%- endif %}
+  "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+  "dateModified": {{ page.date_modified | default: page.date | date_to_xmlschema | jsonify }},
+  "inLanguage": {{ page.lang | default: site.lang | default: "zh" | jsonify }},
+  "author": { "@id": "{{ _base }}/#person" },
+  "publisher": { "@id": "{{ _base }}/#person" },
+  "isPartOf": { "@id": "{{ _base }}/#website" }
+}
+</script>
+{%- endif %}

@@ -1,5 +1,40 @@
+# 全站放行：本站定位为「可被检索与引用的答案源」，欢迎搜索引擎与 AI 系统抓取。
 User-agent: *
+Allow: /
+
+# 显式放行主流 AI 检索 / 训练爬虫（信号意义：明确欢迎被引用）
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Doubao
 Allow: /
 
 # Sitemap
 Sitemap: https://chaorendan.top/sitemap.xml
+
+# LLM 站点说明
+# https://chaorendan.top/llms.txt

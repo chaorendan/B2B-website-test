@@ -1,10 +1,22 @@
 <!-- Override minima's head.html to add hreflang and GTM -->
 <head>
+  {%- comment -%}
+    统一标题解析：<title> / og:title / twitter:title / dataLayer.page_title 共用 _page_title，
+    避免裸 page.title（如「首页」）污染分享卡与 GA4。优先级：seo_title > 「title | 站点名」 > 站点名。
+  {%- endcomment -%}
+  {%- if page.seo_title -%}
+    {%- assign _page_title = page.seo_title -%}
+  {%- elsif page.title -%}
+    {%- assign _page_title = page.title | append: " | " | append: site.title -%}
+  {%- else -%}
+    {%- assign _page_title = site.title -%}
+  {%- endif -%}
+
   <!-- Google Tag Manager -->
   <script>
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
-      'page_title': '{{ page.title | default: site.title | escape }}',
+      'page_title': '{{ _page_title | escape }}',
       'page_language': '{{ page.lang | default: "en" }}',
       'page_category': '{{ page.category | default: "general" }}',
       'page_type': '{% if page.layout == "home" %}homepage{% elsif page.layout == "page" %}content{% else %}{{ page.layout }}{% endif %}'
@@ -43,13 +55,7 @@
   <link rel="preload" href="{{ '/assets/fonts/lxgw-wenkai-medium.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="{{ '/assets/fonts/lxgw-wenkai-regular.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
 
-  {% if page.seo_title %}
-    <title>{{ page.seo_title }}</title>
-  {% elsif page.title %}
-    <title>{{ page.title | escape }} | {{ site.title | escape }}</title>
-  {% else %}
-    <title>{{ site.title | escape }}</title>
-  {% endif %}
+  <title>{{ _page_title | escape }}</title>
 
   {% if page.description %}
     <meta name="description" content="{{ page.description | escape }}">
@@ -61,7 +67,7 @@
   <link rel="canonical" href="{{ canonical_url }}">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="{{ page.title | default: site.title | escape }}" />
+  <meta property="og:title" content="{{ _page_title | escape }}" />
   <meta property="og:description" content="{{ page.description | default: site.description | escape }}" />
   <meta property="og:type" content="{% if page.layout == 'home' %}website{% else %}article{% endif %}" />
   <meta property="og:url" content="{{ canonical_url }}" />
@@ -69,7 +75,7 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="{{ page.title | default: site.title | escape }}" />
+  <meta name="twitter:title" content="{{ _page_title | escape }}" />
   <meta name="twitter:description" content="{{ page.description | default: site.description | escape }}" />
 
   <!-- hreflang for multilingual SEO -->
@@ -89,5 +95,7 @@
   {% if site.plugins contains 'jekyll-feed' %}
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
   {% endif %}
+
+  {%- include schema.html -%}
 </head>
 {% include body-open.html %}

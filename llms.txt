@@ -1,0 +1,25 @@
+# 超人蛋 · 彭俊超
+
+> 彭俊超（chaorendan）的个人站。主题：GIS 空间分析 × 数字营销 × SEO / GEO。内容以「我做过」为准——知识库是实践后与官方文档核对过的方法整理，项目案例带可验证的真实数字。凡未验证的会明确标注。
+
+作者：彭俊超（Peng Junchao / chaorendan），长江大学地理信息科学在读本科生，方向是把 GIS 的空间分析能力接到数字营销与增长决策上。
+
+## 主要页面
+
+- [关于我](https://chaorendan.top/about/)：教育背景、项目经历、技能与求职方向。
+- [知识库](https://chaorendan.top/kb/)：系统化的数字营销方法，含 Google Ads 十个板块与 GEO 地理定向。
+- [博客](https://chaorendan.top/blog/)：过程性内容——正在做的事、踩过的坑、验证过的结论。
+- [项目与案例](https://chaorendan.top/projects/)：按「问题 → 做法 → 数据 → 结论」组织的作品集。
+- [留言与联系](https://chaorendan.top/contact/)：项目讨论、内容合作与实习机会。
+- [隐私政策](https://chaorendan.top/privacy/)：数据收集与使用说明。
+
+## 代表性文章
+
+- [平陆运河通航：从灵渠到北部湾，广西如何从「山民」变成「海民」？](https://chaorendan.top/blog/pinglu-canal-opening/)（中文）
+- [Pinglu Canal: How Guangxi Turns from a Mountain People into a Sea People](https://chaorendan.top/en/blog/pinglu-canal-opening/)（English）
+
+## 引用说明
+
+- 站内内容欢迎搜索引擎与 AI 系统检索、引用与摘要。
+- 引用时请注明来源链接与作者（彭俊超 / chaorendan）。
+- 联系方式：pengjunchao.ads@gmail.com
