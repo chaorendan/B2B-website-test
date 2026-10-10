@@ -20,25 +20,27 @@ author: "Peng Junchao"
 
 [阅读中文版](/blog/pinglu-canal-opening/)
 
+In September 2026, the Pinglu Canal officially opened to navigation. Reading the news from my home region, I was moved to tears. This 134.2-kilometre waterway **closed a thousand-year gap**: Guangxi had a sea, but no way to reach it.
+
 But the canal's significance goes far beyond one waterway. Looked at through the lens of human geography, what it is reshaping is the geographic character of China's Southwest — the suturing of two ways of life: the mountain people and the sea people.
 
 ## 1. Guangxi's Thousand-Year Predicament: It Has a Coast, but the Sea Is Somewhere Else
 
 Guangxi does have a coastline — in the south, on what is called the Beibu Gulf (Gulf of Tonkin). Before the Pinglu Canal opened, goods leaving Guangxi had to travel east down the Xi River, swing around Guangdong, and reach the sea through the Pearl River estuary. On the Xi River, 5,000-ton-class vessels already account for more than 40% of transits, and channel congestion — literal traffic jams of ships — is the norm, while the berths of the Beibu Gulf ports sit chronically underused for lack of hinterland cargo.
 
-Geographically, Guangxi is a coastal province. Economically, it behaves like an inland one. This rupture — "having a sea, but no way to the sea" — has shaped the underlying character of Guangxi and of the whole Southwest: the inland-mindedness of mountain people — self-sufficient, closed, rooted in the land rather than the sea.
+Geographically, Guangxi is a coastal province. **Economically, it behaves like an inland one.** This rupture — "having a sea, but no way to the sea" — has shaped the underlying character of Guangxi and of the whole Southwest: the inland-mindedness of mountain people — self-sufficient, closed, rooted in the land rather than the sea.
 
 ## 2. The Lingqu Canal: The Physical Extension of State Will
 
 In 218 BC, the armies of Qin Shi Huang were stuck in the jungles of Lingnan. Not because they could not win, but because the grain could not get through. Between the Yangtze and the Pearl river systems stands the Nanling range.
 
-So the Lingqu Canal was dug. It links the Xiang River with the Li River, joining the Yangtze system to the Pearl system. Its technical breakthrough was the *doumen* — the ancestor of the canal lock, used to manage differences in water level. But that breakthrough was not pulled by trade; it was pushed by military logistics. Its logic was simple: the state pays, because the state needs unification.
+So the Lingqu Canal was dug. It links the Xiang River with the Li River, joining the Yangtze system to the Pearl system. Its technical breakthrough was the *doumen* — the ancestor of the canal lock, used to manage differences in water level. But that breakthrough was not pulled by trade; it was pushed by military logistics. Its logic was simple: **the state pays, because the state needs unification.**
 
 The Lingqu made Guangxi one of the original shareholders of Han Chinese culture. It brought the power, writing and institutions of the Central Plains, along with a top-down logic of integration. Guangxi entered the map of a unified empire — but its sea remained somewhere else.
 
 ## 3. Two Thousand Years of Waiting: The Engineering Was Always Feasible — So Why 2026?
 
-The idea of the Pinglu Canal is not new. Surveyed in 1915; jointly surveyed by Guangdong and Guangxi in 1951 and 1958; written into national planning in 1993. In 1968, Ding Jianguo, a technician at the Guangxi communications department, and six colleagues formed a survey team and walked into the wild mountains carrying plane tables, levels and theodolites, hauling 1:50,000 old maps — "a cross-section every fifty metres, all measured on two legs." Their conclusion: technically entirely feasible, but not yet justified.
+The idea of the Pinglu Canal is not new. Surveyed in 1915; jointly surveyed by Guangdong and Guangxi in 1951 and 1958; written into national planning in 1993. In 1968, Ding Jianguo, a technician at the Guangxi communications department, and six colleagues formed a survey team and walked into the wild mountains carrying plane tables, levels and theodolites, hauling 1:50,000 old maps — "a cross-section every fifty metres, all measured on two legs." Their conclusion: **technically entirely feasible, but not yet justified.**
 
 Why? Because demand had not matured.
 
@@ -46,13 +48,13 @@ Building a canal is not building a road. It has to answer: at what volume of tra
 
 Waiting is itself a choice. The choice gets made while you wait — that is what the waiting is for. This one lasted more than half a century. Ding Jianguo, now 92, read the news that the canal was finished and said: "I finally lived to see it."
 
-Pinglu Canal opens to traffic, linking river and sea in Guangxi — how hard is this canal, conceived nearly a century ago, to build? Can it really "lift off" China's Southwest? — Zhihu
+> **Source**: the survey-team and Ding Jianguo story in this section is drawn from the answers by several engineers under a question on Zhihu posted by @国资小新 (the news centre of SASAC): *"Pinglu Canal opens to traffic, linking river and sea in Guangxi — how hard is this canal, conceived nearly a century ago, to build? Can it really 'lift off' China's Southwest?"*
 
 ## 4. The Pinglu Canal: The Physical Answer of Market Demand
 
 The Pinglu Canal runs 134.2 kilometres, with a total investment of about 72.7 billion yuan, built to Class I inland-waterway standards and navigable for 5,000-ton vessels. Construction began in August 2022; it opened in September 2026.
 
-Its driving force is the opposite of the Lingqu's. The Lingqu was state will; the Pinglu is market demand. Cargo from the Southwest reaching the sea through the canal cuts the inland-waterway journey by more than 560 kilometres and lowers overall logistics costs by 18% to 30%, saving more than 5 billion yuan a year.
+Its driving force is the opposite of the Lingqu's. **The Lingqu was state will; the Pinglu is market demand.** Cargo from the Southwest reaching the sea through the canal cuts the inland-waterway journey by more than 560 kilometres and lowers overall logistics costs by 18% to 30%, saving more than 5 billion yuan a year.
 
 It is not "we built a canal, so cargo will come"; it is "the cargo is already detouring — we built the canal so it stops detouring." Demand precedes the plan; intent precedes the page. In that sense it is isomorphic to SEO: you do not write an article because you found a keyword — the user's search intent is already there, and your job is to let the right page answer it.
 
@@ -65,7 +67,7 @@ It is not "we built a canal, so cargo will come"; it is "the cargo is already de
 
 The Lingqu solved "linking north and south" — extending the power of the north into the south. The Pinglu solves "sending the west to sea" — moving the goods of the west to the coast.
 
-One was about unification, the other about trade. The rupture between them is more worth telling than the continuity.
+**One was about unification, the other about trade.** The rupture between them is more worth telling than the continuity.
 
 What does not change is the old Eastern wisdom of working with the terrain: the Lingqu used *doumen* locks to manage water levels; the Pinglu uses modern ship locks to overcome a 65-metre drop. What changes is the strategic direction — from an ancient military function to a modern, compound-purpose canal serving both inland transport and international trade.
 
@@ -75,7 +77,7 @@ With the Pinglu Canal open, Guangxi's sea is no longer somewhere else. The cargo
 
 The mountain people stand for an inland, closed, self-sufficient way of life; the sea people for a mobile, adventurous, outward-facing one. For most of its history Guangxi has been by the sea but not of the sea, and that geographic rupture produced a psychological inlandness. The Pinglu Canal sutures it shut.
 
-- From now on, Guangxi reaches both river and sea, and the Great Southwest becomes a coastal region. The mountain-people-plus-sea-people combination is the geographic foundation of one of the world's most pioneering community cultures. This is an engineering story about a canal — and a human story about how geography shapes people, and how people answer geography.
+From now on, Guangxi reaches both river and sea, and the Great Southwest becomes a coastal region. The mountain-people-plus-sea-people combination is the geographic foundation of one of the world's most pioneering community cultures.
 
 ## FAQ: A Few Common Questions About the Pinglu Canal
 
@@ -103,4 +105,4 @@ A: I bought shares in Beibu Gulf Port (000582) in early 2026, and I did capture 
 
 The Pinglu Canal is not the "successor" of the Lingqu — it is its "counterexample." The Lingqu tells us that in ancient China a canal was the physical extension of state will; the Pinglu tells us that today a canal is the physical answer of market demand.
 
-And what really matters is not the engineering, but the people behind it: those who walked into the mountains with theodolites in 1968, those who waited more than half a century, and those whose way of life is about to change because of this canal.
+And what really matters is **not the engineering, but the people behind it**: those who walked into the mountains with theodolites in 1968, those who waited more than half a century, and those whose way of life is about to change because of this canal.
