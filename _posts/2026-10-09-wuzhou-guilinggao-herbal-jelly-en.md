@@ -4,6 +4,11 @@ title: "Wuzhou Guilinggao: The Herbal Jelly That Isn't What You Think"
 seo_title: "Wuzhou Guilinggao: The Herbal Jelly That Isn't What You Think | Chaorendan"
 description: "A personal story and factual guide to Wuzhou Guilinggao: what it is, why traditional versions are amber rather than black, whether it really contains turtle, and how to eat it."
 date: 2026-10-09 09:00:00 +0800
+cover: "/assets/images/blog/wuzhou-guilinggao-cover.jpg"
+cover_alt: "A bowl of Wuzhou guilinggao cubes served with milk, in a white bowl printed with the Shuangqian brand name"
+cover_caption: "Cubed, served with milk, eaten cold — the most common way to have guilinggao in Wuzhou"
+cover_width: 430
+cover_height: 241
 lang: "en"
 permalink: "/en/blog/wuzhou-guilinggao-herbal-jelly/"
 tags:
@@ -25,13 +30,15 @@ schema_faq:
     answer: "In Traditional Chinese Medicine, Guilinggao is prized for its ability to clear internal heat and nourish the skin. It is traditionally consumed during warm weather or after eating fried, spicy foods to restore internal balance."
 ---
 
+[阅读中文版](/blog/wuzhou-guilinggao-herbal-jelly/)
+
 It was always served in a heavy stainless-steel basin.
 
 Not a ceramic bowl, not a delicate dessert plate, but the kind of wide, flat-bottomed steel basin with concentric rings etched into the base—a staple of southern Chinese kitchens. My mother would set it down on a low, red plastic stool. The stool was short enough that when I leaned over as a child, the surface of the dark jelly rested right at my chest level.
 
-I used to spend long afternoons just staring at it. I watched how a pot of scalding, dark liquid slowly settled into something silent, still, and completely motionless.
+I would often just sit there staring at it, watching how a pot of scalding, dark liquid quieted down little by little—growing calm, settling, until it stopped moving altogether.
 
-It wasn't actually black.
+Strictly speaking, it wasn't actually black.
 
 If you buy commercial herbal jelly off a supermarket shelf today, it is as black as polished ink. But the batch my mother poured into that steel basin was a deep, translucent amber—like tea leaves steeped for so long they begin to look like liquid resin.
 
@@ -39,7 +46,12 @@ The magic happened at the edges. When you ran a thin knife along the inside of t
 
 That trembling was distinct. It didn't bounce like commercial gelatin. It possessed a heavier, denser weight—a slow wave that looked as if it were about to collapse under its own gravity, yet somehow held its form.
 
-That tremble was what made you hungry.
+Watching those trembling cubes, daydreaming of the sweetness and coolness to come, I would get hungry.
+
+<figure class="post-fig--small">
+  <img src="/assets/images/blog/wuzhou-guilinggao-home-bowl.jpg" alt="A home-style bowl of dark herbal jelly in a plain white bowl, on a wooden table" width="237" height="236" loading="lazy" decoding="async">
+  <figcaption>A plain, home-style bowl of guilinggao</figcaption>
+</figure>
 
 ## Is Guilinggao Made from Real Turtles? Debunking the Myth
 
@@ -101,6 +113,8 @@ Neither version is "wrong." But knowing the difference allows you to make a cons
 The next time you pick up a container of herbal jelly from a market shelf, take a brief moment to flip it over. Look at the ingredient list. See where the herbs sit. See if the shell is still there.
 
 It might be at the bottom. It might be gone altogether. But when you pause to look, you stop consuming blindly—and start tasting the history behind what you drink.
+
+Turtle is turtle, and ling is ling. Today, more than a thousand kilometres from home, both have all but disappeared from my life—but the memory endures.
 
 ## Frequently Asked Questions (FAQ)
 

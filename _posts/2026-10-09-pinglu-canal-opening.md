@@ -6,6 +6,8 @@ description: "平陆运河通航，广西从“有海不通海”到“江海直
 date: 2026-10-09 20:00:00 +0800
 cover: "/assets/images/blog/pinglu-canal-01.jpg"
 cover_alt: "平陆运河船闸实景，闸门上方悬挂「世纪工程 平陆运河」横幅"
+cover_width: 1036
+cover_height: 613
 cover_caption: "世纪工程——平陆运河船闸（图源：央视新闻）"
 lang: "zh"
 tags:

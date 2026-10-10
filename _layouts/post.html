@@ -26,7 +26,8 @@ layout: default
     <img class="post-cover__img"
          src="{{ page.cover | relative_url }}"
          alt="{{ page.cover_alt | default: page.title | escape }}"
-         width="1200" height="675"
+         width="{{ page.cover_width | default: 1200 }}" height="{{ page.cover_height | default: 675 }}"
+         fetchpriority="high"
          decoding="async">
     {%- if page.cover_caption %}
     <figcaption class="post-cover__caption">{{ page.cover_caption | escape }}</figcaption>

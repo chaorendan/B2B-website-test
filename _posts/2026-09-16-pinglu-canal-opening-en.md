@@ -8,6 +8,8 @@ lang: "en"
 permalink: "/en/blog/pinglu-canal-opening/"
 cover: "/assets/images/blog/pinglu-canal-01.jpg"
 cover_alt: "The ship lock of the Pinglu Canal, with a red banner reading 'A Project of the Century: Pinglu Canal' above the gates"
+cover_width: 1036
+cover_height: 613
 cover_caption: "A project of the century — the Pinglu Canal ship lock (photo: CCTV News)"
 tags:
   - Pinglu Canal
