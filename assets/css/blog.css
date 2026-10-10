@@ -225,3 +225,31 @@ html[data-theme="night"] .post-card__cover{
   background:linear-gradient(135deg, rgba(180,200,225,.14), rgba(180,200,225,.04));
 }
 html[data-theme="night"] .post-card__initial{opacity:.38}
+
+/* ---------- 9. 正文表格（对比表等；跟随主题变量，窄屏降字号避免溢出） ---------- */
+.post-content table{
+  width:100%;
+  border-collapse:collapse;
+  margin:22px 0;
+  font-size:14px;
+  line-height:1.5;
+}
+.post-content th,
+.post-content td{
+  padding:9px 12px;
+  border:1px solid var(--line);
+  text-align:left;
+  vertical-align:top;
+}
+.post-content th{
+  background:var(--bg);
+  font-weight:600;
+  white-space:nowrap;
+}
+.post-content tbody tr:nth-child(even) td{background:rgba(127,127,127,.045)}
+@media (max-width:640px){
+  .post-content table{font-size:12.5px}
+  .post-content th,
+  .post-content td{padding:7px 8px}
+  .post-content th{white-space:normal}
+}

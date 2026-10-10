@@ -4,8 +4,10 @@
     1. 分两个 <script> 块，避免条件分支造成 JSON 尾逗号错误。
     2. 全站块：WebSite + Person（站点与作者实体，全站唯一）。
     3. 文章块：仅当 layout == post 时输出 BlogPosting。
-    4. FAQPage 暂不输出：FAQ 目前是「页脚全站共用」的 5 条，若每页都标注 FAQPage 属重复标注；
-       等 FAQ 升级为独立 /faq/ 页后再补（见 ROADMAP A0）。
+    4. FAQPage：不在全站输出（页脚那 5 条 FAQ 是每页共用，逐页标注属重复）。
+       仅当某篇文章在 front matter 用 `schema_faq:` 显式声明「该页真实存在的问答」时才输出。
+    5. Product：本站无商品页，**不输出 Product 结构化数据**（对不存在的商品标注属违规/低质结构化数据）。
+       将来若有真实商品详情页，应在该商品页单独输出。
 {%- endcomment -%}
 {%- assign _base = site.url | append: site.baseurl -%}
 {%- assign _canonical = page.url | absolute_url | replace: '/index.html', '/' -%}
@@ -54,6 +56,28 @@
   "author": { "@id": "{{ _base }}/#person" },
   "publisher": { "@id": "{{ _base }}/#person" },
   "isPartOf": { "@id": "{{ _base }}/#website" }
+}
+</script>
+{%- endif %}
+{%- if page.layout == "post" and page.schema_faq %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "{{ _canonical }}#faq",
+  "inLanguage": {{ page.lang | default: site.lang | default: "zh" | jsonify }},
+  "mainEntity": [
+    {%- for item in page.schema_faq %}
+    {
+      "@type": "Question",
+      "name": {{ item.question | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ item.answer | jsonify }}
+      }
+    }{%- unless forloop.last -%},{%- endunless -%}
+    {%- endfor %}
+  ]
 }
 </script>
 {%- endif %}
