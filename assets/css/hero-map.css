@@ -56,25 +56,43 @@ html[data-theme="night"] td{border-color:#22314a}
 .site-nav .trigger{display:flex;align-items:center;gap:18px;white-space:nowrap}
 .site-nav .page-link{white-space:nowrap}
 .site-nav .trigger .page-link:not(:last-child){margin-right:0}
-/* 语言切换按钮（可能有多枚：中文 / EN / FR）：与导航、主题钮等距，自身不收缩 */
-.lang-toggle{flex:0 0 auto;margin-left:2px}
+/* 语言切换：单控件下拉（details/summary，当前语言显示在钮上） */
+.lang-menu{position:relative;flex:0 0 auto;margin-left:2px}
+.lang-menu__btn{display:inline-flex;align-items:center;gap:5px;width:auto;padding:0 12px;
+  height:38px;border-radius:999px;border:1px solid var(--line);background:var(--btn-bg);
+  color:var(--text);cursor:pointer;font-size:13px;font-weight:500;white-space:nowrap;
+  list-style:none;user-select:none;
+  transition:transform .2s ease,background-color .35s ease}
+.lang-menu__btn::-webkit-details-marker{display:none}
+.lang-menu__btn:hover{transform:scale(1.08)}
+.lang-menu__caret{font-size:10px;color:var(--muted);transition:transform .2s ease}
+.lang-menu[open] .lang-menu__caret{transform:rotate(180deg)}
+.lang-menu__list{position:absolute;right:0;top:calc(100% + 6px);z-index:60;margin:0;padding:6px;
+  min-width:112px;list-style:none;border:1px solid var(--line);border-radius:12px;
+  background:var(--panel);box-shadow:0 6px 18px rgba(13,22,38,.14)}
+.lang-menu__list a{display:flex;align-items:center;justify-content:space-between;gap:10px;
+  padding:7px 12px;border-radius:8px;font-size:13px;color:var(--text);white-space:nowrap}
+.lang-menu__list a:hover{background:var(--bg);text-decoration:none}
+.lang-menu__list a[aria-current]::after{content:"✓";font-size:12px;color:var(--accent)}
+@media (max-width:600px){
+  .lang-menu{margin-left:0}
+  .lang-menu__btn{padding:0 10px;font-size:12px;height:34px}
+  .lang-menu__list{min-width:104px}
+}
 /* 夜间模式下汉堡菜单下拉底色与图标跟随主题 */
 html[data-theme="night"] .site-nav{background:var(--panel);border-color:var(--line)}
 html[data-theme="night"] .menu-icon>svg{fill:#dce6f2}
 @media (max-width:600px){
   /* 汉堡键绝对定位在最右，主题钮/语言钮让出 52px 避免重叠 */
   .site-header .theme-toggle{margin-right:52px}
-  .lang-toggle{margin-left:0}
 }
 .theme-toggle{flex:none;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);
   background:var(--btn-bg);color:var(--text);cursor:pointer;font-size:17px;line-height:1;
   display:inline-flex;align-items:center;justify-content:center;
   transition:transform .2s ease,background-color .35s ease}
 .theme-toggle:hover{transform:scale(1.08)}
-.lang-toggle{width:auto;padding:0 12px;border-radius:999px;font-size:13px;font-weight:500;white-space:nowrap}
 @media (max-width:600px){
   .theme-toggle{width:34px;height:34px;font-size:15px}
-  .lang-toggle{padding:0 10px;font-size:12px}
 }
 
 /* ---------- Hero：晨昏线地图 ----------

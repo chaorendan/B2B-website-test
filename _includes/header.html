@@ -52,22 +52,30 @@
     {%- endif -%}
 
     {%- comment -%}
-      语言切换：按当前语言列出其它语言入口（中文 / EN / FR）。
+      语言切换：单控件下拉（当前语言标注，点击展开全部选项）。
       路由：中文 / · 英文 /en/ · 法语 /fr/
+      details/summary 原生可键盘操作，无需框架；下方 4 行 JS 处理点击外部/Escape 关闭。
     {%- endcomment -%}
     {%- assign cur_lang = page.lang | default: "zh" -%}
-    {%- if cur_lang != "zh" -%}
-    <button class="theme-toggle lang-toggle" type="button" title="切换到中文"
-            onclick="location.href='{{ '/' | relative_url }}'">中文</button>
-    {%- endif -%}
-    {%- if cur_lang != "en" -%}
-    <button class="theme-toggle lang-toggle" type="button" title="Switch to English"
-            onclick="location.href='{{ '/en/' | relative_url }}'">EN</button>
-    {%- endif -%}
-    {%- if cur_lang != "fr" -%}
-    <button class="theme-toggle lang-toggle" type="button" title="Passer au français"
-            onclick="location.href='{{ '/fr/' | relative_url }}'">FR</button>
-    {%- endif -%}
+    <details class="lang-menu">
+      <summary class="lang-menu__btn" title="Language / 语言"
+               aria-label="当前语言：{% if cur_lang == 'en' %}English{% elsif cur_lang == 'fr' %}Français{% else %}中文{% endif %}，点击切换语言">
+        {%- if cur_lang == "en" -%}EN{%- elsif cur_lang == "fr" -%}FR{%- else -%}中文{%- endif -%}<span class="lang-menu__caret" aria-hidden="true">▾</span>
+      </summary>
+      <ul class="lang-menu__list">
+        <li><a href="{{ '/' | relative_url }}"{% if cur_lang == "zh" %} aria-current="true"{% endif %}>中文</a></li>
+        <li><a href="{{ '/en/' | relative_url }}"{% if cur_lang == "en" %} aria-current="true"{% endif %}>EN</a></li>
+        <li><a href="{{ '/fr/' | relative_url }}"{% if cur_lang == "fr" %} aria-current="true"{% endif %}>FR</a></li>
+      </ul>
+    </details>
+    <script>
+      (function(){
+        var m = document.querySelector('.lang-menu');
+        if(!m) return;
+        document.addEventListener('click', function(e){ if(!m.contains(e.target)) m.removeAttribute('open'); });
+        document.addEventListener('keydown', function(e){ if(e.key === 'Escape') m.removeAttribute('open'); });
+      })();
+    </script>
 
     <button class="theme-toggle" id="theme-toggle" type="button"
             aria-label="切换日间/夜间模式" aria-pressed="false" title="切换到夜间模式" data-page-node-id="uuX1fSDBiAYB6AItzHPYcb">🌙</button>
