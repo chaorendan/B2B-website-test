@@ -1,0 +1,162 @@
+/* 注意力资本 · CEO 驾驶舱
+ * 刻意独立于站点日夜主题：驾驶舱固定深色冷调，切进来就是一个「作战室」。
+ */
+
+.att{
+  --c-bg:#0b1420; --c-panel:#111d2e; --c-panel2:#16253a;
+  --c-line:rgba(140,170,200,.18);
+  --c-text:#dbe6f2; --c-muted:#8ba0ba;
+  --c-build:#4ea8de; --c-drain:#e0563c; --c-warn:#e8b84b; --c-ok:#3fb98a;
+  background:var(--c-bg);color:var(--c-text);
+  border:1px solid var(--c-line);border-radius:14px;position:relative;
+  padding:16px;margin:18px 0 10px;font-size:14px;line-height:1.6}
+.att [hidden]{display:none !important}
+
+/* 顶部：日期 + 视图切换 */
+.att-top{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
+.att-top input[type="date"]{
+  background:var(--c-panel);color:var(--c-text);border:1px solid var(--c-line);
+  border-radius:8px;padding:6px 10px;font-family:inherit;font-size:13px}
+.att-tabs{display:flex;gap:6px;margin-left:auto}
+.att-tab{
+  background:transparent;color:var(--c-muted);border:1px solid var(--c-line);
+  border-radius:999px;padding:6px 14px;font-size:13px;cursor:pointer;font-family:inherit}
+.att-tab[aria-selected="true"]{background:var(--c-panel2);color:var(--c-text);border-color:var(--c-build)}
+
+/* 股本条 */
+.att-cap{
+  display:flex;flex-wrap:wrap;align-items:center;gap:8px;
+  background:var(--c-panel);border:1px solid var(--c-line);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+.att-cap__label{font-size:12.5px;color:var(--c-muted)}
+.att-cap__num{font-size:22px;font-weight:500;font-variant-numeric:tabular-nums}
+.att-cap__num--remain{color:var(--c-build)}
+.att-bar{flex:1 1 160px;height:8px;background:var(--c-panel2);border-radius:999px;overflow:hidden;min-width:120px}
+.att-bar__fill{height:100%;width:0;background:var(--c-build);transition:width .25s ease}
+.att-bar__fill--over{background:var(--c-drain)}
+.att-warn{
+  flex:1 1 100%;margin-top:2px;font-size:12.5px;color:var(--c-drain);
+  border-left:2px solid var(--c-drain);padding-left:8px}
+
+/* 表单 */
+.att-form{display:grid;grid-template-columns:1fr 190px 96px 110px 130px;gap:8px;margin-bottom:10px}
+.att-form input,.att-form select{
+  height:38px;padding:0 10px;box-sizing:border-box;font-family:inherit;font-size:13.5px;
+  background:var(--c-panel);color:var(--c-text);border:1px solid var(--c-line);border-radius:9px}
+.att-form input:focus,.att-form select:focus{outline:1px solid var(--c-build)}
+.att-form__submit{
+  height:38px;border:none;border-radius:9px;background:var(--c-build);color:#04202f;
+  font-size:13.5px;font-weight:500;cursor:pointer;font-family:inherit}
+.att-hint{font-size:12.5px;color:var(--c-muted);margin:0 0 14px;border-left:2px solid var(--c-line);padding-left:8px}
+
+/* 任务列表 */
+.att-list{list-style:none;margin:0 0 8px;padding:0}
+.att-task{
+  display:grid;grid-template-columns:64px 1fr auto auto;gap:10px;align-items:center;
+  background:var(--c-panel);border:1px solid var(--c-line);border-radius:10px;
+  padding:9px 12px;margin-bottom:6px;font-size:13.5px}
+.att-task__cat{
+  font-size:11.5px;text-align:center;border-radius:6px;padding:2px 0;
+  background:var(--c-panel2);color:var(--c-muted)}
+.att-task__cat--heavy{color:var(--c-build)}
+.att-task__cat--forbidden{color:var(--c-drain)}
+.att-task__body{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.att-task__meta{font-size:12px;color:var(--c-muted);font-variant-numeric:tabular-nums}
+.att-task__del{
+  background:none;border:none;color:var(--c-muted);cursor:pointer;font-size:12px;font-family:inherit;padding:2px 4px}
+.att-task__del:hover{color:var(--c-drain)}
+.att-task--exec{grid-template-columns:78px 1fr auto 84px}
+.att-task.is-done{opacity:.55}
+.att-task.is-done .att-task__body{text-decoration:line-through}
+.att-check{display:flex;align-items:center;gap:5px;font-size:12.5px;color:var(--c-muted);cursor:pointer}
+.att-act{
+  height:32px;width:84px;padding:0 8px;box-sizing:border-box;font-family:inherit;font-size:13px;
+  background:var(--c-panel2);color:var(--c-text);border:1px solid var(--c-line);border-radius:8px}
+.att-empty{font-size:13px;color:var(--c-muted);padding:10px 2px;list-style:none}
+.att-stat{font-size:12.5px;color:var(--c-muted)}
+
+/* 蓝框三问 */
+.att-blue{
+  background:rgba(78,168,222,.09);border:1px solid var(--c-build);border-radius:12px;
+  padding:14px 16px;margin:0 0 16px}
+.att-blue h3{margin:0 0 4px;font-size:14px;font-weight:500;color:var(--c-build)}
+.att-blue p{margin:0 0 12px;font-size:12.5px;color:var(--c-muted)}
+.att-q{margin-bottom:10px}
+.att-q label{display:block;font-size:13px;margin-bottom:5px;color:var(--c-text)}
+.att-q textarea{
+  width:100%;box-sizing:border-box;min-height:58px;resize:vertical;font-family:inherit;font-size:13.5px;
+  background:var(--c-panel);color:var(--c-text);border:1px solid var(--c-line);border-radius:9px;padding:8px 10px}
+
+/* 区块标题 */
+.att-sec{margin:18px 0 8px;font-size:13px;color:var(--c-muted);letter-spacing:.02em}
+.att-sec:first-child{margin-top:0}
+
+/* ACM 审计表 */
+.att-acm{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:10px}
+.att-acm__row{
+  display:grid;grid-template-columns:1fr 88px 40px;gap:8px;align-items:center;
+  background:var(--c-panel);border:1px solid var(--c-line);border-radius:10px;padding:8px 10px;font-size:13px}
+.att-acm__row--drain{border-left:2px solid var(--c-drain)}
+.att-acm__row--build{border-left:2px solid var(--c-build)}
+.att-acm__row input{
+  height:32px;padding:0 8px;box-sizing:border-box;font-family:inherit;font-size:13px;
+  background:var(--c-panel2);color:var(--c-text);border:1px solid var(--c-line);border-radius:8px}
+.att-acm__side{font-size:11.5px;color:var(--c-muted);text-align:right}
+.att-kpi{
+  display:flex;flex-wrap:wrap;gap:14px;align-items:center;
+  background:var(--c-panel);border:1px solid var(--c-line);border-radius:10px;padding:10px 12px;margin-bottom:10px}
+.att-kpi span{font-size:12.5px;color:var(--c-muted)}
+.att-kpi b{font-size:15px;font-weight:500;color:var(--c-text);font-variant-numeric:tabular-nums}
+.att-kpi b.is-build{color:var(--c-build)}
+.att-kpi b.is-drain{color:var(--c-drain)}
+.att-alert{
+  background:rgba(232,184,75,.12);border:1px solid var(--c-warn);color:#f0d79a;
+  border-radius:10px;padding:10px 12px;font-size:13px;margin-bottom:10px}
+
+/* 五维打分 */
+.att-scores{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:10px}
+.att-score__row{
+  display:grid;grid-template-columns:88px 1fr 40px;gap:8px;align-items:center;
+  background:var(--c-panel);border:1px solid var(--c-line);border-radius:10px;padding:8px 10px;font-size:13px}
+.att-score__row input{accent-color:var(--c-build)}
+.att-score__row output{font-size:13px;color:var(--c-build);text-align:right;font-variant-numeric:tabular-nums}
+
+/* 文字区 */
+.att-ta{
+  width:100%;box-sizing:border-box;min-height:64px;resize:vertical;font-family:inherit;font-size:13.5px;
+  background:var(--c-panel);color:var(--c-text);border:1px solid var(--c-line);border-radius:9px;
+  padding:8px 10px;margin-bottom:10px}
+.att-label{display:block;font-size:13px;margin-bottom:5px}
+
+/* 工具条与按钮 */
+.att-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;padding-top:14px;border-top:1px solid var(--c-line)}
+.att-btn{
+  height:36px;padding:0 16px;border:1px solid var(--c-line);border-radius:999px;
+  background:var(--c-panel);color:var(--c-text);font-size:13px;cursor:pointer;font-family:inherit}
+.att-btn:hover{border-color:var(--c-build)}
+.att-btn--primary{background:var(--c-build);border-color:var(--c-build);color:#04202f;font-weight:500}
+.att-btn--ghost{background:transparent;color:var(--c-muted)}
+.att-import{display:inline-flex;align-items:center;height:36px;padding:0 14px;border:1px dashed var(--c-line);
+  border-radius:999px;color:var(--c-muted);font-size:13px;cursor:pointer}
+.att-import input{display:none}
+
+/* 清算弹层 */
+.att-layer{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  background:rgba(6,12,20,.78);border-radius:14px;z-index:5}
+.att-layer__box{max-width:340px;text-align:center;padding:24px 22px;
+  background:var(--c-panel);border:1px solid var(--c-build);border-radius:12px}
+.att-layer__box p{margin:0 0 6px;font-size:14px}
+.att-layer__box .muted{font-size:12.5px;color:var(--c-muted);margin-bottom:16px}
+
+@media (max-width:640px){
+  .att{padding:12px;font-size:13.5px}
+  .att-form{grid-template-columns:1fr 1fr}
+  .att-form input[type="text"]:first-child{grid-column:1 / -1}
+  .att-acm,.att-scores{grid-template-columns:1fr}
+  .att-task{grid-template-columns:58px 1fr auto}
+  .att-task__meta{display:none}
+  .att-task--exec{grid-template-columns:70px 1fr 76px}
+  .att-check{font-size:12px}
+  .att-tabs{margin-left:0;width:100%}
+  .att-tab{flex:1;text-align:center}
+}

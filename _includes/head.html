@@ -64,6 +64,9 @@
   {% endif %}
 
   {% assign canonical_url = page.url | absolute_url | replace: '/index.html', '/' %}
+  {%- if page.noindex -%}
+    <meta name="robots" content="noindex, nofollow">
+  {%- endif -%}
   <link rel="canonical" href="{{ canonical_url }}">
 
   <!-- Open Graph -->
