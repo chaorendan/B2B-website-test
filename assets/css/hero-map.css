@@ -79,6 +79,35 @@ html[data-theme="night"] td{border-color:#22314a}
   .lang-menu__btn{padding:0 10px;font-size:12px;height:34px}
   .lang-menu__list{min-width:104px}
 }
+
+/* ---------- 工具菜单（父级按钮 + 子项下拉） ---------- */
+.tools-menu{position:relative;flex:0 0 auto}
+.tools-menu__btn{display:inline-flex;align-items:center;gap:5px;padding:0;min-height:38px;
+  color:var(--text);cursor:pointer;font-size:14px;font-weight:500;white-space:nowrap;
+  list-style:none;user-select:none;background:transparent;border:none;
+  transition:color .2s ease}
+.tools-menu__btn::-webkit-details-marker{display:none}
+.tools-menu__btn:hover{color:var(--accent);text-decoration:underline}
+.tools-menu__btn.is-current{font-weight:600}
+.tools-menu__caret{font-size:10px;color:var(--muted);transition:transform .2s ease}
+.tools-menu[open] .tools-menu__caret{transform:rotate(180deg)}
+.tools-menu__list{position:absolute;right:0;top:calc(100% + 8px);z-index:60;margin:0;padding:6px;
+  min-width:168px;list-style:none;border:1px solid var(--line);border-radius:12px;
+  background:var(--panel);box-shadow:0 6px 18px rgba(13,22,38,.14)}
+.tools-menu__link{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;
+  font-size:13.5px;color:var(--text);white-space:nowrap;text-decoration:none;
+  transition:background-color .2s ease,color .2s ease}
+.tools-menu__link:hover{background:var(--bg);color:var(--accent);text-decoration:none}
+.tools-menu__link.is-current{background:var(--bg);font-weight:600}
+.tools-menu__icon{width:16px;height:16px;flex:none;stroke:currentColor;fill:none;
+  stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tools-menu__icon *{fill:none}
+@media (max-width:600px){
+  .tools-menu{width:100%}
+  .tools-menu__btn{display:flex;justify-content:flex-end;width:100%;padding:10px 15px;min-height:auto;font-size:16px}
+  .tools-menu__list{position:static;width:100%;margin:6px 0 0;box-shadow:none;border-radius:8px;background:var(--panel)}
+  .tools-menu__link{justify-content:flex-end;padding:10px 15px;border-radius:0}
+}
 /* 夜间模式下汉堡菜单下拉底色与图标跟随主题 */
 html[data-theme="night"] .site-nav{background:var(--panel);border-color:var(--line)}
 html[data-theme="night"] .menu-icon>svg{fill:#dce6f2}

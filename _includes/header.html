@@ -1,15 +1,15 @@
 <!-- Override minima's header.html to add language switch -->
-<header class="site-header" data-page-node-id="TobfSDe2LGtJbb52d6sz6V">
-  <div class="wrapper" data-page-node-id="j9N5nd6sGP8xDlRCbnzqII">
+<header class="site-header">
+  <div class="wrapper">
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
-    
-    <a class="site-title site-title--with-avatar" rel="author" href="{{ '/' | relative_url }}" data-page-node-id="tmwe9BVwrdSfFGS3cKC5g5">
-      <picture data-page-node-id="1UOUQLbGjg2OEt3x9fcm6o">
+
+    <a class="site-title site-title--with-avatar" rel="author" href="{{ '/' | relative_url }}">
+      <picture>
         <source srcset="{{ '/assets/images/brand/firebird-64.webp' | relative_url }} 64w,
                         {{ '/assets/images/brand/firebird-128.webp' | relative_url }} 128w,
                         {{ '/assets/images/brand/firebird-256.webp' | relative_url }} 256w"
-                sizes="40px" type="image/webp" data-page-node-id="s6oBcM9qJS35wLuW6c3WSP">
+                sizes="40px" type="image/webp">
         <img
           class="site-avatar"
           src="{{ '/assets/images/brand/firebird-128.png' | relative_url }}"
@@ -21,30 +21,54 @@
           alt="chaorendan 火鸟标志"
           loading="eager"
           decoding="async"
-          fetchpriority="high" data-page-node-id="GRLb0uBlRmXy5A42RNfHBf" />
+          fetchpriority="high" />
       </picture>
-      <span class="site-title__block" data-page-node-id="IOkhn2nic9UTGpjZ6n7Nsd">
-        <span class="site-title__text" data-page-node-id="7y9leIiZEAEySUkSfTpcyR">chaorendan 超人蛋的独立站</span>
-        <span class="site-title__subtitle" data-page-node-id="qs9CK9iWGsv4AALlRSKQwM">忍受寂寞，努力拼搏，坚持不懈 —— 所谓普通人，都是还没破壳的超人蛋。</span>
+      <span class="site-title__block">
+        <span class="site-title__text">chaorendan 超人蛋的独立站</span>
+        <span class="site-title__subtitle">忍受寂寞，努力拼搏，坚持不懈 —— 所谓普通人，都是还没破壳的超人蛋。</span>
       </span>
     </a>
-    
+
     {%- if page_paths -%}
-      <nav class="site-nav" data-page-node-id="kjERvOL0Tt9OK3Pq3H4pze">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" data-page-node-id="npBXrakhkCdObnBWK4b460" />
-        <label for="nav-trigger" data-page-node-id="1wpjbnL8HFrpHhpWSdbRQf">
-          <span class="menu-icon" data-page-node-id="17udx6u9mAifJt0L1DZQKp">
-            <svg viewBox="0 0 18 15" width="18px" height="15px" data-page-node-id="Nyd3bRObkJ6xGCxQ60x9be">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.336,17.335,9,16.516,9H1.484C0.665,9,0,8.336,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.336,17.335,15,16.516,15H1.484 c-0.82,0-1.484-0.665-1.484-1.484l0,0c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,13.031,18,13.696,18,13.516L18,13.516z" data-page-node-id="sUfvTCt8yoRYmwwMTWbFlC"/>
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.336,17.335,9,16.516,9H1.484C0.665,9,0,8.336,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.336,17.335,15,16.516,15H1.484 c-0.82,0-1.484-0.665-1.484-1.484l0,0c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,13.031,18,13.696,18,13.516L18,13.516z"/>
             </svg>
           </span>
         </label>
-        
-        <div class="trigger" data-page-node-id="GyCCGOdC7i3SCxUvJPQatP">
+
+        <div class="trigger">
           {%- for path in page_paths -%}
             {%- assign my_page = site.pages | where: "path", path | first -%}
             {%- if my_page.title -%}
-              <a class="page-link" href="{{ my_page.url | relative_url }}" data-page-node-id="6YiuaVlj4ejQYBNFKHPXlL">{{ my_page.title | escape }}</a>
+              {%- if path == "tools/index.md" -%}
+                {%- assign in_tools = false -%}
+                {%- if page.url contains '/tools/' -%}{%- assign in_tools = true -%}{%- endif -%}
+                <details class="tools-menu">
+                  <summary class="tools-menu__btn{% if in_tools %} is-current{% endif %}" aria-haspopup="true" aria-label="工具菜单，点击展开">
+                    {{ my_page.title | escape }}<span class="tools-menu__caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <ul class="tools-menu__list">
+                    <li>
+                      <a class="tools-menu__link{% if page.url == '/tools/pcfs/' %} is-current{% endif %}" href="{{ '/tools/pcfs/' | relative_url }}"{% if page.url == '/tools/pcfs/' %} aria-current="page"{% endif %}>
+                        <svg class="tools-menu__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zm0 0V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2"/><circle cx="12" cy="12" r="2"/></svg>
+                        <span>财务工具</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="tools-menu__link{% if page.url == '/tools/attention/' %} is-current{% endif %}" href="{{ '/tools/attention/' | relative_url }}"{% if page.url == '/tools/attention/' %} aria-current="page"{% endif %}>
+                        <svg class="tools-menu__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M18 6h4v4"/></svg>
+                        <span>个人复盘</span>
+                      </a>
+                    </li>
+                  </ul>
+                </details>
+              {%- else -%}
+                <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+              {%- endif -%}
             {%- endif -%}
           {%- endfor -%}
         </div>
@@ -54,7 +78,7 @@
     {%- comment -%}
       语言切换：单控件下拉（当前语言标注，点击展开全部选项）。
       路由：中文 / · 英文 /en/ · 法语 /fr/
-      details/summary 原生可键盘操作，无需框架；下方 4 行 JS 处理点击外部/Escape 关闭。
+      details/summary 原生可键盘操作，无需框架；下方 JS 统一处理点击外部/Escape 关闭。
     {%- endcomment -%}
     {%- assign cur_lang = page.lang | default: "zh" -%}
     <details class="lang-menu">
@@ -68,16 +92,21 @@
         <li><a href="{{ '/fr/' | relative_url }}"{% if cur_lang == "fr" %} aria-current="true"{% endif %}>FR</a></li>
       </ul>
     </details>
-    <script>
-      (function(){
-        var m = document.querySelector('.lang-menu');
-        if(!m) return;
-        document.addEventListener('click', function(e){ if(!m.contains(e.target)) m.removeAttribute('open'); });
-        document.addEventListener('keydown', function(e){ if(e.key === 'Escape') m.removeAttribute('open'); });
-      })();
-    </script>
 
     <button class="theme-toggle" id="theme-toggle" type="button"
-            aria-label="切换日间/夜间模式" aria-pressed="false" title="切换到夜间模式" data-page-node-id="uuX1fSDBiAYB6AItzHPYcb">🌙</button>
+            aria-label="切换日间/夜间模式" aria-pressed="false" title="切换到夜间模式">🌙</button>
   </div>
+
+  <script>
+    (function(){
+      var menus = document.querySelectorAll('.lang-menu, .tools-menu');
+      if(!menus.length) return;
+      document.addEventListener('click', function(e){
+        menus.forEach(function(m){ if(!m.contains(e.target)) m.removeAttribute('open'); });
+      });
+      document.addEventListener('keydown', function(e){
+        if(e.key === 'Escape') menus.forEach(function(m){ m.removeAttribute('open'); });
+      });
+    })();
+  </script>
 </header>
