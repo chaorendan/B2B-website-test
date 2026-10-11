@@ -76,6 +76,8 @@ Grass jelly makes it black. It makes it cheaper. It allows it to be mass-produce
 
 It doesn't render the dessert "bad." It simply makes it something else.
 
+**Traditional guilinggao contains turtle; most mass-produced versions today do not.**
+
 ## Guilinggao vs. Grass Jelly: What's the Difference?
 
 When people taste commercial Guilinggao for the first time, they often ask: "How is this any different from Grass Jelly?"
@@ -86,6 +88,8 @@ The short answer? In modern commercial forms, they are almost cousins.
 - **Guilinggao (龟苓膏):** Grounded in Traditional Chinese Medicine (TCM). It relies on a blend of bitter, heat-clearing roots—Smilax, Licorice, Dandelion, and Honeysuckle.
 
 When made authentically, Guilinggao is not merely a sweet snack; it is a functional tonic meant to balance "internal heat" (上火) during hot summers. It carries an unapologetic bitterness that gives way to a long, clean, herbal sweetness in the back of the throat.
+
+**Grass jelly is made from the plant; guilinggao was meant to be made from the turtle.**
 
 ## How to Eat Guilinggao: Traditional & Modern Pairings
 
@@ -99,7 +103,7 @@ Slice the jelly into 1-inch cubes. Drizzle generously with raw mountain honey or
 
 Cube the herbal jelly finely and drop it into a glass of cold oat milk or a hot milk tea base. Because the jelly retains its structural integrity without melting, it serves as a chewy, herbal, low-sugar alternative to tapioca pearls.
 
-> **Taste Wuzhou Craft:** Want to experience the authentic bittersweet balance at home? The Wuzhou Direct Starter Kit pairs slow-brewed herbal jelly pots with artisanal raw honey packets.
+**Eaten plain it can be bitter — honey or condensed milk is the Wuzhou way.**
 
 ## Two Kinds of Heritage: Knowing What You Pay For
 
@@ -113,6 +117,8 @@ Neither version is "wrong." But knowing the difference allows you to make a cons
 The next time you pick up a container of herbal jelly from a market shelf, take a brief moment to flip it over. Look at the ingredient list. See where the herbs sit. See if the shell is still there.
 
 It might be at the bottom. It might be gone altogether. But when you pause to look, you stop consuming blindly—and start tasting the history behind what you drink.
+
+**Flip the can over and read the ingredient list: the fastest way to tell the two apart.**
 
 Turtle is turtle, and ling is ling. Today, more than a thousand kilometres from home, both have all but disappeared from my life—but the memory endures.
 
@@ -129,3 +135,5 @@ Guilinggao has a firm, jelly-like texture with a prominent earthy, herbal bitter
 ### Why is Guilinggao considered good for health in TCM?
 
 In Traditional Chinese Medicine, Guilinggao is prized for its ability to clear internal heat (清热解毒) and nourish the skin. It is traditionally consumed during warm weather or after eating fried, spicy foods to restore internal balance.
+
+**Further reading**: [Pinglu Canal: How Guangxi Turns from a Mountain People into a Sea People](/en/blog/pinglu-canal-opening/) · [About me](/about/) · [中文版](/blog/wuzhou-guilinggao-herbal-jelly/)

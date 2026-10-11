@@ -108,3 +108,5 @@ A: I bought shares in Beibu Gulf Port (000582) in early 2026, and I did capture 
 The Pinglu Canal is not the "successor" of the Lingqu — it is its "counterexample." The Lingqu tells us that in ancient China a canal was the physical extension of state will; the Pinglu tells us that today a canal is the physical answer of market demand.
 
 And what really matters is **not the engineering, but the people behind it**: those who walked into the mountains with theodolites in 1968, those who waited more than half a century, and those whose way of life is about to change because of this canal.
+
+**Further reading**: [Wuzhou Guilinggao: The Herbal Jelly That Isn't What You Think](/en/blog/wuzhou-guilinggao-herbal-jelly/) · [About me](/about/) · [中文版](/blog/pinglu-canal-opening/)
