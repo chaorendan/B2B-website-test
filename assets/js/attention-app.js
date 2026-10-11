@@ -35,14 +35,18 @@
   }
 
   /* ---------- 视图切换 ---------- */
+  var currentView = 'plan';
+
   function setView(name) {
-    ['plan', 'exec', 'review'].forEach(function (v) {
+    currentView = name;
+    ['plan', 'exec', 'review', 'board'].forEach(function (v) {
       var sec = document.querySelector('[data-panel="' + v + '"]');
       var tab = document.querySelector('[data-view="' + v + '"]');
       if (sec) sec.hidden = (v !== name);
       if (tab) tab.setAttribute('aria-selected', v === name ? 'true' : 'false');
     });
     if (name === 'review') { syncACMInputs(); syncScoreInputs(); renderAudit(); renderScore(); }
+    if (name === 'board' && window.AttentionBoard) window.AttentionBoard.render(date);
   }
 
   /* ---------- 股本条 ---------- */
@@ -320,6 +324,7 @@
     el.date.addEventListener('change', function () {
       date = el.date.value || todayStr();
       syncAll();
+      if (currentView === 'board' && window.AttentionBoard) window.AttentionBoard.render(date);
     });
 
     ['qSelf', 'qSociety', 'qInterest', 'rFocus', 'rTask', 'rOverall', 'improvement'].forEach(function (k) {

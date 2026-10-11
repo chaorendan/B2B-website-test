@@ -20,6 +20,7 @@ sitemap: false
       <button class="att-tab" type="button" data-view="plan" role="tab">晨会</button>
       <button class="att-tab" type="button" data-view="exec" role="tab">执行</button>
       <button class="att-tab" type="button" data-view="review" role="tab">复盘</button>
+      <button class="att-tab" type="button" data-view="board" role="tab">看板</button>
     </div>
   </div>
 
@@ -110,6 +111,10 @@ sitemap: false
       </div>
     </div>
   </div>
+
+  <div data-panel="board" hidden>
+    <div id="att-board"></div>
+  </div>
 </div>
 
 ## 规则
@@ -126,8 +131,17 @@ sitemap: false
 | 真相 | 导出的 JSON 备份 | 建议存进网盘，这是数据所有权所在 |
 | 仓库 | 无 | 只有代码，没有你的任何记录 |
 
-「导出复盘（Markdown）」只输出文字部分（三问、反思、明日方向、总分），**不含股数与打分明细**——想公开什么，你自己决定。
+「导出备份（JSON）」导出的是**统一账本**：金钱资本（财务工具）与注意力资本（本页）两本账合成一个文件，导入时一并还原；旧的单本备份也能直接导入。「导出复盘（Markdown）」只输出文字部分（三问、反思、明日方向、总分），**不含股数与打分明细**——想公开什么，你自己决定。
 
+## 看板怎么读
+
+- **建设 vs 消耗**：每根柱是一天，蓝色是建设型（重仓 + 定投），红色是消耗型。虚线是 60% 消耗红线，柱子越过它说明那天基本在给别人打工。
+- **股本使用率**：当天的排仓总量 ÷ 960 股。低于 100% 是常态，说明还有余量没被固定任务占满。
+- **五维得分**：只统计**真正填过复盘**的天，没复盘的天不会把均值拉低。
+- **复利账户**：日结时累加、永不清零，这是跨天唯一留存的东西。
+
+<script src="/assets/js/ledger.js"></script>
 <script src="/assets/js/attention-model.js"></script>
 <script src="/assets/js/attention-store.js"></script>
+<script src="/assets/js/attention-board.js"></script>
 <script src="/assets/js/attention-app.js"></script>

@@ -79,9 +79,14 @@
 
     /* ---- 导出 ---- */
 
-    /* 完整备份：金钱 + 注意力（若 PCFS 存在则一并导出） */
+    /* 统一备份：金钱 + 注意力两本账
+     * 委托给 Ledger（直读 localStorage，跨页可靠）；
+     * Ledger 未加载时退回只导注意力账（不静默丢数据，但会少 money）。 */
     exportJSON: function () {
-      var out = {
+      if (global.Ledger && typeof global.Ledger.toJSON === 'function') {
+        return global.Ledger.toJSON();
+      }
+      return JSON.stringify({
         exportedAt: new Date().toISOString(),
         app: 'chaorendan-personal-ledger',
         attention: {
@@ -89,11 +94,7 @@
           reviews: this.allReviews(),
           accounts: this.accounts()
         }
-      };
-      if (global.PCFS && typeof global.PCFS.toJSON === 'function') {
-        try { out.money = JSON.parse(global.PCFS.toJSON()); } catch (e) { /* 忽略 */ }
-      }
-      return JSON.stringify(out, null, 2);
+      }, null, 2);
     },
 
     /* 复盘心得（脱敏 Markdown）：只含文字，不含股数与打分明细 */
@@ -124,7 +125,12 @@
       return lines.join('\n');
     },
 
+    /* 还原备份：统一账本（两本账）或旧格式（任一单本账）都吃 */
     importJSON: function (text) {
+      if (global.Ledger && typeof global.Ledger.restore === 'function') {
+        global.Ledger.restore(text);
+        return true;
+      }
       var data = JSON.parse(text);
       var a = data.attention || data;
       if (a.plans)    write(K.plans, a.plans);

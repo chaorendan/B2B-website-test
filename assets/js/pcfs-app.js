@@ -95,23 +95,45 @@
     render();
   }
 
-  function exportJSON() {
-    var blob = new Blob([window.PCFS.toJSON()], { type: 'application/json' });
+  function download(name, text) {
+    var blob = new Blob([text], { type: 'application/json' });
     var a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
-    a.download = 'pcfs-backup-' + today() + '.json';
+    a.download = name;
     a.click();
     URL.revokeObjectURL(a.href);
+  }
+
+  /* 导出统一账本（含注意力账，若那边有数据）；Ledger 未加载时退回只导金钱 */
+  function exportJSON() {
+    var text = (window.Ledger && window.Ledger.toJSON)
+      ? window.Ledger.toJSON()
+      : window.PCFS.toJSON();
+    var name = (window.Ledger ? 'ledger-backup-' : 'pcfs-backup-') + today() + '.json';
+    download(name, text);
   }
 
   function importJSON(file) {
     var reader = new FileReader();
     reader.onload = function () {
       try {
-        var list = JSON.parse(reader.result);
-        if (!window.confirm('导入会替换现在的 ' + window.PCFS.all().length + ' 条记录，继续？')) return;
-        window.PCFS.replaceAll(list);
+        var payload = JSON.parse(reader.result);
+        var isMoneyOnly = Array.isArray(payload);
+        var msg = isMoneyOnly
+          ? '这是一份「只有金钱」的旧备份。导入会替换现在的 ' + window.PCFS.all().length + ' 条记录，继续？'
+          : '这是一份统一账本（金钱 + 注意力）。导入会同时替换两本账的现存数据，继续？';
+        if (!window.confirm(msg)) return;
+
+        var done = { money: true, attention: false };
+        if (window.Ledger) {
+          done = window.Ledger.restore(reader.result);
+        } else {
+          window.PCFS.replaceAll(payload);
+        }
         render();
+        window.alert(done.attention
+          ? '导入完成：金钱 + 注意力两本账都已还原。'
+          : '导入完成：金钱流水已还原。');
       } catch (err) {
         window.alert('这个文件读不出来，确认是本工具导出的备份。');
       }

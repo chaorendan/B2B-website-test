@@ -167,3 +167,57 @@
   .att-tabs{margin-left:0;width:100%}
   .att-tab{flex:1;text-align:center}
 }
+
+/* ============================================================
+   M2 · 周度看板（手写 SVG，无图表库）
+   ============================================================ */
+
+/* KPI 行：覆盖 .att-kpi 的 flex 布局，改为等宽网格 */
+.att-kpi--board{
+  display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;
+  background:transparent;border:none;padding:0;margin-bottom:12px}
+.att-kpi--board .att-kpi__cell{
+  display:flex;flex-direction:column;gap:2px;
+  background:var(--c-panel);border:1px solid var(--c-line);border-radius:10px;padding:8px 10px}
+.att-kpi__label{font-size:11.5px;color:var(--c-muted)}
+.att-kpi__num{font-size:16px;font-weight:500;color:var(--c-text);font-variant-numeric:tabular-nums}
+.att-kpi__num.is-build{color:var(--c-build)}
+.att-kpi__num.is-drain{color:var(--c-drain)}
+
+/* 图表卡片 */
+.att-board{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.att-card{background:var(--c-panel);border:1px solid var(--c-line);border-radius:12px;padding:12px 14px}
+.att-card--wide{grid-column:1 / -1}
+.att-card__title{margin:0 0 8px;font-size:12.5px;font-weight:500;color:var(--c-muted);letter-spacing:.02em}
+.att-chart{display:block;width:100%;height:auto}
+
+/* SVG 元素统一走主题变量 */
+.att-chart__grid{stroke:var(--c-line);stroke-width:1}
+.att-chart__gridp{fill:none;stroke:var(--c-line);stroke-width:1}
+.att-chart__rule{stroke:var(--c-warn);stroke-width:1;stroke-dasharray:4 3}
+.att-chart__line{fill:none;stroke:var(--c-build);stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.att-chart__area{fill:rgba(78,168,222,.14);stroke:none}
+.att-chart__dot{fill:var(--c-build)}
+.att-chart__radar{fill:rgba(78,168,222,.22);stroke:var(--c-build);stroke-width:2;stroke-linejoin:round}
+.att-chart__tick{font-size:10px;fill:var(--c-muted)}
+.att-chart__tick--warn{fill:var(--c-warn)}
+.att-chart__val{font-size:10px;fill:var(--c-text);text-anchor:middle;font-variant-numeric:tabular-nums}
+.att-chart__val--dim{fill:var(--c-muted)}
+
+/* 复利账户进度条 */
+.att-comp{display:flex;flex-direction:column;gap:9px;padding-top:4px}
+.att-comp__row{display:grid;grid-template-columns:64px minmax(0,1fr) 46px;gap:10px;align-items:center}
+.att-comp__label{font-size:12.5px;color:var(--c-text)}
+.att-comp__bar{height:9px;border-radius:999px;background:var(--c-panel2);overflow:hidden}
+.att-comp__bar i{display:block;height:100%;border-radius:999px;background:var(--c-build);transition:width .25s ease}
+.att-comp__val{font-size:12.5px;color:var(--c-muted);text-align:right;font-variant-numeric:tabular-nums}
+
+@media (max-width:900px) and (min-width:641px){
+  .att-kpi--board{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (max-width:640px){
+  .att-kpi--board{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .att-board{grid-template-columns:minmax(0,1fr)}
+  .att-card--wide{grid-column:auto}
+  .att-comp__row{grid-template-columns:58px minmax(0,1fr) 40px;gap:8px}
+}

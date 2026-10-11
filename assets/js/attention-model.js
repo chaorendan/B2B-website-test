@@ -146,6 +146,88 @@
     return Math.round((sum / SCORE_DIMS.length) * 100) / 100;
   }
 
+  /* ---------- 看板用的日期与聚合工具（纯函数，不依赖存储） ---------- */
+
+  function pad2(n) { return n < 10 ? '0' + n : String(n); }
+
+  /* 日期偏移：dateStr 为 YYYY-MM-DD，delta 为天数（可负） */
+  function shiftDate(dateStr, delta) {
+    var p = String(dateStr).split('-');
+    var d = new Date(Number(p[0]), Number(p[1]) - 1, Number(p[2]));
+    d.setDate(d.getDate() + delta);
+    return d.getFullYear() + '-' + pad2(d.getMonth() + 1) + '-' + pad2(d.getDate());
+  }
+
+  /* 以 endDate 为终点向前取 n 天（含当天），升序 */
+  function recentDates(endDate, n) {
+    var out = [];
+    for (var i = n - 1; i >= 0; i--) out.push(shiftDate(endDate, -i));
+    return out;
+  }
+
+  /* 逐日聚合：getPlan/getReview 由调用方注入（读 store 或读测试数据皆可） */
+  function dailyStats(dates, getPlan, getReview) {
+    return dates.map(function (date) {
+      var plan = getPlan(date) || createPlan(date);
+      var review = getReview(date) || createReview(date);
+      var a = audit(review.acm);
+      var sc = weightedScore(review.scores);
+      var tasks = plan.tasks || [];
+      return {
+        date: date,
+        allocated: allocated(plan),
+        capacity: plan.capital || DAY_CAPITAL,
+        taskCount: tasks.length,
+        doneCount: tasks.filter(function (t) { return t.done; }).length,
+        build: a.build,
+        drain: a.drain,
+        buildRatio: a.buildRatio,
+        drainRatio: a.drainRatio,
+        score: sc,
+        scores: review.scores,
+        settled: !!review.settled,
+        /* 该日是否有可用的复盘账（用于图表跳过空白天） */
+        hasReview: a.total > 0 || sc > 0
+      };
+    });
+  }
+
+  /* 五维均值（跳过无复盘的天） */
+  function avgScores(days) {
+    var acc = {}, n = 0;
+    SCORE_DIMS.forEach(function (d) { acc[d.key] = 0; });
+    (days || []).forEach(function (day) {
+      if (!day.hasReview) return;
+      n++;
+      SCORE_DIMS.forEach(function (d) { acc[d.key] += Number(day.scores && day.scores[d.key]) || 0; });
+    });
+    var out = {};
+    SCORE_DIMS.forEach(function (d) {
+      out[d.key] = n ? Math.round(acc[d.key] / n * 10) / 10 : 0;
+    });
+    out.n = n;
+    return out;
+  }
+
+  /* 区间汇总：给看板顶部的 KPI 用 */
+  function summarize(days) {
+    var s = { days: days.length, filled: 0, build: 0, drain: 0, allocated: 0, done: 0, tasks: 0, scoreSum: 0, scoreN: 0 };
+    days.forEach(function (d) {
+      if (d.hasReview) { s.filled++; s.scoreSum += d.score; s.scoreN++; }
+      s.build += d.build;
+      s.drain += d.drain;
+      s.allocated += d.allocated;
+      s.done += d.doneCount;
+      s.tasks += d.taskCount;
+    });
+    var total = s.build + s.drain;
+    s.buildRatio = total ? s.build / total : 0;
+    s.drainRatio = total ? s.drain / total : 0;
+    s.avgScore = s.scoreN ? Math.round(s.scoreSum / s.scoreN * 10) / 10 : 0;
+    s.utilization = s.allocated / (DAY_CAPITAL * Math.max(1, s.days));
+    return s;
+  }
+
   global.AttentionModel = {
     DAY_CAPITAL: DAY_CAPITAL,
     DRAIN_ALERT: DRAIN_ALERT,
@@ -163,6 +245,11 @@
     remaining: remaining,
     overspent: overspent,
     audit: audit,
-    weightedScore: weightedScore
+    weightedScore: weightedScore,
+    shiftDate: shiftDate,
+    recentDates: recentDates,
+    dailyStats: dailyStats,
+    avgScores: avgScores,
+    summarize: summarize
   };
 })(window);
