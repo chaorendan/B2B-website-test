@@ -38,9 +38,10 @@
   border-left:2px solid var(--c-drain);padding-left:8px}
 
 /* 表单 */
-.att-form{display:grid;grid-template-columns:1fr 190px 96px 110px 130px;gap:8px;margin-bottom:10px}
+/* 任务列用 minmax(0,1fr)：防止 input 固有宽度把轨道撑大、将时间块挤出容器（黑框越界） */
+.att-form{display:grid;grid-template-columns:minmax(0,1fr) 190px 96px 110px 130px;gap:8px;margin-bottom:10px}
 .att-form input,.att-form select{
-  height:38px;padding:0 10px;box-sizing:border-box;font-family:inherit;font-size:13.5px;
+  min-width:0;height:38px;padding:0 10px;box-sizing:border-box;font-family:inherit;font-size:13.5px;
   background:var(--c-panel);color:var(--c-text);border:1px solid var(--c-line);border-radius:9px}
 .att-form input:focus,.att-form select:focus{outline:1px solid var(--c-build)}
 .att-form__submit{
@@ -148,9 +149,15 @@
 .att-layer__box p{margin:0 0 6px;font-size:14px}
 .att-layer__box .muted{font-size:12.5px;color:var(--c-muted);margin-bottom:16px}
 
+/* 中间宽度：五列固定值太挤，降为两列，任务独占一行 */
+@media (max-width:900px) and (min-width:641px){
+  .att-form{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .att-form input[type="text"]:first-child{grid-column:1 / -1}
+}
+
 @media (max-width:640px){
   .att{padding:12px;font-size:13.5px}
-  .att-form{grid-template-columns:1fr 1fr}
+  .att-form{grid-template-columns:repeat(2,minmax(0,1fr))}
   .att-form input[type="text"]:first-child{grid-column:1 / -1}
   .att-acm,.att-scores{grid-template-columns:1fr}
   .att-task{grid-template-columns:58px 1fr auto}
