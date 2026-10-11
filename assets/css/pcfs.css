@@ -1,0 +1,69 @@
+/* 个人财务工具（/tools/pcfs/）——配色复用全站主题变量，日夜自动适配 */
+
+.pcfs{display:block;margin:18px 0 8px}
+
+/* 汇总三栏 */
+.pcfs-sum{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
+.pcfs-sum__cell{border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:12px 14px}
+.pcfs-sum__label{display:block;font-size:12.5px;color:var(--muted);margin-bottom:4px}
+.pcfs-sum__value{display:block;font-size:20px;font-weight:500;color:var(--text)}
+.pcfs-sum__value--in{color:var(--accent2)}
+.pcfs-sum__value--out{color:var(--accent)}
+
+/* 记一笔表单 */
+.pcfs-form{display:grid;grid-template-columns:132px 96px 110px 1fr;gap:8px;margin-bottom:10px}
+.pcfs-form input,.pcfs-form select{
+  height:38px;padding:0 10px;box-sizing:border-box;
+  border:1px solid var(--line);border-radius:10px;
+  background:var(--panel);color:var(--text);font-size:14px;font-family:inherit}
+.pcfs-form input:focus,.pcfs-form select:focus{outline:2px solid var(--accent2);outline-offset:-1px}
+.pcfs-row2{display:grid;grid-template-columns:1fr 132px;gap:8px;margin-bottom:14px}
+.pcfs-row2 input{
+  height:38px;padding:0 10px;box-sizing:border-box;
+  border:1px solid var(--line);border-radius:10px;
+  background:var(--panel);color:var(--text);font-size:14px;font-family:inherit}
+.pcfs-submit{
+  height:38px;border:1px solid transparent;border-radius:999px;
+  background:var(--accent2);color:#fff;font-size:14px;font-weight:500;cursor:pointer}
+.pcfs-submit:hover{opacity:.9}
+
+/* 工具栏 */
+.pcfs-toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:14px}
+.pcfs-btn{
+  height:34px;padding:0 14px;border:1px solid var(--line);border-radius:999px;
+  background:var(--btn-bg);color:var(--text);font-size:13px;cursor:pointer}
+.pcfs-btn:hover{border-color:var(--accent2)}
+.pcfs-import-label{
+  display:inline-flex;align-items:center;height:34px;padding:0 14px;
+  border:1px dashed var(--line);border-radius:999px;color:var(--muted);font-size:13px;cursor:pointer}
+.pcfs-import-label input{display:none}
+.pcfs-count{font-size:12.5px;color:var(--muted);margin-left:auto}
+
+/* 记录列表 */
+.pcfs-list{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.pcfs-row{
+  display:grid;grid-template-columns:86px 84px 1fr 96px 56px;gap:8px;align-items:center;
+  padding:9px 12px;font-size:13.5px;border-bottom:1px solid var(--line);background:var(--panel)}
+.pcfs-row:last-child{border-bottom:none}
+.pcfs-row__date{color:var(--muted);font-variant-numeric:tabular-nums}
+.pcfs-row__cat{color:var(--text)}
+.pcfs-row__note{color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pcfs-row__amount{text-align:right;font-variant-numeric:tabular-nums}
+.pcfs-row__amount--in{color:var(--accent2)}
+.pcfs-row__amount--out{color:var(--accent)}
+.pcfs-del{
+  border:none;background:none;color:var(--muted);font-size:12.5px;cursor:pointer;padding:2px 4px;font-family:inherit}
+.pcfs-del:hover{color:var(--accent)}
+
+.pcfs-empty{
+  margin:12px 0 0;font-size:13.5px;color:var(--muted);
+  border:1px dashed var(--line);border-radius:12px;padding:14px;text-align:center}
+.pcfs-empty[hidden]{display:none}
+
+@media (max-width:600px){
+  .pcfs-sum{grid-template-columns:1fr;gap:8px}
+  .pcfs-form{grid-template-columns:1fr 1fr}
+  .pcfs-row2{grid-template-columns:1fr}
+  .pcfs-row{grid-template-columns:78px 70px 1fr 74px 44px;font-size:12.5px;padding:8px 10px}
+  .pcfs-row__note{display:none}
+}

@@ -15,6 +15,7 @@ header_pages:
   - blog/index.md
   - kb/index.md
   - projects.md
+  - tools/pcfs/index.md
   - about.md
 
 collections:
