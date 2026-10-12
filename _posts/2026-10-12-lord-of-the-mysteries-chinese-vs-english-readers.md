@@ -6,8 +6,8 @@ description: "一个中国读者在海外社区重新认识《诡秘之主》的
 keywords: "Lord of the Mysteries, 诡秘之主, 网文出海, Reddit, progression fantasy, 序列体系, 扮演法, 中国网文, SEO"
 date: 2026-10-12 22:30:00 +0800
 cover: "/assets/images/blog/lotm-cover.jpg"
-cover_alt: "《诡秘之主》中文版书封，深色雾气中的王座"
-cover_caption: "《诡秘之主》——用「系统语言」写「成长故事」的中国网文"
+cover_alt: "《诡秘之主》两种书封并列：左侧起点经典版（克莱恩持剑回望），右侧阅文新版（雾中王座）"
+cover_caption: "同一本书的两种封面——《诡秘之主》经典版（左）与新版（右），也像两种读法"
 cover_width: 1036
 cover_height: 583
 lang: "zh"
