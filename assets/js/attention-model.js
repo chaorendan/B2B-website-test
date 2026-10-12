@@ -228,6 +228,68 @@
     return s;
   }
 
+  /* ---------- 知识期货：注意力投入 × 实际收入 ----------
+   * 把注意力资本折算成钱：某项目累计投入的分钟数（任务 actMin）与
+   * PCFS 里同名分类的收入配对，算出**折算时薪**（收入 ÷ 投入小时）。
+   *   plans: { date: plan }  → 任务的 futures / actMin
+   *   money: PCFS 流水数组   → type==='income' 的 category / amount
+   * 只做聚合与配对，不判断对错；收入为 0 或未记工时的项目也照列，
+   * 让「投了时间但还没变现」的项目一眼可见。
+   */
+  function futuresROI(plans, money) {
+    var mins = {}, cnt = {}, income = {};
+
+    Object.keys(plans || {}).forEach(function (d) {
+      var tasks = (plans[d] && plans[d].tasks) || [];
+      tasks.forEach(function (t) {
+        var name = String((t && t.futures) || '').trim();
+        if (!name) return;
+        mins[name] = (mins[name] || 0) + (Number(t.actMin) || 0);
+        cnt[name] = (cnt[name] || 0) + 1;
+      });
+    });
+
+    (money || []).forEach(function (r) {
+      if (!r || r.type !== 'income') return;
+      var name = String(r.category == null ? '' : r.category).trim();
+      if (!name) return;
+      income[name] = (income[name] || 0) + (Number(r.amount) || 0);
+    });
+
+    var names = {};
+    Object.keys(mins).forEach(function (k) { names[k] = 1; });
+    Object.keys(income).forEach(function (k) { names[k] = 1; });
+
+    var rows = Object.keys(names).map(function (name) {
+      var actMin = mins[name] || 0;
+      var hours = actMin / 60;
+      var inc = income[name] || 0;
+      return {
+        name: name,
+        actMin: actMin,
+        hours: Math.round(hours * 100) / 100,
+        tasks: cnt[name] || 0,
+        income: Math.round(inc * 100) / 100,
+        /* 折算时薪用未取整的原始值算，避免小时取整放大成比率误差 */
+        rate: hours > 0 ? Math.round(inc / hours * 100) / 100 : null
+      };
+    }).sort(function (a, b) {
+      return (b.income - a.income) || (b.actMin - a.actMin) || (a.name < b.name ? -1 : 1);
+    });
+
+    var total = rows.reduce(function (acc, r) {
+      acc.actMin += r.actMin;
+      acc.income += r.income;
+      return acc;
+    }, { actMin: 0, income: 0 });
+    total.projects = rows.length;
+    total.hours = Math.round(total.actMin / 60 * 100) / 100;   // 分钟 → 小时，2 位
+    total.income = Math.round(total.income * 100) / 100;
+    total.rate = total.hours > 0 ? Math.round(total.income / total.hours * 100) / 100 : null;
+
+    return { rows: rows, total: total };
+  }
+
   global.AttentionModel = {
     DAY_CAPITAL: DAY_CAPITAL,
     DRAIN_ALERT: DRAIN_ALERT,
@@ -250,6 +312,7 @@
     recentDates: recentDates,
     dailyStats: dailyStats,
     avgScores: avgScores,
-    summarize: summarize
+    summarize: summarize,
+    futuresROI: futuresROI
   };
 })(window);

@@ -47,6 +47,9 @@
 .att-form__submit{
   height:38px;border:none;border-radius:9px;background:var(--c-build);color:#04202f;
   font-size:13.5px;font-weight:500;cursor:pointer;font-family:inherit}
+/* 关联项目独占第二行前四列，提交按钮落在第五列（时间块正下方） */
+.att-form__futures{grid-column:1 / 5}
+#att-futures-list{display:none}
 .att-hint{font-size:12.5px;color:var(--c-muted);margin:0 0 14px;border-left:2px solid var(--c-line);padding-left:8px}
 
 /* 任务列表 */
@@ -153,12 +156,14 @@
 @media (max-width:900px) and (min-width:641px){
   .att-form{grid-template-columns:repeat(2,minmax(0,1fr))}
   .att-form input[type="text"]:first-child{grid-column:1 / -1}
+  .att-form__futures{grid-column:1 / -1}
 }
 
 @media (max-width:640px){
   .att{padding:12px;font-size:13.5px}
   .att-form{grid-template-columns:repeat(2,minmax(0,1fr))}
   .att-form input[type="text"]:first-child{grid-column:1 / -1}
+  .att-form__futures{grid-column:1 / -1}
   .att-acm,.att-scores{grid-template-columns:1fr}
   .att-task{grid-template-columns:58px 1fr auto}
   .att-task__meta{display:none}
@@ -221,3 +226,18 @@
   .att-card--wide{grid-column:auto}
   .att-comp__row{grid-template-columns:58px minmax(0,1fr) 40px;gap:8px}
 }
+
+/* 知识期货表 */
+.att-fut__wrap{overflow-x:auto}
+.att-fut{width:100%;min-width:420px;border-collapse:collapse;font-size:12.5px;font-variant-numeric:tabular-nums}
+.att-fut th{
+  text-align:right;font-weight:500;font-size:11.5px;color:var(--c-muted);
+  padding:4px 8px;border-bottom:1px solid var(--c-line);white-space:nowrap}
+.att-fut th:first-child,.att-fut td:first-child{text-align:left}
+.att-fut td{padding:7px 8px;border-bottom:1px solid var(--c-line);color:var(--c-text);text-align:right;white-space:nowrap}
+.att-fut tbody tr:last-child td{border-bottom:none}
+.att-fut__name{max-width:240px;overflow:hidden;text-overflow:ellipsis}
+.att-fut__rate{color:var(--c-build);font-weight:500}
+.att-fut__rate--na{color:var(--c-muted)}
+.att-fut tfoot td{color:var(--c-muted);border-bottom:none;font-size:12px;padding-top:8px}
+.att-fut tfoot tr td:first-child{color:var(--c-muted)}

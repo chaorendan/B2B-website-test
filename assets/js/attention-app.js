@@ -65,13 +65,43 @@
   }
 
   /* ---------- 晨会：任务 ---------- */
+
+  /* 关联项目建议：来自已填过的项目名 + 财务工具里的收入分类（知识期货配对口径） */
+  function futuresNames() {
+    var seen = {};
+    var plans = S.allPlans();
+    Object.keys(plans).forEach(function (d) {
+      ((plans[d] && plans[d].tasks) || []).forEach(function (t) {
+        var n = String((t && t.futures) || '').trim();
+        if (n) seen[n] = 1;
+      });
+    });
+    var money = (window.Ledger && typeof window.Ledger.money === 'function') ? window.Ledger.money() : [];
+    money.forEach(function (r) {
+      if (r && r.type === 'income') {
+        var n = String(r.category || '').trim();
+        if (n) seen[n] = 1;
+      }
+    });
+    return Object.keys(seen).sort();
+  }
+
+  function renderFuturesHints() {
+    var list = $('att-futures-list');
+    if (!list) return;
+    list.innerHTML = futuresNames().map(function (n) {
+      return '<option value="' + esc(n) + '"></option>';
+    }).join('');
+  }
+
   function renderPlanTasks() {
     var plan = S.getPlan(date);
     el.planTasks.innerHTML = plan.tasks.map(function (t) {
       return '<li class="att-task">' +
         '<span class="att-task__cat att-task__cat--' + t.category + '">' + esc(catLabel(t.category)) + '</span>' +
         '<span class="att-task__body">' + esc(t.content) + '</span>' +
-        '<span class="att-task__meta">' + esc(t.block || '未排块') + ' · ' + t.estMin + ' 股 · ROI ' + esc(roiLabel(t.roi)) + '</span>' +
+        '<span class="att-task__meta">' + esc(t.block || '未排块') + ' · ' + t.estMin + ' 股 · ROI ' + esc(roiLabel(t.roi)) +
+          (t.futures ? ' · 期货 ' + esc(t.futures) : '') + '</span>' +
         '<button class="att-task__del" data-id="' + t.id + '" type="button" aria-label="删除任务">删除</button>' +
       '</li>';
     }).join('') || '<li class="att-empty">今天还没有排任务。先在上面开晨会。</li>';
@@ -87,15 +117,19 @@
       category: el.tCategory.value,
       estMin: parseFloat(el.tEst.value) || 0,
       roi: el.tRoi.value,
-      block: el.tBlock.value.trim()
+      block: el.tBlock.value.trim(),
+      futures: (el.tFutures && el.tFutures.value.trim()) || ''
     }));
     S.savePlan(plan);
     el.tContent.value = '';
     el.tEst.value = '';
     el.tBlock.value = '';
+    if (el.tFutures) el.tFutures.value = '';
+    el.tFutures.value = '';
     renderCapital();
     renderPlanTasks();
     renderExecTasks();
+    renderFuturesHints();
     el.tContent.focus();
   }
 
@@ -288,7 +322,7 @@
       capUsed: $('att-cap-used'), capRemain: $('att-cap-remain'),
       barFill: $('att-bar-fill'), capWarn: $('att-cap-warn'),
       tContent: $('t-content'), tCategory: $('t-category'), tEst: $('t-est'),
-      tRoi: $('t-roi'), tBlock: $('t-block'),
+      tRoi: $('t-roi'), tBlock: $('t-block'), tFutures: $('t-futures'),
       planTasks: $('att-plan-tasks'), execTasks: $('att-exec-tasks'), execStat: $('att-exec-stat'),
       acm: $('att-acm'), acmSum: $('att-acm-sum'),
       buildRatio: $('att-build-ratio'), drainRatio: $('att-drain-ratio'),
@@ -313,6 +347,7 @@
 
     buildACMInputs();
     buildScoreInputs();
+    renderFuturesHints();
 
     el.tabs.addEventListener('click', function (e) {
       var v = e.target.getAttribute('data-view');

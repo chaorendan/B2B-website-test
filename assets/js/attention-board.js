@@ -5,8 +5,9 @@
  *   ② 股本使用率 —— 面积折线
  *   ③ 五维得分 —— 雷达图（仅统计有复盘的天）
  *   ④ 复利账户 —— 纯 CSS 进度条
+ *   ⑤ 知识期货 —— 表格：项目投入小时 × PCFS 同名收入 → 折算时薪
  *
- * 依赖：attention-model.js（聚合）、attention-store.js（数据）
+ * 依赖：attention-model.js（聚合）、attention-store.js（数据）、ledger.js（读金钱账）
  * 隐私：只读本地数据，不联网、不上传、不推埋点。
  */
 (function (global) {
@@ -168,6 +169,43 @@
     }).join('');
   }
 
+  /* ---------- ⑤ 知识期货 · 投入 vs 收入 ---------- */
+  function money(n) {
+    var v = Math.round((Number(n) || 0) * 100) / 100;
+    var s = (v % 1 === 0) ? String(v) : v.toFixed(2);
+    return '¥' + s.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+  function rateCell(r) {
+    if (r.rate == null) return '<span class="att-fut__rate--na">未记工时</span>';
+    if (r.rate === 0) return '<span class="att-fut__rate--na">¥0/h</span>';
+    return '<span class="att-fut__rate">' + money(r.rate) + '/h</span>';
+  }
+  function futuresCard(res) {
+    if (!res.rows.length) {
+      return '<p class="att-empty">还没有关联项目。在「晨会」给任务填上「关联项目」，并在财务工具里用同名分类记录收入，这里就会算出每投入一小时换回多少钱。</p>';
+    }
+    var rows = res.rows.map(function (r) {
+      return '<tr>' +
+        '<td class="att-fut__name" title="' + esc(r.name) + '">' + esc(r.name) + '</td>' +
+        '<td>' + r.hours + '</td>' +
+        '<td>' + r.tasks + '</td>' +
+        '<td>' + (r.income ? money(r.income) : '<span class="att-fut__rate--na">—</span>') + '</td>' +
+        '<td>' + rateCell(r) + '</td>' +
+      '</tr>';
+    }).join('');
+    var t = res.total;
+    var foot = '<tfoot><tr>' +
+      '<td>合计 · ' + t.projects + ' 个项目</td>' +
+      '<td>' + t.hours + '</td>' +
+      '<td></td>' +
+      '<td>' + money(t.income) + '</td>' +
+      '<td>' + (t.rate == null ? '—' : money(t.rate) + '/h') + '</td>' +
+    '</tr></tfoot>';
+    return '<div class="att-fut__wrap"><table class="att-fut">' +
+      '<thead><tr><th>项目</th><th>投入(h)</th><th>任务</th><th>收入</th><th>折算时薪</th></tr></thead>' +
+      '<tbody>' + rows + '</tbody>' + foot + '</table></div>';
+  }
+
   /* ---------- 顶部 KPI ---------- */
   function kpi(days, sum) {
     var model = M();
@@ -204,8 +242,14 @@
       var sum = model.summarize(days);
       var avg = model.avgScores(days);
       var accounts = store.accounts();
+      /* 知识期货要读金钱账：注意力页不加载 PCFS，走 Ledger 直读 localStorage */
+      var moneyList = (global.Ledger && typeof global.Ledger.money === 'function')
+        ? global.Ledger.money() : [];
+      var moneyPlans = (global.Ledger && typeof global.Ledger.plans === 'function')
+        ? global.Ledger.plans() : store.allPlans();
+      var fut = model.futuresROI(moneyPlans, moneyList);
 
-      var hasAny = days.some(function (d) { return d.hasReview || d.allocated > 0; });
+      var hasAny = days.some(function (d) { return d.hasReview || d.allocated > 0; }) || fut.rows.length > 0;
 
       var html = '';
       html += '<div class="att-kpi att-kpi--board">' + kpi(days, sum) + '</div>';
@@ -219,6 +263,7 @@
       html += '<section class="att-card att-card--wide"><h3 class="att-card__title">股本使用率 · 排仓占当日 960 股的比例</h3>' + trendLine(days) + '</section>';
       html += '<section class="att-card"><h3 class="att-card__title">五维得分 · 近 ' + avg.n + ' 次复盘均值</h3>' + radar(avg) + '</section>';
       html += '<section class="att-card"><h3 class="att-card__title">复利账户 · 累计不清零</h3><div class="att-comp">' + compound(accounts) + '</div></section>';
+      html += '<section class="att-card att-card--wide"><h3 class="att-card__title">知识期货 · 注意力投入 × 金钱收入（折算时薪）</h3>' + futuresCard(fut) + '</section>';
       html += '</div>';
 
       host.innerHTML = html;

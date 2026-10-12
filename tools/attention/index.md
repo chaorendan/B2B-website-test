@@ -39,9 +39,11 @@ sitemap: false
       <input type="number" id="t-est" placeholder="股数" min="5" step="5" aria-label="预计用时（股）">
       <select id="t-roi" aria-label="预期 ROI"></select>
       <input type="text" id="t-block" placeholder="08:00-11:30" aria-label="时间块">
+      <input class="att-form__futures" type="text" id="t-futures" list="att-futures-list" placeholder="关联项目（选填，用于折算时薪）" aria-label="关联知识期货项目">
+      <datalist id="att-futures-list"></datalist>
       <button class="att-form__submit" type="submit">排进今天</button>
     </form>
-    <p class="att-hint">物理隔离：设置无聊时间区块（不可编辑），包括早晨散步、午休静坐、睡前无屏幕。这不是浪费，是给注意力留出清算的内存。</p>
+    <p class="att-hint">物理隔离：设置无聊时间区块（不可编辑），包括早晨散步、午休静坐、睡前无屏幕。这不是浪费，是给注意力留出清算的内存。「关联项目」选填——填了就进入知识期货账，看板上能算出你的时间换回多少钱。</p>
     <ul class="att-list" id="att-plan-tasks"></ul>
   </div>
 
@@ -139,6 +141,7 @@ sitemap: false
 - **股本使用率**：当天的排仓总量 ÷ 960 股。低于 100% 是常态，说明还有余量没被固定任务占满。
 - **五维得分**：只统计**真正填过复盘**的天，没复盘的天不会把均值拉低。
 - **复利账户**：日结时累加、永不清零，这是跨天唯一留存的东西。
+- **知识期货**：把注意力投入折算成钱。晨会给任务填「关联项目」，再在财务工具里用**同名分类**记一笔收入，这里就算出该项目每投入一小时的折算价（收入 ÷ 投入小时）。只投了时间、还没变现的项目会显示 `¥0/h`，一眼看出哪笔投资还悬在账上。
 
 <script src="/assets/js/ledger.js"></script>
 <script src="/assets/js/attention-model.js"></script>
