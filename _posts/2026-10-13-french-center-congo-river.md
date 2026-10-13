@@ -195,7 +195,7 @@ schema_faq:
 但当我看到马克龙的发言，当我看到刚果河两岸的对比，当我看到法国石油、中国基建、非洲人口，我开始意识到：我学的语言，和我以为我学的语言，不是一回事。
 
 <figure class="post-fig">
-  <img src="/assets/images/blog/french-speakers-chart.webp" alt="条形图：全球法语使用者分布，法国本土 6600 万，刚果金 5700 万，刚果河流域六国合计 7700 万" width="1000" height="430" loading="lazy" decoding="async">
+  <img src="/assets/images/blog/french-speakers-chart.webp" alt="条形图：全球法语使用者分布，法国本土 6600 万，刚果金 5700 万，刚果河流域六国合计 7700 万" width="700" height="556" loading="lazy" decoding="async">
   <figcaption>使用者的中心已经过了塞纳河：刚果河流域六国合计超过法国本土（数据：法语国家国际组织 2026 年报告）</figcaption>
 </figure>
 

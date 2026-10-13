@@ -119,6 +119,7 @@
 .latest-posts__more a{text-decoration:underline;text-underline-offset:2px}
 
 /* ---------- 6. 详情页 ---------- */
+.post-summary,.post-title{overflow-wrap:break-word}
 .post-summary{
   margin:10px 0 0;
   font-size:14px;
@@ -140,7 +141,7 @@
   color:var(--muted);
   text-align:center;
 }
-.post-body{margin-top:2px}
+.post-body{margin-top:2px;overflow-wrap:break-word}
 
 /* 正文内插图（markdown 里的 <figure>/<img>） */
 .post-body figure{margin:26px 0;text-align:center}
@@ -227,29 +228,29 @@ html[data-theme="night"] .post-card__cover{
 html[data-theme="night"] .post-card__initial{opacity:.38}
 
 /* ---------- 9. 正文表格（对比表等；跟随主题变量，窄屏降字号避免溢出） ---------- */
-.post-content table{
+.post-body table{
   width:100%;
   border-collapse:collapse;
   margin:22px 0;
   font-size:14px;
   line-height:1.5;
 }
-.post-content th,
-.post-content td{
+.post-body th,
+.post-body td{
   padding:9px 12px;
   border:1px solid var(--line);
   text-align:left;
   vertical-align:top;
 }
-.post-content th{
+.post-body th{
   background:var(--bg);
   font-weight:600;
   white-space:nowrap;
 }
-.post-content tbody tr:nth-child(even) td{background:rgba(127,127,127,.045)}
+.post-body tbody tr:nth-child(even) td{background:rgba(127,127,127,.045)}
 @media (max-width:640px){
-  .post-content table{font-size:12.5px}
-  .post-content th,
-  .post-content td{padding:7px 8px}
-  .post-content th{white-space:normal}
+  .post-body table{font-size:12.5px}
+  .post-body th,
+  .post-body td{padding:7px 8px}
+  .post-body th{white-space:normal}
 }
