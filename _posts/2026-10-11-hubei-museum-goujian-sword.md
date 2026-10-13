@@ -59,7 +59,7 @@ schema_faq:
 </figure>
 
 <figure class="post-fig">
-  <img src="/assets/images/blog/fuchai-sword.webp" alt="湖北省博物馆展厅实拍：展柜中的吴王夫差剑，旁边是剑各部位名称示意图与战国弩构成示意图" width="1200" height="900" loading="lazy" decoding="async">
+  <img src="/assets/images/blog/fuchai-sword.webp" alt="湖北省博物馆展厅实拍：射灯下的吴王夫差剑横陈于展柜中，右侧立有「吴王夫差剑」说明牌" width="1200" height="900" loading="lazy" decoding="async">
   <figcaption>吴王夫差剑展厅实拍——同一座博物馆，几乎没有人排队（图源：笔者摄于湖北省博物馆）</figcaption>
 </figure>
 
