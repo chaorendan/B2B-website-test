@@ -5,6 +5,7 @@ seo_title: "关于彭俊超 | GIS × 数字营销 × SEO"
 description: "彭俊超的个人介绍：长江大学地理信息科学在读，专注 GIS 空间分析、数字营销与 SEO，寻找数字营销 / 增长分析方向实习机会。"
 permalink: /about/
 lang: "zh"
+css: "/assets/css/certs.css"
 ---
 
 # 关于我
@@ -25,6 +26,56 @@ lang: "zh"
 - 第十七届全国高校 GIS 技能大赛（高级开发组）· **全国一等奖**（2025.10）
 - 第七届全国高校计算机能力挑战赛（Office 高级应用）· 省级三等奖（2025.12）
 - 第十五届大学生计算机应用能力与数字素养大赛（数据分析与可视化）· 省级三等奖（2025.05）
+
+## 证书原件
+
+以下为证书原件扫描 / 实拍。**点击条目才加载对应图片**——不点开时，本页不会下载任何证书图片。
+
+<div class="cert-list">
+
+<details>
+  <summary>全国高校 GIS 技能大赛 · 高级开发组 · 全国一等奖<span class="cert-meta">2025 · 团队奖项</span></summary>
+  <figure>
+    <img src="/assets/images/certs/mapgis-gis-first-prize.webp" alt="第十七届全国高校GIS技能大赛高级开发组一等奖荣誉证书" width="1200" height="850" loading="lazy" decoding="async">
+    <figcaption>第十七届全国高校 GIS 技能大赛（中国测绘学会 · 中国地理信息产业协会），开发赛道 / 高级开发组一等奖。团队：徐国东、李冠辉、彭俊超、蔡江浩（长江大学）；指导老师：刘远刚、并然。</figcaption>
+  </figure>
+</details>
+
+<details>
+  <summary>中国大学生计算机设计大赛 · 中南地区赛 · 三等奖<span class="cert-meta">2024 · 团队奖项</span></summary>
+  <figure>
+    <img src="/assets/images/certs/computer-design-third-prize.webp" alt="第十七届中国大学生计算机设计大赛中南地区赛三等奖证书，参赛作品《库存管理系统》" width="989" height="1400" loading="lazy" decoding="async">
+    <figcaption>2024 年（第十七届）中国大学生计算机设计大赛中南地区赛三等奖，参赛作品《库存管理系统》。团队：李铭皓、沈芳旭、熊浩辰、彭俊超、周宗灿；指导老师：刘少华、纪海芹。</figcaption>
+  </figure>
+</details>
+
+<details>
+  <summary>全国高校计算机能力挑战赛 · Excel 科目 · 三等奖<span class="cert-meta">2025 · 湖北赛区</span></summary>
+  <figure>
+    <img src="/assets/images/certs/ncccu-excel-third-prize.webp" alt="第七届全国高校计算机能力挑战赛 Office 高级应用赛 Excel 科目湖北赛区本科组三等奖荣誉证书" width="993" height="1400" loading="lazy" decoding="async">
+    <figcaption>2025 年第七届全国高校计算机能力挑战赛湖北选拔赛暨第三届湖北省高校计算机能力挑战赛，Office 高级应用赛（Excel 科目）湖北赛区本科组三等奖。长江大学（武汉校区）彭俊超；指导老师：刘少华。</figcaption>
+  </figure>
+</details>
+
+<details>
+  <summary>Google 职业认证 · Ads × Analytics（6 项）<span class="cert-meta">2026 · 每年续证</span></summary>
+  <figure>
+    <img src="/assets/images/certs/google-skillshop-certifications.webp" alt="Google Skillshop 认证面板：Google Ads 展示广告、GA4 入门、GA4 数据与报告、AI 效果广告、Google Analytics 认证、Google Ads 搜索广告共 6 项认证" width="1322" height="931" loading="lazy" decoding="async">
+    <figcaption>Google Skillshop 认证面板（6 项）：Google Ads 展示广告认证、GA4 入门、管理 GA4 数据与报告、「借助 AI 技术的效果广告」认证、Google Analytics（Analytics）认证、Google Ads 搜索广告认证。均为年度认证，2027 年到期。</figcaption>
+  </figure>
+</details>
+
+<details>
+  <summary>全国大学英语六级考试（CET-6）· 528 分<span class="cert-meta">2024.06</span></summary>
+  <figure>
+    <img src="/assets/images/certs/cet6-report-2024.webp" alt="全国大学英语六级考试成绩报告单：长江大学地球科学学院彭俊超，总分 528（听力 177、阅读 229、写作和翻译 122），证件号等敏感信息已打码" width="592" height="840" loading="lazy" decoding="async">
+    <figcaption>2024 年 6 月，总分 528（听力 177 / 阅读 229 / 写作和翻译 122）。<strong>身份证号、准考证号、成绩报告单编号、二维码与校验码已打码。</strong></figcaption>
+  </figure>
+</details>
+
+</div>
+
+<p class="cert-note">团队奖项由参赛队共同完成，署名以证书为准；个人证书与成绩单为本人原件。</p>
 
 ## 项目与研究经历
 
