@@ -59,8 +59,8 @@ schema_faq:
 </figure>
 
 <figure class="post-fig">
-  <img src="/assets/images/blog/fuchai-sword.webp" alt="吴王夫差剑：与勾践剑同馆展出，展厅内几乎无人排队" width="474" height="355" loading="lazy" decoding="async">
-  <figcaption>吴王夫差剑——同一座博物馆，同一段历史，却几乎没有人排队</figcaption>
+  <img src="/assets/images/blog/fuchai-sword.webp" alt="湖北省博物馆展厅实拍：展柜中的吴王夫差剑，旁边是剑各部位名称示意图与战国弩构成示意图" width="1200" height="900" loading="lazy" decoding="async">
+  <figcaption>吴王夫差剑展厅实拍——同一座博物馆，几乎没有人排队（图源：笔者摄于湖北省博物馆）</figcaption>
 </figure>
 
 几乎没有人在排队。我站在它前面，站了整整五分钟，把剑身上的每一道纹路都看了个遍。
