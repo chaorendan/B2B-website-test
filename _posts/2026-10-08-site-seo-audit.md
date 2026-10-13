@@ -2,7 +2,7 @@
 layout: post
 title: "独立站 SEO 存量体检：我在自己站点上挖出的 4 个真实问题"
 seo_title: "独立站 SEO 存量体检：4 个真实问题与自查清单 | 超人蛋"
-description: "一次对自建独立站的 SEO 存量检查：39 条站内断链、被完全忽略的 hreflang、sitemap 正常但站长工具报错、以及被污染的页面标题。每个问题都附实测数字与排查方法。"
+description: "一次自建独立站的 SEO 存量体检：39 条站内断链、被忽略的 hreflang、被污染的页面标题，每条都附实测数字与修法。"
 date: 2026-10-08 21:50:00 +0800
 lang: "zh"
 tags:
