@@ -3,7 +3,7 @@ layout: post
 title: "Pinglu Canal: From the Lingqu to the Beibu Gulf — How Guangxi Turns from a Mountain People into a Sea People"
 seo_title: "Pinglu Canal: How Guangxi Turns from a Mountain People into a Sea People | Chaorendan"
 description: "From the ancient Lingqu to the Pinglu Canal: how a two-thousand-year wait turned Guangxi from a mountain region into a coastal one."
-date: 2026-10-09 20:00:00 +0800
+date: 2026-10-10 20:00:00 +0800
 lang: "en"
 permalink: "/en/blog/pinglu-canal-opening/"
 cover: "/assets/images/blog/pinglu-canal-01.jpg"
