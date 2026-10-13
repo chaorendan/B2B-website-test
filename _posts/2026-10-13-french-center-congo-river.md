@@ -61,6 +61,13 @@ schema_faq:
 
 我没有收到回信。但我也没有期待收到回信。
 
+<figure class="post-fig">
+  <img src="/assets/images/blog/elysee-confirmation.webp" alt="爱丽舍宫自动确认邮件截图：Confirmation of message validation to the President，发件人 nepasrepondre@ecrire.elysee.fr，2026年5月2日 18:22" width="1008" height="626" loading="lazy" decoding="async">
+  <figcaption>唯一的回音是一张「签收单」：爱丽舍宫通信服务处的自动确认，2026 年 5 月 2 日 18:22</figcaption>
+</figure>
+
+严格来说，有一封回执。第二天傍晚，爱丽舍宫通信服务处的自动系统确认：您的信息已收到，将由团队处理，再酌情转交总统的顾问或身边同事。发件人叫 nepasrepondre——法语里「不要回复」。它不算回信，只是一张签收单。但它证明那封邮件真的被签收过：2026 年 5 月 2 日 18 点 22 分，五一深夜写下的那几行字，跨越八千公里，被另一端的一台机器郑重其事地收下了。
+
 那封邮件，现在还在我的已发送箱里。我偶尔会翻出来看一眼，提醒自己：你开始学这门语言，是因为一个朋友在中山大学听到了一场演讲，然后把那份热情传给了你。你和法语的关系，始于一个人传给另一个人的温度。
 
 ## 第二节：巴黎与刚果河
