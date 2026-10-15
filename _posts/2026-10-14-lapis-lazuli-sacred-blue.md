@@ -63,11 +63,6 @@ schema_faq:
   <figcaption>青金石标本——不闪，不亮，像一小块被切下来的夜空</figcaption>
 </figure>
 
-<figure class="post-fig post-fig--small">
-  <img src="/assets/images/blog/lapis-stones.webp" alt="一把青金石小件摊在白色纸巾上，深浅不一的蓝色，部分带白色方解石斑" width="1024" height="1450" loading="lazy" decoding="async">
-  <figcaption>青金石小件（图源：笔者摄）</figcaption>
-</figure>
-
 ## 二、青金石不闪，但它比所有闪的石头都古老
 
 青金石不是一种闪闪发光的宝石。它不透明，不折射，不耀眼。它的蓝，是一种深沉的、安静的、不带攻击性的蓝。它上面的金色斑点，是黄铁矿——地质学上再普通不过的矿物，因为形似黄金却被无数次误认，得了个“愚人金”的绰号。
@@ -118,6 +113,10 @@ schema_faq:
 ## 五、不闪的石头，不闪的蓝
 
 青金石不闪。它不反射光线，不刺激视网膜，不让人本能地兴奋。它只是蓝，一种安静的、深沉的、需要一点耐心才能感受到的蓝。
+<figure class="post-fig post-fig--small">
+  <img src="/assets/images/blog/lapis-stones.webp" alt="一把青金石小件摊在白色纸巾上，深浅不一的蓝色，部分带白色方解石斑" width="1024" height="1450" loading="lazy" decoding="async">
+  <figcaption>青金石小件（图源：笔者摄）</figcaption>
+</figure>
 
 售货员小姐可能到现在也不明白，我为什么选了一块不闪的石头。但我希望，如果我把这篇文章写出来，如果她有一天看到，她再看那块青金石的时候，会看到的不再是“灰灰的蓝”，而是伊什塔尔门的釉砖，是圣母的长袍，是飞天的裙摆，是药师佛的身色。
 
