@@ -60,7 +60,12 @@ schema_faq:
 
 <figure class="post-fig post-fig--small">
   <img src="/assets/images/blog/lapis-specimen.webp" alt="青金石标本：深蓝色底，撒着黄铁矿的金色斑点与白色方解石纹路" width="287" height="234" loading="lazy" decoding="async">
-  <figcaption>青金石标本——不闪，不亮，像一小块被切下来的夜空（图源：笔者摄）</figcaption>
+  <figcaption>青金石标本——不闪，不亮，像一小块被切下来的夜空</figcaption>
+</figure>
+
+<figure class="post-fig post-fig--small">
+  <img src="/assets/images/blog/lapis-stones.webp" alt="一把青金石小件摊在白色纸巾上，深浅不一的蓝色，部分带白色方解石斑" width="1024" height="1450" loading="lazy" decoding="async">
+  <figcaption>青金石小件（图源：笔者摄）</figcaption>
 </figure>
 
 ## 二、青金石不闪，但它比所有闪的石头都古老
