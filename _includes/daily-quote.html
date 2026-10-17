@@ -2,11 +2,16 @@
   <figure class="quote">
     <div class="quote-head">
       <span class="quote-tag">每日一言</span>
-      <time class="quote-date" id="quote-date"></time>
+      <span class="quote-head__meta">
+        <time class="quote-date" id="quote-date"></time>
+        <a class="quote-more" href="{{ '/quotes/' | relative_url }}" title="按日历查看往期每日一言">往期 &rarr;</a>
+      </span>
     </div>
     <blockquote class="quote-text" id="quote-text" lang="zh"></blockquote>
     <p class="quote-tr" id="quote-en" lang="en"></p>
     <p class="quote-tr" id="quote-fr" lang="fr"></p>
   </figure>
 </section>
+<script src="{{ '/assets/js/quotes-data.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/quotes-core.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/daily-quote.js' | relative_url }}" defer></script>
