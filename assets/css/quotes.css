@@ -1,0 +1,116 @@
+/* ============================================================
+   quotes.css —— /quotes/ 每日一言往期页
+   依赖 hero-map.css 里的主题变量（--panel/--line/--text/--muted/--accent/--accent2）
+   ============================================================ */
+
+.qa-lead{color:var(--muted);font-size:14.5px;line-height:1.8;margin:0 0 6px}
+.qa-lead kbd{
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;
+  padding:1px 5px;border:1px solid var(--line);border-radius:5px;
+  background:var(--panel);color:var(--text)
+}
+
+/* 与首页「每日一言」同样破出 740px 正文宽度，日历才有呼吸空间 */
+.qa{
+  width:min(1080px,94vw);position:relative;left:50%;transform:translateX(-50%);
+  display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);
+  gap:22px;align-items:start;margin:24px 0 34px
+}
+@media (max-width:760px){ .qa{grid-template-columns:1fr;gap:16px} }
+
+/* ---------- 月历 ---------- */
+.qa-cal{
+  background:var(--panel);border:1px solid var(--line);border-radius:16px;
+  padding:14px 14px 12px;box-shadow:0 6px 24px rgba(28,43,58,.05)
+}
+.qa-cal__bar{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}
+.qa-cal__title{margin:0;font-size:15px;letter-spacing:.04em;color:var(--text)}
+.qa-btn{
+  width:32px;height:32px;flex:0 0 auto;border-radius:10px;cursor:pointer;
+  border:1px solid var(--line);background:transparent;color:var(--muted);
+  font-size:14px;line-height:1;transition:color .18s,border-color .18s
+}
+.qa-btn:hover,.qa-btn:focus-visible{color:var(--accent2);border-color:currentColor}
+
+.qa-cal__week{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:4px}
+.qa-cal__week span{
+  text-align:center;font-size:11px;color:var(--muted);opacity:.72;padding:3px 0
+}
+
+.qa-cal__grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+
+.qa-cell{
+  position:relative;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;
+  border:1px solid transparent;border-radius:10px;background:transparent;
+  color:var(--text);font-size:13px;font-variant-numeric:tabular-nums;cursor:pointer;
+  transition:background-color .16s,color .16s,border-color .16s
+}
+.qa-cell--blank{cursor:default;pointer-events:none}
+.qa-cell:hover{background:rgba(47,109,179,.12)}
+.qa-cell.is-today{border-color:var(--accent2);color:var(--accent2);font-weight:600}
+.qa-cell.is-selected{background:var(--accent2);color:var(--bg);border-color:var(--accent2);font-weight:600}
+.qa-cell.is-selected:hover{background:var(--accent2)}
+/* 有 date 定点的日子：底部一个实心点 */
+.qa-cell.is-pinned::after{
+  content:"";position:absolute;bottom:4px;left:50%;transform:translateX(-50%);
+  width:4px;height:4px;border-radius:50%;background:var(--accent)
+}
+.qa-cell.is-selected.is-pinned::after{background:var(--bg)}
+
+.qa-cal__hint{margin:10px 0 0;font-size:11.5px;line-height:1.6;color:var(--muted);opacity:.85}
+.qa-dot{
+  display:inline-block;width:5px;height:5px;border-radius:50%;
+  vertical-align:middle;margin-right:3px;background:var(--accent)
+}
+
+/* ---------- 当日卡片 ---------- */
+.qa-card{
+  background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent2);
+  border-radius:16px;padding:22px 26px 18px;min-height:236px;
+  box-shadow:0 6px 24px rgba(28,43,58,.05);
+  transition:background-color .35s ease,border-color .35s ease
+}
+@media (max-width:760px){ .qa-card{padding:18px 18px 14px;min-height:0} }
+
+.qa-card__meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 14px}
+.qa-card__date{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.qa-card__badge{
+  font-size:11px;padding:1px 8px;border-radius:999px;
+  border:1px solid var(--line);color:var(--muted)
+}
+.qa-card__badge.is-pinned{color:var(--accent);border-color:currentColor}
+
+.qa-card__zh{
+  margin:0;font-family:"KaiTi","STKaiti","楷体","DFKai-SB",serif;
+  font-size:clamp(17px,2vw,21px);line-height:1.78;color:var(--text);letter-spacing:.02em
+}
+.qa-card__zh::before{content:"「";color:var(--accent2);opacity:.6;margin-right:2px}
+.qa-card__zh::after{content:"」";color:var(--accent2);opacity:.6;margin-left:2px}
+
+.qa-card__tr{margin:10px 0 0;font-size:13.5px;line-height:1.65;color:var(--muted)}
+
+.qa-card__nav{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  margin-top:20px;padding-top:14px;border-top:1px solid var(--line)
+}
+.qa-link{
+  border:0;background:none;padding:0;cursor:pointer;
+  font-size:13px;color:var(--accent2)
+}
+.qa-link:hover,.qa-link:focus-visible{text-decoration:underline}
+.qa-card__empty{margin:0;color:var(--muted);font-size:14px}
+
+/* ---------- 全量列表 ---------- */
+.qa-all{margin:12px 0 44px}
+.qa-all summary{
+  cursor:pointer;font-size:14px;color:var(--accent2);padding:8px 0;
+  list-style-position:inside
+}
+.qa-list{list-style:none;padding:0;margin:10px 0 0}
+.qa-item{padding:14px 0;border-top:1px solid var(--line)}
+.qa-item:first-child{border-top:0}
+.qa-item__zh{
+  margin:0;font-family:"KaiTi","STKaiti","楷体","DFKai-SB",serif;
+  font-size:16.5px;line-height:1.72;color:var(--text)
+}
+.qa-item__tr{margin:4px 0 0;font-size:12.5px;line-height:1.55;color:var(--muted);opacity:.9}
