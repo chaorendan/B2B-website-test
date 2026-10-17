@@ -18,6 +18,8 @@ tags:
   - Western Land-Sea Corridor
   - Guangxi
 author: "Peng Junchao"
+categories:
+  - culture
 ---
 
 [阅读中文版](/blog/pinglu-canal-opening/)

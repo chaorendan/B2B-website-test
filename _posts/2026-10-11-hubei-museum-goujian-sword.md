@@ -18,7 +18,7 @@ tags:
   - 楚文化
   - 人文精神
 categories:
-  - Culture & Reflection
+  - culture
 author: "彭俊超"
 schema_faq:
   - question: "湖北省博物馆的镇馆之宝是什么？"

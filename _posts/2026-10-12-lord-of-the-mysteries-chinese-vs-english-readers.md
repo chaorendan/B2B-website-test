@@ -21,7 +21,8 @@ tags:
   - 序列体系
   - 扮演法
 categories:
-  - Book & Culture
+  - reading
+series: reading-notes
 author: "彭俊超"
 schema_faq:
   - question: "《诡秘之主》在海外有多火？"

@@ -19,6 +19,8 @@ tags:
   - 山民海民
   - 平陆运河通航
 author: "彭俊超"
+categories:
+  - culture
 ---
 
 [Read in English](/en/blog/pinglu-canal-opening/)

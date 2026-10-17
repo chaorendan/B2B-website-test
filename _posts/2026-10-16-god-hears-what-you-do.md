@@ -17,7 +17,7 @@ tags:
   - 上行数据
   - 活人感
 categories:
-  - Faith & Action
+  - faith
 author: "彭俊超"
 keywords:
   - 行为即祷告

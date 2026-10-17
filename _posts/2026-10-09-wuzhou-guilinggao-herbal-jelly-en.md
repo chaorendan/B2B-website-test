@@ -19,7 +19,7 @@ tags:
   - Chinese Dessert
   - TCM
 categories:
-  - Food & Culture
+  - culture
 author: "Peng Junchao"
 schema_faq:
   - question: "Is Guilinggao vegan-friendly?"

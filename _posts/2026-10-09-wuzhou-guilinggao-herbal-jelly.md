@@ -17,7 +17,7 @@ tags:
   - 美食
   - 文化
 categories:
-  - Food & Culture
+  - culture
 author: "彭俊超"
 ---
 

@@ -27,7 +27,7 @@ tags:
   - 文明史
   - 玉石文化
 categories:
-  - Culture & Reflection
+  - culture
 author: "彭俊超"
 schema_faq:
   - question: "青金石为什么被称为“圣蓝”？"

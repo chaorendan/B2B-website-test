@@ -16,6 +16,20 @@ layout: default
       <span class="post-meta__sep" aria-hidden="true">&middot;</span>{{ page.author | escape }}
       {%- endif -%}
     </p>
+    {%- comment -%} 分类与专栏入口：categories 的展示信息在 _data/categories.yml，专栏页在 _columns/ {%- endcomment -%}
+    {%- assign _cat_key = page.categories.first -%}
+    {%- assign _cat = site.data.categories | where: "key", _cat_key | first -%}
+    {%- assign _ser = site.columns | where: "column_key", page.series | first -%}
+    {%- if _cat or _ser %}
+    <p class="post-meta post-meta--tax">
+      {%- if _cat %}
+      <a class="post-tax" href="{{ '/blog/categories/' | relative_url }}#{{ _cat.key }}">{{ _cat.icon }} {{ _cat.title }}</a>
+      {%- endif -%}
+      {%- if _ser %}
+      <a class="post-tax post-tax--series" href="{{ _ser.url | relative_url }}">{{ _ser.icon }} 专栏 · {{ _ser.title }}</a>
+      {%- endif -%}
+    </p>
+    {%- endif %}
     {%- if page.description %}
     <p class="post-summary">{{ page.description | escape }}</p>
     {%- endif %}

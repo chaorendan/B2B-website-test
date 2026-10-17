@@ -29,7 +29,7 @@ tags:
   - 非洲
   - 法语国家
 categories:
-  - Language & Power
+  - language
 author: "彭俊超"
 schema_faq:
   - question: "马克龙真的说了「法语的中心在刚果河流域」吗？"
