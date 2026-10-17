@@ -4,6 +4,10 @@ title: "摄影、遥感与SEO：我们都在截取宏大信息流的一角"
 seo_title: "摄影、遥感与SEO：我们都在截取宏大信息流的一角 | 超人蛋"
 description: "光圈、快门、焦距——摄影、遥感与SEO是同一件事：放下表面招式，搭好信息框架，定格那一帧真实需求。"
 date: 2026-10-17 23:00:00 +0800
+cover: "/assets/images/blog/fy4b-full-disk-earth-cover.webp"
+cover_alt: "黑色宇宙背景中央的风云四号B星全圆盘地球：非洲大陆、澳洲荒漠与印度洋上空的云系"
+cover_width: 1036
+cover_height: 583
 permalink: "/blog/photography-remote-sensing-seo/"
 lang: "zh"
 tags:
