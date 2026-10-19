@@ -21,7 +21,7 @@ tags:
   - 序列体系
   - 扮演法
 categories:
-  - reading
+  - creation
 series: reading-notes
 author: "彭俊超"
 schema_faq:

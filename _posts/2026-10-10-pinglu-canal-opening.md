@@ -11,6 +11,7 @@ cover_height: 613
 cover_caption: "世纪工程——平陆运河船闸（图源：央视新闻）"
 lang: "zh"
 tags:
+  - 我的家乡
   - 平陆运河
   - 灵渠
   - 广西通江达海

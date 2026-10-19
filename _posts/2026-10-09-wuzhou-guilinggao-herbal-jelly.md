@@ -11,7 +11,7 @@ cover_width: 430
 cover_height: 241
 lang: "zh"
 tags:
-  - 家乡
+  - 我的家乡
   - 梧州
   - 龟苓膏
   - 美食

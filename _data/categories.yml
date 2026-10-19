@@ -6,28 +6,23 @@
   icon: "🏛"
   desc: 文物、饮食、地方与那些被大多数人忽略的细节
   order: 1
-- key: reading
-  title: 读书笔记
-  icon: "📖"
-  desc: 读过的书，和书里带出来的问题——不是书评，是卡住我的地方
-  order: 2
 - key: language
   title: 语言与表达
   icon: "🗣"
   desc: 语言背后的权力、翻译、误解，以及学一门语言的真实过程
-  order: 3
+  order: 2
 - key: growth
   title: 增长实验
   icon: "📈"
   desc: SEO、独立站与数据驱动增长的实操记录
-  order: 4
+  order: 3
 - key: faith
   title: 信仰与行动
   icon: "🕯"
   desc: 信念如何落到具体的行为上——说与做的辩证
-  order: 5
+  order: 4
 - key: creation
   title: 创作
   icon: "✍️"
-  desc: AI 时代的创作方法与身份：互动叙事、内容工具，以及创作者的心法
-  order: 6
+  desc: 网文、AI 与内容产业：怎么写、写给谁，以及创作者的身份变化
+  order: 5
