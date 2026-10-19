@@ -1,23 +1,52 @@
-# 标签图谱 —— 四套关系簇（开放标签的聚类展示层）
+# 标签图谱 —— 关系簇（开放标签的聚类展示层）
 #
-# 职责划分：
-#   categories（_data/categories.yml）= 固定的主题抽屉，少而互斥；
-#   这里的关系簇 = 可重叠的观察视角，同一篇文章允许同时活在几簇里。
-# 新增簇：在下面加一项即可；新增标签：写进某簇 tags，文章打上同名词即自动归簇。
-# 标签用读者读得懂的自然词（如「我的家乡」），「与……」的关系感由簇名承担。
+# 三条护栏（每次新增簇/标签前自查，防止再长出"剩余范畴"）：
+#   1. 问句测试：一个簇必须能被一个疑问句命名（下面 question 字段），否则太宽。
+#   2. 份额测试：单簇文章数不超过中文总量的 40%，超了就拆。
+#   3. 镜像测试：簇名不得与某个分类（_data/categories.yml）同义。
+#
+# 与分类的职责划分：
+#   categories = 固定的主题抽屉，少而互斥；
+#   关系簇     = 可重叠的观察视角，同一篇文章允许同时活在几簇里。
+#
+# 字段：key / title / question（对外显示的判据）/ desc / tags
+#       layers（可选）：簇内再分层，每层有 title 与 tags；页面按 h3 分组渲染。
 - key: place
   title: 与地方
+  question: 这片土地怎么塑造了我？
   desc: 从一块土地长出来的故事
   tags: [我的家乡, 梧州, 龟苓膏, 美食, 平陆运河, 灵渠, 广西通江达海]
-- key: civilization
-  title: 与文明
-  desc: 文物、历史与跨文化的注视
-  tags: [楚文化, 人文精神, 青金石, 文明史, 网文出海, 跨文化阅读, 法语, 法语国家, 文化]
-- key: tech
-  title: 与技术
+- key: object
+  title: 与器物
+  question: 一件东西身上压着多少时间？
+  desc: 文物、矿石，以及它们背后的年代与观念
+  tags: [湖北省博物馆, 越王勾践剑, 曾侯乙尊盘, 楚文化, 青金石, 文明史]
+- key: text
+  title: 与文本
+  question: 别人写下的东西，怎么改变我看世界？
+  desc: 书、语言与被误读的意义
+  tags: [网文出海, 跨文化阅读, 法语, 法语国家]
+- key: tools
+  title: 与工具
+  question: 我用什么手段做？
   desc: AI、SEO 与空间思维的工具箱
-  tags: [SEO, 遥感, 搜索意图, 独立站, hreflang, AI创作, 互动视频, AI应用层]
+  tags: [SEO, 遥感, 搜索意图, 独立站, hreflang, AI应用层]
 - key: meaning
   title: 与意义
-  desc: 信念、语言与活法
+  question: 我为什么做？
+  desc: 信念、行动，以及为什么值得
   tags: [祷告, 知行合一, 上行数据, 活人感]
+- key: creation
+  title: 与创作
+  question: 我怎么把东西做出来？
+  desc: 一条从「谁在做」走到「谁在读」的纵向轴
+  layers:
+    - key: agent
+      title: L1 主体 · 谁在做、凭什么
+      tags: [创作者心法, AI创作, 打破天花板]
+    - key: process
+      title: L2 过程 · 怎么做出来
+      tags: [互动视频, 序列体系, 扮演法]
+    - key: product
+      title: L3 产物 · 做成了什么、谁在读
+      tags: [网文出海, 跨文化阅读, AI应用层]

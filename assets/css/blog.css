@@ -309,6 +309,21 @@ a.col-card:hover,a.col-card:focus-visible{border-color:var(--accent2);box-shadow
 .post-tax--series{color:var(--accent)}
 
 /* 标签图谱（/blog/tags/）的关系簇小签 */
+.cat-q{margin:6px 0 0;font-size:14.5px;line-height:1.65;color:var(--text)}
+.cat-q::before{content:"「";color:var(--accent2)}
+.cat-q::after{content:"」";color:var(--accent2)}
+
+/* 带层次的簇（与创作）：主体 → 过程 → 产物的纵向轴 */
+.tagset-ladder{position:relative;margin:14px 0 2px;padding:2px 0 2px 20px;border-left:2px solid var(--line)}
+.tagset-rung{position:relative;padding:0 0 14px}
+.tagset-rung:last-child{padding-bottom:0}
+.tagset-rung::before{
+  content:"";position:absolute;left:-26px;top:6px;width:9px;height:9px;border-radius:50%;
+  background:var(--bg);border:2px solid var(--accent2)
+}
+.tagset-rung__title{margin:0;font-size:13px;font-weight:600;letter-spacing:.02em;color:var(--accent2)}
+.tagset-rung .tagset-chips{margin:6px 0 0}
+
 .tagset-chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 0}
 .tagset-chip{
   font-size:12px;color:var(--muted);background:var(--panel);
