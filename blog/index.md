@@ -16,7 +16,8 @@ lang: "zh"
 要找体系化的方法手册，去 [知识库](/kb/)；要看完整项目复盘，去 [项目与案例](/projects/)。
 
 <div class="grid">
-  <a class="tile" href="{{ '/blog/categories/' | relative_url }}"><b>🗂 按分类浏览</b><span>文化观察 · 读书笔记 · 语言与表达 · 增长实验 · 信仰与行动</span></a>
+  <a class="tile" href="{{ '/blog/categories/' | relative_url }}"><b>🗂 按分类浏览</b><span>文化观察 · 语言与表达 · 增长实验 · 信仰与行动 · 创作</span></a>
+  <a class="tile" href="{{ '/blog/tags/' | relative_url }}"><b>🏷 标签图谱</b><span>与地方 · 与文明 · 与技术 · 与意义——四套关系视角</span></a>
   <a class="tile" href="{{ '/columns/' | relative_url }}"><b>📚 专栏</b><span>读书笔记等系列，集中归档、持续更新</span></a>
   <a class="tile" href="{{ '/quotes/' | relative_url }}"><b>🕯 每日一言</b><span>按日历回看往期，三语对照</span></a>
 </div>

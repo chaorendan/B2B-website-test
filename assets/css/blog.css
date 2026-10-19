@@ -307,3 +307,11 @@ a.col-card:hover,a.col-card:focus-visible{border-color:var(--accent2);box-shadow
 }
 .post-tax:hover,.post-tax:focus-visible{border-color:currentColor}
 .post-tax--series{color:var(--accent)}
+
+/* 标签图谱（/blog/tags/）的关系簇小签 */
+.tagset-chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 0}
+.tagset-chip{
+  font-size:12px;color:var(--muted);background:var(--panel);
+  border:1px solid var(--line);border-radius:999px;padding:1px 9px
+}
+.tagset-chip i{font-style:normal;color:var(--accent2);margin-left:4px}

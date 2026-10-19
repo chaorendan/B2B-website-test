@@ -9,7 +9,7 @@ lang: "zh"
 
 # 博客分类
 
-<p class="cat-lead">同一类主题，归到同一个分类下集中展示。想追一个主题，就从这里进。</p>
+<p class="cat-lead">同一类主题，归到同一个分类下集中展示。想追一个主题，就从这里进；想换关系视角，去 <a href="{{ '/blog/tags/' | relative_url }}">标签图谱</a>。</p>
 
 <nav class="cat-jump" aria-label="分类跳转">
   {%- for cat in site.data.categories %}
