@@ -1,0 +1,15 @@
+# 友链 —— 唯一事实来源（/links/ 页面读这里）
+#
+# 字段：
+#   name    主人名（卡片标题）
+#   url     站点地址（带 https://）
+#   desc    一句话介绍（照抄对方的自我描述即可，别替人概括）
+#   avatar  头像：站内路径（推荐，头像已转存到 assets/images/links/）或完整 URL
+#   since   添加时间（选填，YYYY-MM；留档用，不强求）
+#
+# 新增一条：复制一个 - 块改内容即可，页面自动渲染，无需改模板。
+- name: Innei
+  url: https://innei.in/
+  desc: "Innei's personal blog on frontend and full-stack development — TypeScript, React, Next.js, AI engineering, indie hacking, travel and life."
+  avatar: /assets/images/links/innei.webp
+  since: "2026-10"
