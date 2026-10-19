@@ -52,7 +52,7 @@ keywords:
 
 > 你只管把你最大的才智分别借给各方去尽情施展——但要记住有些念头有些人想不出、有些主意某些人会不同意。
 >
-> —— John Hexa，[《如何写出像权力的游戏这样的小说？》](https://jh-reader.github.io/post/ru-he-xie-chu-xiang-quan-li-de-you-xi-zhe-yang-de-xiao-shuo/)
+> —— John Hexa，[《如何写出像权力的游戏这样的小说？》](https://www.zhihu.com/question/60350841/answer/2565992747)
 
 这就是解法：**不要当全知全能的上帝，要把才智借给正反双方。**你只需要设定条件（捏住意大利面的两端），剩下的，让他们自己碰撞。
 
@@ -76,5 +76,5 @@ keywords:
 
 ## 参考
 
-- [如何写出像权力的游戏这样的小说？—— John Hexa 的回答（CC0 镜像全文）](https://jh-reader.github.io/post/ru-he-xie-chu-xiang-quan-li-de-you-xi-zhe-yang-de-xiao-shuo/)
+- [如何写出像权力的游戏这样的小说？—— John Hexa 的回答](https://www.zhihu.com/question/60350841/answer/2565992747)
 - [John Hexa 的知乎主页](https://www.zhihu.com/people/mcbig)
