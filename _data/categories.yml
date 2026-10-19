@@ -26,3 +26,8 @@
   icon: "🕯"
   desc: 信念如何落到具体的行为上——说与做的辩证
   order: 5
+- key: creation
+  title: 创作
+  icon: "✍️"
+  desc: AI 时代的创作方法与身份：互动叙事、内容工具，以及创作者的心法
+  order: 6
