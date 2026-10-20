@@ -13,9 +13,9 @@ keywords:
   - 马克龙
   - 地缘政治
 date: 2026-10-18 10:00:00 +0800
-cover: "/assets/images/blog/seine-fire-cover.webp"
-cover_alt: "夜色中的塞纳河，河面映着远处的暖色火光（示意图，非现场照片）"
-cover_caption: "示意图，非现场照片：塞纳河的夜景，与远处的火光"
+cover: "/assets/images/blog/porte-saint-denis-fire-cover.webp"
+cover_alt: "巴黎圣德尼门下，消防车亮着警灯，街道上烟雾弥漫，行人聚集（现场画面截图）"
+cover_caption: "10 月 17 日，巴黎街头的消防车与烟雾（现场画面，图源：网络流传视频截图）"
 cover_width: 1036
 cover_height: 583
 lang: "zh"
@@ -57,19 +57,19 @@ schema_faq:
 
 顺带交代一句：我没去过法国，也没去过萨赫勒。下面的现场都来自报道与材料，判断是我自己的。
 
-<div class="post-callout">
-<p class="post-callout__label">核心洞察</p>
-<p>骚乱的真正引信，不在巴黎的街头，而在非洲的萨赫勒。</p>
-</div>
+<p class="post-mark">
+<span class="post-mark__label">核心洞察</span>
+<mark>骚乱的真正引信，不在巴黎的街头，而在非洲的萨赫勒。</mark>
+</p>
 
 把一个背景拿掉，这场火就看不懂了：2020 年以来，马里、布基纳法索、尼日尔相继政变，法军被一批一批请出去。2022 年撤出马里时还有约 5000 人；到 2026 年，法国在萨赫勒的永久军事基地全部关闭，整个非洲的驻军缩到不足 2000 人，只剩吉布提和加蓬两个小基地。今年 6 月，布基纳法索干脆和法国断了交。马克龙五月在内罗毕说得很清楚：法国不再在非洲常驻大型军事力量，以后只做培训和装备支持。
 
 这不是某一届政府的失误，是一整套「法非特殊关系」的清算：军事支点没了，铀矿被收回去了（尼日尔把法国核企奥拉诺的许可收了回去），法国企业在法语非洲的市场份额掉到 6%—7%。
 
-<div class="post-callout post-callout--verdict">
-<p class="post-callout__label">定性</p>
-<p>法国近年的严重骚乱，表面是「内部阶级与代际冲突」，本质是地缘版撤退在经济和秩序上的后坐力——不是战争失败，是收租失败。</p>
-</div>
+<p class="post-mark">
+<span class="post-mark__label post-mark__label--verdict">定性</span>
+<mark class="post-mark__verdict">法国近年的严重骚乱，表面是「内部阶级与代际冲突」，本质是地缘版撤退在经济和秩序上的后坐力——不是战争失败，是收租失败。</mark>
+</p>
 
 同一次非洲之行里，马克龙先说了「法语的中心如今位于刚果河流域，而非塞纳河畔」，几天后又宣布军队要撤。一个人在同一个月里，先承认语言的中心走了，再承认枪也留不住了。这两句话，其实是同一句话。
 
@@ -87,10 +87,10 @@ schema_faq:
 
 [旧文里那段刚果布的材料](/blog/french-center-congo-river/)，讲的是另一种「资源在、收益不在」：产油国，炼油厂稀缺，成品油靠进口，去加油站加油还得给小费。现在法国本土出现的，是同一结构的高级版本：国家还在，机器还在，钱不在了。
 
-<div class="post-callout">
-<p class="post-callout__label">核心洞察</p>
-<p>法国国内政治的撕裂，本质是「蛋糕做大」的神话破灭之后，各方在争夺一块正在极速缩水的面团。</p>
-</div>
+<p class="post-mark">
+<span class="post-mark__label">核心洞察</span>
+<mark>法国国内政治的撕裂，本质是「蛋糕做大」的神话破灭之后，各方在争夺一块正在极速缩水的面团。</mark>
+</p>
 
 街头的火，不是革命，是分配谈判失败的声音。
 
