@@ -162,6 +162,21 @@
 /* 小尺寸插图（如 283px 的地理位置图）：按原始尺寸居中，不放大到全宽 */
 .post-body figure.post-fig--small img{max-width:340px}
 
+/* 结构化判断块：核心洞察 / 定性（正文里给 AI 与读者共同的「答案卡」） */
+.post-callout{
+  margin:26px 0;padding:14px 18px 16px;
+  border:1px solid var(--line);border-left:3px solid var(--accent2);
+  border-radius:10px;background:var(--panel);
+}
+.post-callout p{margin:0;font-size:15px;line-height:1.85}
+.post-callout__label{
+  margin:0 0 6px;font-size:11.5px;font-weight:700;letter-spacing:.12em;
+  color:var(--accent2)
+}
+.post-callout__label::before{content:"\25C6";font-size:9px;margin-right:6px;vertical-align:1px}
+.post-callout--verdict{border-left-color:var(--accent)}
+.post-callout--verdict .post-callout__label{color:var(--accent)}
+
 .post-footer{
   margin-top:34px;
   padding-top:18px;
