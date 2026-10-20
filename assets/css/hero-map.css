@@ -104,8 +104,8 @@ html[data-theme="night"] td{border-color:#22314a}
 .tools-menu__icon *{fill:none}
 @media (max-width:600px){
   .tools-menu{width:100%}
-  .tools-menu__btn{display:flex;justify-content:flex-end;width:100%;padding:10px 15px;min-height:auto;font-size:16px}
-  .tools-menu__list{position:static;width:100%;margin:6px 0 0;box-shadow:none;border-radius:8px;background:var(--panel)}
+  .tools-menu__btn{display:flex;justify-content:flex-end;width:100%;box-sizing:border-box;padding:10px 15px;min-height:auto;font-size:16px}
+  .tools-menu__list{position:static;width:100%;min-width:0;box-sizing:border-box;margin:6px 0 0;box-shadow:none;border-radius:8px;background:var(--panel)}
   .tools-menu__link{justify-content:flex-end;padding:10px 15px;border-radius:0}
 }
 /* 夜间模式下汉堡菜单下拉底色与图标跟随主题 */
@@ -114,6 +114,14 @@ html[data-theme="night"] .menu-icon>svg{fill:#dce6f2}
 @media (max-width:600px){
   /* 汉堡键绝对定位在最右，主题钮/语言钮让出 52px 避免重叠 */
   .site-header .theme-toggle{margin-right:52px}
+  /* 展开面板必须盖过语言胶囊/主题钮：minima 面板是 absolute 但 z-index auto，
+     而胶囊（position:relative）在 DOM 里靠后，会 painting 在链接上面 */
+  .site-nav{z-index:70}
+  /* 面板宽度只在展开时撑开（收起时只剩汉堡键，不能留一条空面板）；
+     子元素用 border-box，避免 width:100% + padding 溢出面板 */
+  .site-nav .nav-trigger:checked ~ .trigger{min-width:220px}
+  /* 展开面板里的链接加大触控区，与 工具▾ 子项（10px 15px / 16px）对齐 */
+  .site-nav .trigger .page-link{padding:10px 15px;font-size:16px}
 }
 .theme-toggle{flex:none;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);
   background:var(--btn-bg);color:var(--text);cursor:pointer;font-size:17px;line-height:1;
