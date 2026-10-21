@@ -37,12 +37,16 @@ layout: default
 
   {%- if page.cover %}
   <figure class="post-cover">
-    <img class="post-cover__img"
-         src="{{ page.cover | relative_url }}"
-         alt="{{ page.cover_alt | default: page.title | escape }}"
-         width="{{ page.cover_width | default: 1200 }}" height="{{ page.cover_height | default: 675 }}"
-         fetchpriority="high"
-         decoding="async">
+    <div class="post-cover__frame">
+      <img class="post-cover__img"
+           src="{{ page.cover | relative_url }}"
+           alt="{{ page.cover_alt | default: page.title | escape }}"
+           width="{{ page.cover_width | default: 1200 }}" height="{{ page.cover_height | default: 675 }}"
+           fetchpriority="high"
+           decoding="async">
+      {%- comment -%} 系列角标：只有 front matter 写了 series 且能在 _columns/ 里找到专栏时才出现 {%- endcomment -%}
+      {%- include series-stamp.html post=page size="lg" %}
+    </div>
     {%- if page.cover_caption %}
     <figcaption class="post-cover__caption">{{ page.cover_caption | escape }}</figcaption>
     {%- endif %}
@@ -52,6 +56,19 @@ layout: default
   <div class="post-body">
     {{ content }}
   </div>
+
+  {%- comment -%}
+    划线说明：正文里用了 .post-mark（<mark> 高亮 / 下划线）的文章才在文末出现，
+    标签不再贴在句子旁边，读者先读句子，最后再看约定。
+  {%- endcomment -%}
+  {%- if content contains 'post-mark' %}
+  <aside class="post-legend" aria-label="关于文中的划线">
+    <p class="post-legend__title">关于文中的划线</p>
+    <p class="post-legend__row"><span class="post-legend__swatch post-legend__swatch--insight" aria-hidden="true"></span><b>蓝色马克笔</b>　核心洞察：把事实推到判断的那一句，全文的主干。</p>
+    <p class="post-legend__row"><span class="post-legend__swatch post-legend__swatch--verdict" aria-hidden="true"></span><b>橙色下划线</b>　定性：我对这件事的判断，不是定论，欢迎反驳。</p>
+    <p class="post-legend__foot">划线处都是作者自己的话，不是引用。</p>
+  </aside>
+  {%- endif %}
 
   <footer class="post-footer">
     {%- if page.tags %}

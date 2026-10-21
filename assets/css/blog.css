@@ -127,6 +127,8 @@
   color:var(--muted);
 }
 .post-cover{margin:20px 0 24px}
+/* 角标定位容器：图片自身的 hover/缩放不影响徽标 */
+.post-cover__frame{position:relative;line-height:0}
 .post-cover__img{
   display:block;
   width:100%;
@@ -163,14 +165,10 @@
 .post-body figure.post-fig--small img{max-width:340px}
 
 /* 结构化判断（核心洞察 / 定性）：inline 呈现，不装箱。
-   语义用 <mark>（对爬虫与 RAG 是「关键句」信号）+ 微标签保留判据文字；
-   视觉上核心洞察 = 马克笔高亮，定性 = 强调色粗下划线。 */
+   语义用 <mark>（对爬虫与 RAG 是「关键句」信号）；
+   视觉上核心洞察 = 马克笔高亮，定性 = 强调色粗下划线。
+   标签不再贴在句子旁边——约定统一收到文末 .post-legend 里解释。 */
 .post-mark{margin:26px 0}
-.post-mark__label{
-  display:inline-block;margin-right:10px;font-size:11px;font-weight:700;
-  letter-spacing:.14em;color:var(--accent2);vertical-align:3px
-}
-.post-mark__label--verdict{color:var(--accent)}
 .post-mark mark{
   color:inherit;padding:0 1px;
   background:linear-gradient(to top,rgba(47,109,179,.22) 42%,transparent 42%);
@@ -187,6 +185,68 @@ html[data-theme="night"] .post-mark mark{
 }
 html[data-theme="night"] .post-mark .post-mark__verdict{
   text-decoration-color:rgba(255,122,92,.6)
+}
+
+/* 文末「划线说明」：比正文小一档、低对比，读完正文才遇到，不抢句子 */
+.post-legend{
+  margin:38px 0 0;
+  padding-top:16px;
+  border-top:1px dashed var(--line);
+  font-size:13px;
+  line-height:1.85;
+  color:var(--muted);
+}
+.post-legend__title{
+  margin:0 0 8px;
+  font-size:11px;font-weight:700;letter-spacing:.14em;
+  color:var(--muted);text-transform:none;
+}
+.post-legend__row{margin:4px 0;display:flex;gap:8px;align-items:baseline}
+.post-legend__row b{color:var(--text);font-weight:600;white-space:nowrap}
+.post-legend__swatch{
+  flex:0 0 auto;width:18px;height:9px;border-radius:2px;transform:translateY(-1px);
+}
+.post-legend__swatch--insight{
+  background:linear-gradient(to top,rgba(47,109,179,.42) 52%,rgba(47,109,179,.12) 52%);
+}
+.post-legend__swatch--verdict{
+  height:0;border-radius:0;
+  border-bottom:2.5px solid rgba(232,89,60,.75);transform:translateY(-2px);
+}
+.post-legend__foot{margin:8px 0 0;font-size:12px;opacity:.85}
+html[data-theme="night"] .post-legend__swatch--insight{
+  background:linear-gradient(to top,rgba(125,179,232,.5) 52%,rgba(125,179,232,.16) 52%);
+}
+html[data-theme="night"] .post-legend__swatch--verdict{
+  border-bottom-color:rgba(255,122,92,.8);
+}
+
+/* 系列角标：叠在封面左上，深色玻璃底 + 白字，任何照片上都读得清 */
+.series-stamp{
+  position:absolute;top:10px;left:10px;z-index:2;
+  display:inline-flex;align-items:center;gap:5px;
+  max-width:calc(100% - 20px);
+  padding:4px 9px 5px;
+  border-radius:999px;
+  background:rgba(18,20,24,.58);
+  -webkit-backdrop-filter:blur(8px) saturate(1.2);
+  backdrop-filter:blur(8px) saturate(1.2);
+  color:#fff;
+  font-size:10.5px;line-height:1.25;letter-spacing:.02em;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.14), 0 1px 3px rgba(0,0,0,.28);
+  pointer-events:none;
+}
+.series-stamp__name{
+  font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.series-stamp__idx{
+  flex:0 0 auto;font-variant-numeric:tabular-nums;
+  color:rgba(255,255,255,.72);font-weight:600;
+}
+.series-stamp--lg{top:12px;left:12px;padding:5px 11px 6px;font-size:12px}
+/* 兜底：不支持 backdrop-filter 的浏览器用更实的底色 */
+@supports not ((backdrop-filter:blur(4px)) or (-webkit-backdrop-filter:blur(4px))) {
+  .series-stamp{background:rgba(18,20,24,.82)}
 }
 
 .post-footer{

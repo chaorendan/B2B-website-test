@@ -2,7 +2,7 @@
 layout: page
 title: "专栏"
 seo_title: "专栏 | 超人蛋 · 彭俊超"
-description: "超人蛋的博客专栏：读书笔记等系列内容的集中入口。比分类更进一步的连载。"
+description: "超人蛋的博客专栏：读书笔记、法语中心转移等系列内容的集中入口。比分类更进一步的连载。"
 permalink: /columns/
 lang: "zh"
 ---

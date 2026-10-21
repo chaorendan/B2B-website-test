@@ -1,0 +1,20 @@
+{%- comment -%}
+  系列角标（封面左上角的连载编号）—— 用法：{% include series-stamp.html post=page %}
+  可选 size="lg" 用于详情页大封面（字号放大一档）。
+
+  编号不手写：按 series 取出所有文章、按日期升序排，当前文章落在第几位就是第几篇，
+  分母是系列总数。新增文章时序号自动重排，不需要回改旧文。
+  没有 series、或 series 在 _columns/ 里找不到对应专栏时，整块不输出。
+{%- endcomment -%}
+{%- assign _stamp_series = include.post.series -%}
+{%- if _stamp_series -%}
+  {%- assign _stamp_col = site.columns | where: "column_key", _stamp_series | first -%}
+  {%- assign _stamp_posts = site.posts | where: "series", _stamp_series | sort: "date" -%}
+  {%- assign _stamp_no = 0 -%}
+  {%- for _stamp_p in _stamp_posts -%}
+    {%- if _stamp_p.url == include.post.url -%}{%- assign _stamp_no = forloop.index -%}{%- endif -%}
+  {%- endfor -%}
+  {%- if _stamp_no > 0 -%}
+<span class="series-stamp{% if include.size == 'lg' %} series-stamp--lg{% endif %}"><b class="series-stamp__name">{{ _stamp_col.title | default: _stamp_series }}</b><span class="series-stamp__idx">（{{ _stamp_no }}/{{ _stamp_posts.size }}）</span></span>
+  {%- endif -%}
+{%- endif -%}

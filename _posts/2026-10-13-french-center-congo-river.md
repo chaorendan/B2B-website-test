@@ -21,6 +21,7 @@ cover_caption: "刚果河与塞纳河——法语的「使用者中心」与「�
 cover_width: 1036
 cover_height: 583
 lang: "zh"
+series: french-center
 tags:
   - 法语
   - 刚果布
