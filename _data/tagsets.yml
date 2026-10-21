@@ -30,12 +30,12 @@
   title: 与工具
   question: 我用什么手段做？
   desc: AI、SEO 与空间思维的工具箱
-  tags: [SEO, 遥感, 搜索意图, 独立站, hreflang, AI应用层, 内网穿透, 宝塔, WordPress]
+  tags: [SEO, 遥感, 搜索意图, 独立站, hreflang, AI应用层, 归纳法, 内网穿透, 宝塔, WordPress]
 - key: meaning
   title: 与意义
   question: 我为什么做？
   desc: 信念、行动，以及为什么值得
-  tags: [祷告, 知行合一, 上行数据, 活人感]
+  tags: [祷告, 知行合一, 上行数据, 活人感, 认知边界]
 - key: creation
   title: 与创作
   question: 我怎么把东西做出来？
@@ -46,7 +46,7 @@
       tags: [创作者心法, AI创作, 打破天花板]
     - key: process
       title: L2 过程 · 怎么做出来
-      tags: [互动视频, 序列体系, 扮演法]
+      tags: [互动视频, 序列体系, 扮演法, AI创作工作流]
     - key: product
       title: L3 产物 · 做成了什么、谁在读
       tags: [网文出海, 跨文化阅读, AI应用层]
