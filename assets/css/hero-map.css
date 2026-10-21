@@ -236,3 +236,11 @@ html{overflow-x:hidden}
   .hero-card{flex:none;width:min(340px,92%);margin:18px auto 34px}
 }
 @media (max-width:600px){.wrap{padding:28px 18px 60px}}
+
+/* ---------- 立体按压按钮（借鉴 lk-energy.com.ua 的 3D CTA） ---------- */
+.btn-3d{display:inline-block;padding:12px 24px;border-radius:12px;font-weight:700;font-size:15px;
+  color:#fff;background:linear-gradient(180deg,var(--accent2),var(--accent,#2f6fb3));
+  box-shadow:0 4px 0 rgba(28,43,58,.32),0 8px 18px rgba(28,43,58,.16);
+  transition:transform .08s ease,box-shadow .08s ease,filter .2s ease;text-decoration:none}
+.btn-3d:hover{transform:translateY(-1px);filter:brightness(1.06);color:#fff}
+.btn-3d:active{transform:translateY(3px);box-shadow:0 1px 0 rgba(28,43,58,.32),0 3px 8px rgba(28,43,58,.14)}

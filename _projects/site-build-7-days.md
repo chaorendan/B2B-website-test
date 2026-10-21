@@ -20,6 +20,12 @@ featured: true
 
 **涉及技能**：DNS / HTTPS · GitHub Pages + Jekyll · Google Search Console · Google Tag Manager + GA4 · sitemap / robots.txt · CI（GitHub Actions）故障排查
 
+**核心交付 01 / 02 / 03**：
+
+- **01 · 搜索基础设施**：自定义域 + 强制 HTTPS + GSC Domain Property + sitemap 零重定向——方法论沉淀于[知识库](/kb/)
+- **02 · 单通道埋点**：GA4 只经 GTM 一条通道，线上 HTML 硬编码 `gtag` 为零——工具与实验沉淀于[工具箱](/tools/)
+- **03 · 站内质量**：39 条断链清零、只链接真实存在的页面——扫描与排障方法见文末延伸阅读
+
 ---
 
 ## 一、问题（Context）
@@ -125,6 +131,15 @@ GET /repos/{owner}/{repo}/check-runs/{job_id}/annotations
 - 把仅有的 `page_view` 埋点扩展到**转化事件**（名片点击 / 邮件点击），让「增长分析」这件事本身可被数据说明
 - 把「站内断链治理」与「埋点方案」写成可复用的 SOP
 - 持续观察 GSC 索引覆盖与关键词表现，建立可见性基线
+
+## 延伸阅读 · 与本案例直接相关的页面
+
+- **基础设施选型**：为什么不用宝塔 + Frp 自建隧道——[本地隧道与宝塔的取舍](/blog/localhost-tunnel-baota/)
+- **营销体系**：Google Ads 账户结构与关键词分层——[知识库 · Google Ads 基础](/kb/google-ads/01-fundamentals/)
+- **跨界工具**：GIS × 数字营销的分析工具——[GIS 工具箱](/geo/gis-toolkit/)
+- **关于站主**：背景、技能与合作方式——[关于我](/about/)
+
+<p style="margin-top:22px"><a class="btn-3d" href="/tools/">前往工具箱 →</a></p>
 
 ---
 

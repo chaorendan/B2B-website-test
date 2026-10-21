@@ -5,7 +5,7 @@ permalink: /tools/pcfs/
 description: "把个人当一家公司记账的自用工具：记一笔、看本月汇总、导出备份。数据只存在你的浏览器里，不上传、不联网。"
 seo_title: "个人财务工具（自用 MVP） | 超人蛋 · 彭俊超"
 lang: "zh"
-js: "/assets/js/click-ripple.js"
+js: "/assets/js/click-burst.js"
 css: "/assets/css/pcfs.css"
 ---
 
