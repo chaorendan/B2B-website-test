@@ -132,4 +132,5 @@ exclude:
   - "*.new"
   - _ARCHITECTURE_DESIGN.md
   - _TEMPLATE.md
+  - AGENTS.md
   - growth-lab/
