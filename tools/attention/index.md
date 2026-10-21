@@ -4,6 +4,7 @@ title: "注意力资本"
 permalink: /tools/attention/
 description: "把一天 960 股注意力当资本来配置的 CEO 驾驶舱：晨会排仓、执行追踪、日结复盘。数据只存在你的浏览器里。"
 lang: "zh"
+js: "/assets/js/click-ripple.js"
 css: "/assets/css/attention.css"
 noindex: true
 sitemap: false

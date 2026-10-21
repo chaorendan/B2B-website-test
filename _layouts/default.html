@@ -15,6 +15,11 @@
 
     {%- include footer.html -%}
 
+    {%- comment -%} 页面级脚本：front matter 写 js: /assets/js/xxx.js 即加载（与 page.css 对称） {%- endcomment -%}
+    {%- if page.js -%}
+    <script src="{{ page.js | relative_url }}" defer></script>
+    {%- endif -%}
+
   </body>
 
 </html>

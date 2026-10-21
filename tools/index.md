@@ -5,6 +5,7 @@ permalink: /tools/
 description: "自用小工具集合：把个人当公司记账的财务工具，与把每日注意力当资本配置的 CEO 复盘驾驶舱。数据均只存在浏览器本地。"
 seo_title: "工具箱 | 超人蛋 · 彭俊超"
 lang: "zh"
+js: "/assets/js/click-ripple.js"
 ---
 
 这里是一些自用的小工具，全部零构建、数据只存在浏览器本地。

@@ -66,6 +66,44 @@
                     </li>
                   </ul>
                 </details>
+              {%- elsif path == "about.md" -%}
+                {%- comment -%}
+                  关于 = 下拉容器：把「关于我 / 友链 / 留言 / 隐私」收进同一入口。
+                  顶级导航仍是 5 项（不新增第六项），与「工具」共用 .tools-menu 样式与关闭逻辑。
+                {%- endcomment -%}
+                {%- assign in_about = false -%}
+                {%- if page.url == '/about/' or page.url == '/links/' or page.url == '/contact/' or page.url == '/privacy/' -%}{%- assign in_about = true -%}{%- endif -%}
+                <details class="tools-menu">
+                  <summary class="tools-menu__btn{% if in_about %} is-current{% endif %}" aria-haspopup="true" aria-label="关于菜单，点击展开">
+                    关于<span class="tools-menu__caret" aria-hidden="true">▾</span>
+                  </summary>
+                  <ul class="tools-menu__list">
+                    <li>
+                      <a class="tools-menu__link{% if page.url == '/about/' %} is-current{% endif %}" href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>
+                        <svg class="tools-menu__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c0-3.3 3.1-5.5 7-5.5s7 2.2 7 5.5"/></svg>
+                        <span>关于我</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="tools-menu__link{% if page.url == '/links/' %} is-current{% endif %}" href="{{ '/links/' | relative_url }}"{% if page.url == '/links/' %} aria-current="page"{% endif %}>
+                        <svg class="tools-menu__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a4 4 0 0 0 5.7 0l2.3-2.3a4 4 0 0 0-5.7-5.7L11 6.3"/><path d="M14 11a4 4 0 0 0-5.7 0L6 13.3a4 4 0 0 0 5.7 5.7l1.3-1.3"/></svg>
+                        <span>友链</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="tools-menu__link{% if page.url == '/contact/' %} is-current{% endif %}" href="{{ '/contact/' | relative_url }}"{% if page.url == '/contact/' %} aria-current="page"{% endif %}>
+                        <svg class="tools-menu__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                        <span>留言</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="tools-menu__link{% if page.url == '/privacy/' %} is-current{% endif %}" href="{{ '/privacy/' | relative_url }}"{% if page.url == '/privacy/' %} aria-current="page"{% endif %}>
+                        <svg class="tools-menu__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg>
+                        <span>隐私</span>
+                      </a>
+                    </li>
+                  </ul>
+                </details>
               {%- else -%}
                 <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
               {%- endif -%}
