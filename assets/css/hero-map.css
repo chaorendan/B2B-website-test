@@ -245,12 +245,18 @@ html{overflow-x:hidden}
 .btn-3d:hover{transform:translateY(-1px);filter:brightness(1.06);color:#fff}
 .btn-3d:active{transform:translateY(3px);box-shadow:0 1px 0 rgba(28,43,58,.32),0 3px 8px rgba(28,43,58,.14)}
 
-/* ---------- 名片指标条（素问快照，_data/card-stats.yml） ---------- */
-.card-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0 0 2px}
-.card-stat{display:flex;flex-direction:column;gap:2px;align-items:center;
-  padding:9px 4px 7px;background:var(--bg);border-radius:10px}
-.card-stat b{font-size:17px;line-height:1.1;color:var(--accent);
-  font-variant-numeric:tabular-nums;letter-spacing:.01em}
-.card-stat span{font-size:11px;color:var(--muted);letter-spacing:.04em;white-space:nowrap}
+/* ---------- 名片 · 连续打卡（素问快照，_data/card-stats.yml） ----------
+   单指标小胶囊：数字放大 + 主题强调色，白天/夜间都靠变量取色保证对比度；
+   居中一行，不改变名片原有布局节奏。 */
+.card-streak{
+  margin:0 0 2px;text-align:center;
+  font-size:12.5px;color:var(--muted);letter-spacing:.02em;
+}
+.card-streak b{
+  display:inline-block;min-width:70px;
+  padding:3px 12px;margin:0 3px;border-radius:999px;
+  background:var(--bg);border:1px solid var(--line);
+  color:var(--accent);font-size:15px;line-height:1.5;
+  font-variant-numeric:tabular-nums;
+}
 .card-src{margin:10px 0 0;font-size:11.5px;line-height:1.6;color:var(--muted);text-align:center}
-@media (max-width:600px){.card-stat b{font-size:15.5px}.card-stat span{font-size:10.5px}}
