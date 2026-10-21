@@ -34,9 +34,24 @@
       <div class="meta">长江大学 · 地理信息科学（产业计划）</div>
       <div class="meta">创作，地理，法语。广西梧州人。INTJ。</div>
       <div class="divider"></div>
+      {%- comment -%}
+        素问名片指标：读 _data/card-stats.yml（由 growth-lab/sooon-card-snapshot.py 定时刷新）。
+        数据文件缺失或没有 streak_days 时整块隐藏，不影响名片其余部分。
+      {%- endcomment -%}
+      {%- assign card = site.data.card-stats -%}
+      {%- if card and card.streak_days -%}
+      <div class="card-stats">
+        <div class="card-stat"><b>{{ card.streak_days }}</b><span>连续打卡 · 天</span></div>
+        <div class="card-stat"><b>{{ card.contribution }}</b><span>总贡献值</span></div>
+        <div class="card-stat"><b>{{ card.adopted | times: 100 | divided_by: card.answered }}%</b><span>回答采纳率</span></div>
+      </div>
+      {%- endif -%}
       <div class="card-cta">
         <a class="btn primary" href="https://sooon.ai/s/r/3KVBGlekVOmXSoSaXOP4lK" target="_blank" rel="noopener noreferrer">📇 打开我的素问名片</a>
       </div>
+      {%- if card and card.fetched_at -%}
+      <p class="card-src">数据截至 {{ card.fetched_at | date: "%Y-%m-%d" }}，来自素问公开名片</p>
+      {%- endif -%}
     </div>
   </aside>
 </section>
