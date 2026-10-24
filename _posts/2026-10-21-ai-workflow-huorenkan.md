@@ -18,7 +18,6 @@ cover_caption: "唐 · 颜真卿《祭侄文稿》局部——二百三十四字
 cover_width: 1036
 cover_height: 583
 lang: "zh"
-series:
 tags:
   - AI创作工作流
   - 归纳法

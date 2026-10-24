@@ -11,6 +11,7 @@ cover_caption: "看勾践剑的队伍，从展厅门口一直排到大厅中央"
 cover_width: 1036
 cover_height: 583
 lang: "zh"
+series: museum-notes
 tags:
   - 湖北省博物馆
   - 越王勾践剑
