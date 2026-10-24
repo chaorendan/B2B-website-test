@@ -15,7 +15,7 @@
   title: 与地方
   question: 这片土地怎么塑造了我？
   desc: 从一块土地长出来的故事
-  tags: [我的家乡, 梧州, 龟苓膏, 美食, 平陆运河, 灵渠, 广西通江达海, 荆州]
+  tags: [我的家乡, 梧州, 龟苓膏, 美食, 平陆运河, 灵渠, 广西通江达海, 荆州, 武汉, 知音湖绿道]
 - key: object
   title: 与器物
   question: 一件东西身上压着多少时间？
@@ -25,12 +25,12 @@
   title: 与文本
   question: 别人写下的东西，怎么改变我看世界？
   desc: 书、语言与被误读的意义
-  tags: [网文出海, 跨文化阅读, 法语, 法语国家, 法语中心转移]
+  tags: [网文出海, 跨文化阅读, 法语, 法语国家, 法语中心转移, 中法对照]
 - key: tools
   title: 与工具
   question: 我用什么手段做？
   desc: AI、SEO 与空间思维的工具箱
-  tags: [SEO, 遥感, 搜索意图, 独立站, hreflang, AI应用层, 归纳法, 内网穿透, 宝塔, WordPress]
+  tags: [SEO, 遥感, 搜索意图, 独立站, hreflang, AI应用层, 归纳法, 城市规划, 空间分层, 内网穿透, 宝塔, WordPress]
 - key: meaning
   title: 与意义
   question: 我为什么做？

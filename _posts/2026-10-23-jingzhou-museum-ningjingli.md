@@ -122,7 +122,7 @@ schema_faq:
     <figcaption>京都某神社步道（视频截图）——灯笼划定「神域」</figcaption>
   </figure>
   <figure>
-    <img src="/assets/images/blog/jingzhou-wall-path.webp" alt="荆州城墙顶部的步道实拍：石板路沿城墙延伸，一侧是垛口，一侧是茂密的树" width="540" height="669" loading="lazy" decoding="async">
+    <img src="/assets/images/blog/jingzhou-wall-path.webp" alt="荆州城墙顶部的步道实拍：石板路沿城墙延伸，左侧是垛口，右侧是茂密的树与红灯笼" width="900" height="622" loading="lazy" decoding="async">
     <figcaption>荆州城墙顶步道（作者实拍）——喧嚣留在墙外</figcaption>
   </figure>
 </div>
