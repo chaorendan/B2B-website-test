@@ -44,7 +44,7 @@ schema_faq:
 那是 10 月 22 日的傍晚，我从武汉关码头刷卡上了轮渡。
 
 <figure>
-  <img src="/assets/images/blog/wuhan-ferry-deck.webp" alt="武汉长江轮渡甲板实拍：雾天里游客凭栏远眺，远处隐约可见长江大桥与龟山电视塔" width="720" height="495" loading="lazy" decoding="async">
+  <img src="/assets/images/blog/wuhan-ferry-deck.webp" alt="武汉长江轮渡甲板实拍：雾天里游客凭栏远眺，远处隐约可见长江大桥与龟山电视塔" width="480" height="330" loading="lazy" decoding="async">
   <figcaption>轮渡甲板（作者实拍）——远处是长江大桥与龟山电视塔</figcaption>
 </figure>
 
@@ -67,7 +67,7 @@ schema_faq:
 如果说轮渡是这座城市粗粝的切面，那蔡甸的知音湖绿道，就是一张精美的网。
 
 <figure>
-  <img src="/assets/images/blog/wuhan-greenway-trees.webp" alt="知音湖绿道旁的雪松林地实拍：平整的草地与成排的树" width="720" height="495" loading="lazy" decoding="async">
+  <img src="/assets/images/blog/wuhan-greenway-trees.webp" alt="知音湖绿道旁的雪松林地实拍：平整的草地与成排的树" width="480" height="330" loading="lazy" decoding="async">
   <figcaption>知音湖绿道旁（作者实拍）——平整、安静，也被精心修剪过</figcaption>
 </figure>
 
