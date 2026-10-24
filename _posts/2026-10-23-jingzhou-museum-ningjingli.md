@@ -64,7 +64,7 @@ schema_faq:
 左边的大墓 M7，随葬品一百零三件，其中不乏精美的玉器；右边的 M14，墓坑极其窄小，除了一副骨架，几乎一无所获。而旁边那座肖家屋脊 W6 瓮棺更夸张：随葬玉器五十六件，数量之多、质量之精，均属空前。
 
 <figure>
-  <img src="/assets/images/blog/jingzhou-w6-urn.webp" alt="后石家河文化肖家屋脊W6瓮棺展板：文字说明与出土照片，显示该瓮棺随葬玉器五十六件" width="900" height="675" loading="lazy" decoding="async">
+  <img src="/assets/images/blog/jingzhou-w6-urn.webp" alt="后石家河文化肖家屋脊W6瓮棺展板：文字说明与出土照片，显示该瓮棺随葬玉器五十六件" width="900" height="621" loading="lazy" decoding="async">
   <figcaption>后石家河文化 · 肖家屋脊 W6 瓮棺展板——随葬玉器五十六件，「均属空前」</figcaption>
 </figure>
 
@@ -75,7 +75,7 @@ schema_faq:
 ## 第三站：青瓷坞堡——堡垒与它留在地名里的痕迹
 
 <figure>
-  <img src="/assets/images/blog/jingzhou-wubao.webp" alt="荆州博物馆藏西晋青瓷坞堡：高墙、角楼与院落组成的微缩防御性庄园" width="900" height="675" loading="lazy" decoding="async">
+  <img src="/assets/images/blog/jingzhou-wubao.webp" alt="荆州博物馆藏西晋青瓷坞堡：高墙、角楼与院落组成的微缩防御性庄园" width="900" height="621" loading="lazy" decoding="async">
   <figcaption>西晋 · 青瓷坞堡——高墙、角楼、深院，一座微缩的防御工事</figcaption>
 </figure>
 
@@ -88,7 +88,7 @@ schema_faq:
 ## 第四站：复合剑——把工艺规律默会于心
 
 <figure class="post-fig--small">
-  <img src="/assets/images/blog/jingzhou-sword.webp" alt="荆州博物馆藏青铜复合剑：剑脊与剑刃以不同含锡量的青铜分铸嵌合" width="480" height="360" loading="lazy" decoding="async">
+  <img src="/assets/images/blog/jingzhou-sword.webp" alt="荆州博物馆藏青铜复合剑：剑脊与剑刃以不同含锡量的青铜分铸嵌合" width="480" height="330" loading="lazy" decoding="async">
   <figcaption>青铜复合剑——脊韧刃利，两种配比分铸嵌合</figcaption>
 </figure>
 
@@ -103,28 +103,29 @@ schema_faq:
 ## 出了博物馆：城门洞与神社灯笼——给自己划一道「结界」
 
 <figure class="post-fig--small">
-  <img src="/assets/images/blog/jingzhou-binyang-gate.webp" alt="荆州宾阳楼城门：灰砖城台上灯笼与红旗，拱形门洞上嵌着「寅宾门」石匾" width="640" height="853" loading="lazy" decoding="async">
+  <img src="/assets/images/blog/jingzhou-binyang-gate.webp" alt="荆州宾阳楼城门：灰砖城台上灯笼与红旗，拱形门洞上嵌着「寅宾门」石匾" width="640" height="793" loading="lazy" decoding="async">
   <figcaption>宾阳楼下的「寅宾门」——我没有登楼，钻进了门洞</figcaption>
 </figure>
 
 去宾阳楼的时候，我没有买票登顶，而是钻进了那个巨大的城门洞。
 
 <figure class="post-fig--small">
-  <img src="/assets/images/blog/jingzhou-gate-vault.webp" alt="荆州城门洞内部：砖石拱券层层收拢，光线从两端洞口透进来" width="640" height="853" loading="lazy" decoding="async">
+  <img src="/assets/images/blog/jingzhou-gate-vault.webp" alt="荆州城门洞内部：砖石拱券层层收拢，光线从两端洞口透进来" width="640" height="793" loading="lazy" decoding="async">
   <figcaption>门洞内部——砖石包裹出的封闭感，像一座城堡</figcaption>
 </figure>
 
 砖石包裹的厚重感，给人一种极其私密的、被保护的安全感。这让我想起一段京都神社步道的视频截图：林间小路尽头的红色灯笼，是用来划分「神域」与「俗世」的结界。
 
-<figure>
-  <img src="/assets/images/blog/kyoto-shrine-path.webp" alt="日本京都神社林间步道的视频截图：幽暗森林小径旁立着红色灯笼" width="900" height="545" loading="lazy" decoding="async">
-  <figcaption>京都某神社步道（视频截图）——灯笼与鸟居划定「神域」的边界</figcaption>
-</figure>
-
-<figure class="post-fig--small">
-  <img src="/assets/images/blog/jingzhou-wall-path.webp" alt="荆州城墙顶部的步道实拍：石板路沿城墙延伸，一侧是垛口，一侧是茂密的树" width="540" height="720" loading="lazy" decoding="async">
-  <figcaption>城墙顶的步道（作者实拍）——走上去，喧嚣就留在墙外了</figcaption>
-</figure>
+<div class="post-fig-duo">
+  <figure>
+    <img src="/assets/images/blog/kyoto-shrine-path.webp" alt="日本京都神社林间步道的视频截图：幽暗森林小径旁立着红色灯笼" width="900" height="545" loading="lazy" decoding="async">
+    <figcaption>京都某神社步道（视频截图）——灯笼划定「神域」</figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/images/blog/jingzhou-wall-path.webp" alt="荆州城墙顶部的步道实拍：石板路沿城墙延伸，一侧是垛口，一侧是茂密的树" width="540" height="669" loading="lazy" decoding="async">
+    <figcaption>荆州城墙顶步道（作者实拍）——喧嚣留在墙外</figcaption>
+  </figure>
+</div>
 
 荆州的城门洞也是一种结界：从宣讲会、论文和 AI 焦虑里暂时抽离出来的物理隔离。结界不一定要花钱，也不一定要远行——一段不看手机的城墙步道、一个关掉通知的下午、一间只放纸笔的书桌，都是同一种东西：一块你说了算的物理与心理边界。<p class="post-mark post-mark--verdict"><mark class="post-mark__verdict">宁静力的前提，是为自己设定结界——知道何时关闭信息流，何时退回自己的「坞堡」。</mark></p>
 
@@ -138,4 +139,4 @@ schema_faq:
 
 ---
 
-**延伸阅读**：[在湖北省博，与勾践剑擦肩而过](/blog/hubei-museum-goujian-sword/)（博物馆漫记 · 上一篇）｜ [安安稳稳地在小城市过一生，真的那么不堪吗？](https://www.zhihu.com/question/387024332/answer/2034268795578077717)（宁静力）｜ [聊聊我的AI创作工作流：AI替代不了的活人感](/blog/ai-workflow-huorenkan/) ｜ [一场好的旅行是什么样的？](https://afdian.com/p/45652e8c87a411efada55254001e7c00)（于无声处听惊雷）
+**延伸阅读**：[在湖北省博，与勾践剑擦肩而过](/blog/hubei-museum-goujian-sword/)（随行漫记 · 上一篇）｜ [安安稳稳地在小城市过一生，真的那么不堪吗？](https://www.zhihu.com/question/387024332/answer/2034268795578077717)（宁静力）｜ [聊聊我的AI创作工作流：AI替代不了的活人感](/blog/ai-workflow-huorenkan/) ｜ [一场好的旅行是什么样的？](https://afdian.com/p/45652e8c87a411efada55254001e7c00)（于无声处听惊雷）
