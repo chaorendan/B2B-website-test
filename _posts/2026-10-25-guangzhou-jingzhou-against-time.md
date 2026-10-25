@@ -13,8 +13,8 @@ keywords:
   - 旅游
 date: 2026-10-25 09:00:00 +0800
 cover: "/assets/images/blog/guangzhou-jingzhou-cover.webp"
-cover_alt: "广东省博物馆「粤山秀水 丰物岭南」自然资源展览前言墙，紫光展厅里一名观众抬手指向标题"
-cover_caption: "广东省博物馆·广东省自然资源展览前言墙（作者实拍）"
+cover_alt: "广东省博物馆新馆外观：深灰色「珍宝容器」造型的建筑体块嵌着红色镂空，门楣上挂着「广东省博物馆」牌匾，楼顶飘着红旗"
+cover_caption: "广东省博物馆——设计概念是「蕴藏珍宝的容器」（作者实拍）"
 cover_width: 1036
 cover_height: 583
 lang: "zh"
