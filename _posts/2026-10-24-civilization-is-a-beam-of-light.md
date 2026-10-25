@@ -904,6 +904,11 @@ AI：「您渴望什么？
 
 这篇小说的理论骨架，最初来自 G. Michael Hopf 在《Those Who Remain》里那句被反复引用的箴言——**「Hard times create strong men. Strong men create good times. Good times create weak men. And, weak men create hard times.」**——它本质上是一种关于文明兴衰的循环史观的现代速写。我把这个四句循环拆解、拉长、嵌入到一个技术周期的框架里，对应到黄金、白银、青铜、黑铁这四个时代：Hopf 意义上的「强人创造好时代」被转译为黄金/白银时代的认知革命与制度扩张，「好时代制造弱者」对应福利见顶后的社会疲惫，「弱者创造坏时代」对应「准共识」与虚无主义泛滥，「坏时代制造强者」对应柯伊伯带那些「苟活无益」的疯子。
 
+<figure>
+  <img src="/assets/images/blog/civilization-hopf-cycle.webp" alt="Hopf 循环四格流传图：罗马军团（艰难时代造就强者）、鼎盛帝国的黄金时代（强者造就美好时代）、纵欲疲惫的晚期（美好时代造就弱者）、燃烧崩塌的废墟（弱者造就艰难时代）" width="610" height="864" loading="lazy" decoding="async">
+  <figcaption>「Hard times create strong men…」四句循环的流传配图（图源网络）——恰似小说中黄金、白银、青铜、黑铁四个时代的缩影</figcaption>
+</figure>
+
 把「循环」具体化为「阶段」的工具，来自 Carroll Quigley。他在 1961 年的《The Evolution of Civilizations》里提出了一个文明的七阶段模型：混合、孕育、扩张、冲突、普遍帝国、衰败、入侵。Quigley 认为西方文明已经多次抵达冲突期的门槛，但每次都以某种方式自我修复、重新进入新的扩张期。小说的「技术周期论」借用了这种阶段性思维，但把驱动因素从 Quigley 的「工具/制度关系」换成了「认知革命→福利增长→社会摩擦→工程远征」这一组更具科幻感的机制。
 
 我在知乎上读到一个[讨论基础科学长期停滞的回答](https://www.zhihu.com/question/634189554/answer/1934639352614492128)，它给了我极大的震撼与启示——原来在如此宏大长远的时间尺度上，文明有着如此壮烈的悲歌。
