@@ -190,8 +190,8 @@ html{overflow-x:hidden}
 .daily-quote{position:relative;width:min(1080px,94vw);left:50%;transform:translateX(-50%);
   margin:clamp(22px,3.6vh,38px) 0 0}
 .daily-quote .quote{max-width:860px;margin:0 auto;padding:20px 26px 22px;
-  background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent2);
-  border-radius:16px;box-shadow:0 6px 24px rgba(28,43,58,.06);
+  background:var(--card-warm);border:1px solid var(--card-warm-line);border-left:3px solid var(--accent2);
+  border-radius:16px;box-shadow:var(--card-warm-shadow);
   transition:background-color .35s ease,border-color .35s ease}
 .quote-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}
 .quote-tag{font-size:12px;letter-spacing:.18em;color:var(--accent2)}
@@ -210,7 +210,7 @@ html{overflow-x:hidden}
 /* ---------- 入口磁贴 ---------- */
 .section-title{font-size:14px;letter-spacing:.14em;color:var(--muted);margin:44px 0 14px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
-.tile{display:block;background:var(--panel);border:1px solid var(--line);border-radius:14px;
+.tile{display:block;background:var(--card-warm);border:1px solid var(--card-warm-line);border-radius:14px;
   padding:20px;color:var(--text);transition:background-color .35s ease,transform .15s ease}
 .tile:hover{transform:translateY(-2px)}
 .tile b{display:block;margin-bottom:6px}
@@ -221,7 +221,7 @@ html{overflow-x:hidden}
 .featured .grid{grid-template-columns:repeat(2,1fr)}
 .featured .tile{border-left:3px solid var(--accent2)}
 .featured .tile .tag{display:inline-block;font-size:11px;letter-spacing:.1em;color:var(--accent2);
-  border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-bottom:9px;font-style:normal}
+  border:1px solid var(--card-warm-line);border-radius:999px;padding:1px 8px;margin-bottom:9px;font-style:normal}
 .featured .tile span{display:block;line-height:1.6}
 .featured-more{margin:14px 0 0;font-size:13.5px;color:var(--muted)}
 .featured-more a{color:var(--accent2);text-decoration:none}
