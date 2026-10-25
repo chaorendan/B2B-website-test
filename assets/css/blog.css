@@ -18,8 +18,8 @@
 
 /* ---------- 2. 卡片 ---------- */
 .post-card{
-  background:var(--panel);
-  border:1px solid var(--line);
+  background:var(--card-warm,#faf7f0);
+  border:1px solid var(--card-warm-line,rgba(120,100,70,.20));
   border-radius:12px;
   overflow:hidden;
   transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;

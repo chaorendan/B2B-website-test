@@ -8,6 +8,7 @@
 /* ---------- 主题变量 ---------- */
 :root, html[data-theme="day"]{
   --bg:#eef4f9; --panel:#ffffff; --line:rgba(28,43,58,.12);
+  --card-warm:#faf7f0; --card-warm-line:rgba(120,100,70,.20); --card-warm-shadow:0 6px 24px rgba(90,70,40,.10);
   --text:#1c2b3a; --muted:#5f7186; --accent:#e8593c; --accent2:#2f6db3;
   --header-bg:rgba(255,255,255,.9);
   --veil:linear-gradient(90deg,rgba(238,244,249,.94) 0%,rgba(238,244,249,.72) 38%,rgba(238,244,249,.06) 72%);
@@ -18,6 +19,7 @@
 html[data-theme="night"]{
   color-scheme:dark;
   --bg:#0d1626; --panel:#152238; --line:rgba(180,200,225,.16);
+  --card-warm:#152238; --card-warm-line:rgba(180,200,225,.16); --card-warm-shadow:0 6px 18px rgba(0,0,0,.30);
   --text:#dce6f2; --muted:#8ba0ba; --accent:#ff7a5c; --accent2:#7db3e8;
   --header-bg:rgba(13,22,38,.92);
   --veil:linear-gradient(90deg,rgba(13,22,38,.94) 0%,rgba(13,22,38,.72) 38%,rgba(13,22,38,.06) 72%);
@@ -147,8 +149,10 @@ html{overflow-x:hidden}
   padding:clamp(20px,4vh,42px) 24px clamp(20px,4vh,42px) clamp(112px,15%,148px);
   max-width:620px}
 /* 右侧：个人名片（垂直居中，与地图并排，底色与页面一致避免与地图视觉重叠） */
-.hero-card{flex:0 0 320px;display:flex;align-items:stretch;z-index:2}
-.hero-card .card{width:100%;margin:0}
+.hero-card{flex:0 0 320px;display:flex;align-items:center;z-index:2}
+.hero-card .card{width:100%;margin:0;
+  background:var(--card-warm);border-color:var(--card-warm-line);
+  box-shadow:var(--card-warm-shadow);padding:26px 24px 22px}
 .kicker{font-size:13px;letter-spacing:.22em;color:var(--accent);text-transform:uppercase;font-weight:600}
 .hero-inner h1{font-size:clamp(20px,2.2vw,28px);line-height:1.35;font-weight:700;margin:12px 0 0}
 .hero-inner h1 em{font-style:normal;color:var(--accent2)}
@@ -173,13 +177,13 @@ html{overflow-x:hidden}
 .wrap{max-width:860px;margin:0 auto;padding:40px 24px 80px}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:34px 28px 30px;
   text-align:center;box-shadow:0 6px 24px rgba(28,43,58,.06);transition:background-color .35s ease}
-.card img.avatar{width:88px;height:88px;border-radius:50%;border:3px solid var(--panel);
+.card img.avatar{width:80px;height:80px;border-radius:50%;border:3px solid var(--panel);
   box-shadow:0 0 0 1px var(--line),0 4px 14px rgba(28,43,58,.12);margin:0 auto 14px;display:block}
 .card .name{font-size:21px;font-weight:700;letter-spacing:.08em}
 .card .name .en{color:var(--accent);font-size:14px;font-weight:600;margin-left:8px;letter-spacing:.02em}
 .card .meta{font-size:13.5px;color:var(--muted);margin-top:6px}
 .card .meta time{font-variant-numeric:tabular-nums}
-.card .divider{width:56px;height:3px;border-radius:2px;background:var(--accent);opacity:.85;margin:18px auto}
+.card .divider{width:56px;height:3px;border-radius:2px;background:var(--accent);opacity:.85;margin:15px auto}
 .card-cta{margin-top:20px}
 
 /* ---------- 每日一言（hero 下方整宽横幅） ---------- */
@@ -249,7 +253,7 @@ html{overflow-x:hidden}
    单指标小胶囊：数字放大 + 主题强调色，白天/夜间都靠变量取色保证对比度；
    居中一行，不改变名片原有布局节奏。 */
 .card-streak{
-  margin:0 0 2px;text-align:center;
+  margin:0 0 12px;text-align:center;
   font-size:12.5px;color:var(--muted);letter-spacing:.02em;
 }
 .card-streak b{
