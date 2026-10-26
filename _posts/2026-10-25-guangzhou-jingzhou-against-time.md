@@ -14,7 +14,7 @@ keywords:
 date: 2026-10-25 09:00:00 +0800
 cover: "/assets/images/blog/guangzhou-jingzhou-cover.webp"
 cover_alt: "广东省博物馆新馆外观：深灰色「珍宝容器」造型的建筑体块嵌着红色镂空，门楣上挂着「广东省博物馆」牌匾，楼顶飘着红旗"
-cover_caption: "广东省博物馆——设计概念是「蕴藏珍宝的容器」（作者实拍）"
+cover_caption: "广东省博物馆——设计概念是「蕴藏珍宝的容器」"
 cover_width: 1036
 cover_height: 583
 lang: "zh"
@@ -53,17 +53,17 @@ schema_faq:
 <div class="post-fig-duo">
 <figure>
   <img src="/assets/images/blog/gdm-facade.webp" alt="广东省博物馆新馆外观：深灰色「珍宝容器」造型的建筑体块，嵌着红色与象牙色的镂空" width="480" height="360" loading="lazy" decoding="async">
-  <figcaption>广东省博物馆——设计概念是「蕴藏珍宝的容器」（作者实拍）</figcaption>
+  <figcaption>广东省博物馆——设计概念是「蕴藏珍宝的容器」</figcaption>
 </figure>
 <figure>
   <img src="/assets/images/blog/gdm-preface.webp" alt="广东省自然资源展览前言墙，紫光展厅里写着「粤山秀水 丰物岭南」，一名观众抬手指向标题" width="1100" height="825" loading="lazy" decoding="async">
-  <figcaption>「粤山秀水，丰物岭南」——广东省自然资源展览（作者实拍）</figcaption>
+  <figcaption>「粤山秀水，丰物岭南」——广东省自然资源展览</figcaption>
 </figure>
 </div>
 
 <figure>
   <img src="/assets/images/blog/gdm-tin-ores.webp" alt="广东省博物馆有色金属矿产展厅：锡矿说明牌下列着一排矿石标本，背景是银岩锡矿露天采矿场与井下作业的照片" width="1100" height="825" loading="lazy" decoding="async">
-  <figcaption>锡矿与有色金属——广东的矿产家底（作者实拍）</figcaption>
+  <figcaption>锡矿与有色金属——广东的矿产家底</figcaption>
 </figure>
 
 再往里走，我看到了那只广宁玉雕鸡，和那串石雕葡萄。
@@ -71,11 +71,11 @@ schema_faq:
 <div class="post-fig-duo">
 <figure>
   <img src="/assets/images/blog/gdm-jade-chicken.webp" alt="广宁玉雕鸡：用微黄色玉石雕成的白切鸡，伏在一只青花盘上，鸡皮质感纤毫毕现" width="360" height="480" loading="lazy" decoding="async">
-  <figcaption>广宁玉雕鸡——连鸡皮的毛孔都看得见（作者实拍）</figcaption>
+  <figcaption>广宁玉雕鸡——连鸡皮的毛孔都看得见</figcaption>
 </figure>
 <figure>
   <img src="/assets/images/blog/gdm-stone-grapes.webp" alt="石雕葡萄：各色玉石雕成的一串葡萄，果实带有白霜质感，盛放在展柜的白色托盒上" width="360" height="480" loading="lazy" decoding="async">
-  <figcaption>石雕葡萄——真实到让人想伸手去摘（作者实拍）</figcaption>
+  <figcaption>石雕葡萄——真实到让人想伸手去摘</figcaption>
 </figure>
 </div>
 
@@ -94,11 +94,11 @@ schema_faq:
 <div class="post-fig-duo">
 <figure>
   <img src="/assets/images/blog/nanyue-jade-suit.webp" alt="南越王丝缕玉衣：两千多片玉片以丝线编缀成整体，平陈在展柜中，头套、手套与鞋清晰可辨" width="480" height="360" loading="lazy" decoding="async">
-  <figcaption>丝缕玉衣——南越王赵眜的「永生外壳」（作者实拍）</figcaption>
+  <figcaption>丝缕玉衣——南越王赵眜的「永生外壳」</figcaption>
 </figure>
 <figure>
   <img src="/assets/images/blog/jingzhou-han-mummy.webp" alt="荆州博物馆凤凰山西汉男尸：透明棺内男尸浸泡在淡黄色棺液中，旁边小盒里陈列着配套的内脏标本" width="700" height="868" loading="lazy" decoding="async">
-  <figcaption>凤凰山西汉男尸——棺液替他挡下了两千年（作者实拍）</figcaption>
+  <figcaption>凤凰山西汉男尸——棺液替他挡下了两千年</figcaption>
 </figure>
 </div>
 
@@ -116,14 +116,14 @@ schema_faq:
 
 <figure class="post-fig--small">
   <img src="/assets/images/blog/nanyue-sign.webp" alt="南越王博物院的指路牌：写着「南越王博物院 等你」，下面挂着拍照打卡与展览方向的箭头" width="360" height="480" loading="lazy" decoding="async">
-  <figcaption>南越王博物院的指路牌（作者实拍）</figcaption>
+  <figcaption>南越王博物院的指路牌</figcaption>
 </figure>
 
 而在王宫展区——南越国宫署遗址的展示坑里，最让我停下脚步的，不是那件华美的玉衣，而是一截陶制排水管。
 
 <figure>
   <img src="/assets/images/blog/nanyue-drain-pipes.webp" alt="南越国宫署遗址展示坑：红土中埋着一排陶制排水管，管口相接，上方是玻璃栈道与木质步道" width="900" height="675" loading="lazy" decoding="async">
-  <figcaption>南越国宫署遗址的陶制排水管——两千年前的「城市地下」（作者实拍）</figcaption>
+  <figcaption>南越国宫署遗址的陶制排水管——两千年前的「城市地下」</figcaption>
 </figure>
 
 那是两千多年前的排水系统。玉衣，是权力巅峰对死亡的极度恐惧和妄想；而这条下水道，代表的却是最底层的、最琐碎的日常。无论地上的王侯将相如何渴望不朽，城市地下每天排泄的污水雨水，只是沉默地流。
