@@ -1,0 +1,39 @@
+---
+layout: null
+sitemap: false
+---
+{%- comment -%}
+  站内搜索索引（构建时生成，勿手改）
+  字段：t 标题 / u 链接 / d 摘要 / g 类型 / l 语言 / dt 日期 / tg 标签 / tx 正文纯文本
+  数据源：所有集合文档 + 独立页面；列表页（/, /blog/, /kb/, /columns/, /projects/, /quotes/,
+  /tools/, /en/, /search/, /404.html）剔除以避免重复；/tools/ 下的具体工具页仍收录。
+  正文字段截断至 2000 字符：站内搜索用不到全文，索引体积可降到原约三分之一。
+{%- endcomment -%}
+{%- assign skip_urls = "/,/blog/,/blog/categories/,/blog/tags/,/kb/,/columns/,/projects/,/quotes/,/tools/,/en/,/search/,/404.html" | split: "," -%}
+[
+{%- assign comma = "" -%}
+{%- for d in site.documents -%}
+{%- if d.title and d.url -%}
+{%- assign group = d.collection -%}
+{%- case group -%}
+{%- when "posts" -%}{%- assign doc_type = "博客" -%}
+{%- when "knowledge" -%}{%- assign doc_type = "知识库" -%}
+{%- when "geo" -%}{%- assign doc_type = "GEO" -%}
+{%- when "columns" -%}{%- assign doc_type = "专栏" -%}
+{%- when "projects" -%}{%- assign doc_type = "项目" -%}
+{%- when "fr" -%}{%- assign doc_type = "法语" -%}
+{%- else -%}{%- assign doc_type = "页面" -%}
+{%- endcase -%}
+{{ comma }}{"t":{{ d.title | jsonify }},"u":{{ d.url | relative_url | jsonify }},"d":{{ d.description | default: "" | jsonify }},"g":{{ doc_type | jsonify }},"l":{{ d.lang | default: "zh" | jsonify }},"dt":{{ d.date | date: "%Y-%m-%d" | default: "" | jsonify }},"tg":{% if d.tags %}{{ d.tags | jsonify }}{% else %}[]{% endif %},"tx":{{ d.content | strip_html | normalize_whitespace | replace: "&nbsp;", " " | replace: "&lt;", "<" | replace: "&gt;", ">" | replace: "&quot;", '"' | replace: "&#39;", "'" | replace: "&amp;", "&" | truncate: 2000, "" | jsonify }}}
+{%- assign comma = "," -%}
+{%- endif -%}
+{%- endfor -%}
+{%- for p in site.pages -%}
+{%- if p.title and p.url and p.noindex != true -%}
+{%- unless skip_urls contains p.url -%}
+{{ comma }}{"t":{{ p.title | jsonify }},"u":{{ p.url | relative_url | jsonify }},"d":{{ p.description | default: "" | jsonify }},"g":"页面","l":{{ p.lang | default: "zh" | jsonify }},"dt":"","tg":{% if p.tags %}{{ p.tags | jsonify }}{% else %}[]{% endif %},"tx":{{ p.content | strip_html | normalize_whitespace | replace: "&nbsp;", " " | replace: "&lt;", "<" | replace: "&gt;", ">" | replace: "&quot;", '"' | replace: "&#39;", "'" | replace: "&amp;", "&" | truncate: 2000, "" | jsonify }}}
+{%- assign comma = "," -%}
+{%- endunless -%}
+{%- endif -%}
+{%- endfor -%}
+]

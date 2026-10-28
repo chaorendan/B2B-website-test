@@ -1,0 +1,209 @@
+/* ==========================================================================
+   站内搜索页
+   引入：search.md front matter（page.css），仅搜索页加载
+   主题变量沿用 hero-map.css：--bg --panel --line --text --muted --accent
+   ========================================================================== */
+
+.search-lead{
+  margin:10px 0 0;
+  font-size:14px;
+  line-height:1.8;
+  color:var(--muted);
+}
+
+.site-search{max-width:720px;margin:20px 0 44px}
+
+/* ---------- 1. 输入区 ---------- */
+.site-search__form{margin:0 0 14px}
+.site-search__label{
+  display:block;
+  margin:0 0 8px;
+  font-size:12.5px;
+  letter-spacing:.04em;
+  color:var(--muted);
+}
+.site-search__field{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:6px 8px 6px 12px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:var(--panel);
+  transition:border-color .2s ease, box-shadow .2s ease;
+}
+.site-search__field:focus-within{
+  border-color:var(--accent);
+  box-shadow:0 0 0 3px rgba(232,89,60,.14);
+}
+.site-search__icon{
+  width:18px;
+  height:18px;
+  flex:none;
+  stroke:var(--muted);
+  fill:none;
+  stroke-width:2;
+  stroke-linecap:round;
+}
+.site-search__input{
+  flex:1 1 auto;
+  min-width:0;
+  padding:8px 0;
+  border:none;
+  outline:none;
+  background:transparent;
+  color:var(--text);
+  font-size:15px;
+  line-height:1.5;
+}
+.site-search__input::placeholder{color:var(--muted);opacity:.75}
+.site-search__input::-webkit-search-cancel-button{-webkit-appearance:none;appearance:none}
+.site-search__submit{
+  flex:none;
+  padding:8px 16px;
+  border:none;
+  border-radius:8px;
+  background:var(--accent);
+  color:#fff;
+  font-size:13.5px;
+  font-weight:500;
+  line-height:1.5;
+  cursor:pointer;
+  transition:filter .2s ease;
+}
+.site-search__submit:hover{filter:brightness(1.06)}
+.site-search__submit:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* ---------- 2. 类型筛选 ---------- */
+.site-search__filters{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:0 0 4px;
+}
+.site-search__chip{
+  padding:5px 12px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:var(--panel);
+  color:var(--muted);
+  font-size:12.5px;
+  line-height:1.6;
+  cursor:pointer;
+  transition:background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+.site-search__chip:hover{color:var(--accent);border-color:var(--accent)}
+.site-search__chip.is-active{
+  background:var(--accent);
+  border-color:var(--accent);
+  color:#fff;
+  font-weight:500;
+}
+
+/* ---------- 3. 状态与结果 ---------- */
+.site-search__status{
+  margin:14px 0 0;
+  font-size:12.5px;
+  line-height:1.7;
+  color:var(--muted);
+}
+.site-search__results{
+  margin:8px 0 0;
+  padding:0;
+  list-style:none;
+}
+.search-result{border-bottom:1px solid var(--line)}
+.search-result:first-child{border-top:1px solid var(--line)}
+.search-result__link{
+  display:block;
+  padding:14px 12px;
+  border-radius:10px;
+  color:inherit;
+  text-decoration:none;
+  transition:background-color .2s ease;
+}
+.search-result__link:hover,
+.search-result__link:focus-visible{background:var(--panel)}
+.search-result__title{
+  display:block;
+  font-size:16px;
+  font-weight:600;
+  line-height:1.55;
+  color:var(--text);
+}
+.search-result__link:hover .search-result__title{color:var(--accent)}
+.search-result__meta{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:6px 10px;
+  margin-top:6px;
+  font-size:12px;
+  line-height:1.6;
+  color:var(--muted);
+}
+.search-result__type{
+  padding:1px 8px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  font-size:11.5px;
+}
+.search-result__lang{
+  padding:1px 6px;
+  border-radius:4px;
+  background:var(--bg);
+  font-size:11px;
+  letter-spacing:.04em;
+}
+.search-result__tag{opacity:.85}
+.search-result__snippet{
+  display:block;
+  margin-top:6px;
+  font-size:13.5px;
+  line-height:1.75;
+  color:var(--muted);
+  word-break:break-word;
+}
+
+/* 高亮：日/夜各一档，保证对比度 */
+mark{
+  padding:0 1px;
+  border-radius:3px;
+  background:rgba(232,89,60,.16);
+  color:inherit;
+}
+html[data-theme="night"] mark{
+  background:rgba(255,122,92,.28);
+  color:#ffe8e0;
+}
+
+/* ---------- 4. 空态 ---------- */
+.site-search__empty{
+  margin:16px 0 0;
+  padding:16px 14px;
+  border:1px dashed var(--line);
+  border-radius:10px;
+  font-size:13.5px;
+  line-height:1.8;
+  color:var(--muted);
+}
+.site-search__empty p{margin:0}
+.site-search__empty-links{margin-top:8px !important;font-size:13px}
+.site-search__noscript{
+  margin:16px 0 0;
+  font-size:13px;
+  line-height:1.8;
+  color:var(--muted);
+}
+
+/* ---------- 5. 移动端 ---------- */
+@media (max-width:600px){
+  .site-search{margin:16px 0 36px}
+  .site-search__field{padding:5px 6px 5px 10px;gap:6px}
+  .site-search__input{font-size:14.5px}
+  .site-search__submit{padding:7px 12px;font-size:13px}
+  .site-search__chip{padding:4px 10px;font-size:12px}
+  .search-result__link{padding:12px 8px}
+  .search-result__title{font-size:15px}
+  .search-result__snippet{font-size:13px}
+}

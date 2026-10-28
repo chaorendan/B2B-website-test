@@ -82,6 +82,20 @@ html[data-theme="night"] td{border-color:#22314a}
   .lang-menu__list{min-width:104px}
 }
 
+/* ---------- 站内搜索入口（导航右侧圆形图标） ---------- */
+.site-search-link{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;
+  width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--btn-bg);
+  color:var(--text);text-decoration:none;
+  transition:transform .2s ease,color .2s ease,background-color .35s ease}
+.site-search-link:hover{transform:scale(1.08);color:var(--accent);text-decoration:none}
+.site-search-link svg{width:17px;height:17px;stroke:currentColor;fill:none;
+  stroke-width:2;stroke-linecap:round}
+.site-search-link:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (max-width:600px){
+  .site-search-link{width:34px;height:34px}
+  .site-search-link svg{width:15px;height:15px}
+}
+
 /* ---------- 工具菜单（父级按钮 + 子项下拉） ---------- */
 .tools-menu{position:relative;flex:0 0 auto}
 .tools-menu__btn{display:inline-flex;align-items:center;gap:5px;padding:0;min-height:38px;

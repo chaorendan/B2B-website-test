@@ -113,6 +113,11 @@
       </nav>
     {%- endif -%}
 
+    {%- comment -%} 站内搜索入口：全站可见，键盘按 / 可直接聚焦搜索框 {%- endcomment -%}
+    <a class="site-search-link" href="{{ '/search/' | relative_url }}" aria-label="站内搜索" title="站内搜索（快捷键 /）">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5L21 21"/></svg>
+    </a>
+
     {%- comment -%}
       语言切换：单控件下拉（当前语言标注，点击展开全部选项）。
       路由：中文 / · 英文 /en/ · 法语 /fr/
