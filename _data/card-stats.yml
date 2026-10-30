@@ -1,14 +1,14 @@
 # 素问名片指标快照 —— 由 scripts/sooon-card-snapshot.py 定时刷新（GitHub Actions 每天 10:30）
 # 自动化跑不了时，手动改这份文件即可；hero-card 里读不到 streak_days 会整块隐藏（优雅降级）。
-fetched_at: "2026-10-29"
+fetched_at: "2026-10-30"
 source: "https://sooon.ai/s/r/3KVBGlekVOmXSoSaXOP4lK"
 display_name: "水狮子"
-streak_days: 604           # 连续打卡（天）
-total_checkin_days: 616    # 总打卡（天）
-contribution: 10342        # 总贡献值
-adopted: 4410            # 被采纳回答数
-answered: 7723           # 回答总数
+streak_days: 605           # 连续打卡（天）
+total_checkin_days: 617    # 总打卡（天）
+contribution: 10354        # 总贡献值
+adopted: 4415            # 被采纳回答数
+answered: 7730           # 回答总数
 quick_answer_days: 488    # 抢答天数
-subscribed: 718           # 连续订阅（天）
-subscribe_total: 759       # 订阅区间总天数
-stdev_minutes: 35          # 打卡时间标准差（分钟）
+subscribed: 719           # 连续订阅（天）
+subscribe_total: 760       # 订阅区间总天数
+stdev_minutes: 36          # 打卡时间标准差（分钟）
