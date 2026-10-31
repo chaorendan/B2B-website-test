@@ -3,6 +3,8 @@ name: sooon-card-snapshot
 # 每天北京时间 10:30 抓一次素问公开名片的指标，写回 _data/card-stats.yml 并提交，
 # push 触发 Pages 重建后，首页名片即展示最新数据。
 # 失败不影响站点：脚本抓不到关键字段会非零退出且不改动旧数据。
+# 数据无变化时也会打一个空提交，保证每天必有一次 Pages 构建——
+# 否则 future 文章（front matter 里写未来日期）到了定时点也没有构建可搭车，只能等下次 push。
 on:
   schedule:
     - cron: "30 2 * * *"   # UTC 02:30 = 北京 10:30
@@ -31,14 +33,16 @@ jobs:
       - name: Snapshot sooon card
         run: python scripts/sooon-card-snapshot.py
 
-      - name: Commit if changed
+      - name: Commit (empty commit when unchanged, so Pages rebuilds daily)
         run: |
+          git config user.name  "sooon-card-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if git diff --quiet _data/card-stats.yml; then
-            echo "无变化，跳过提交"
+            # 数据无变化也要留一次 push：Pages 只在 push 时构建，
+            # 没有这次构建，当天定时到点的文章就发不出来。
+            git commit --allow-empty -m "chore(card): daily rebuild ($(TZ=Asia/Shanghai date +%F))"
           else
-            git config user.name  "sooon-card-bot"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add _data/card-stats.yml
             git commit -m "chore(card): refresh sooon stats ($(TZ=Asia/Shanghai date +%F))"
-            git push
           fi
+          git push
