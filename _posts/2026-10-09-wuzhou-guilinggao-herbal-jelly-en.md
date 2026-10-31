@@ -21,6 +21,7 @@ tags:
 categories:
   - culture
 author: "Peng Junchao"
+faq_in_body: true
 schema_faq:
   - question: "Is Guilinggao vegan-friendly?"
     answer: "Traditional Guilinggao contains collagen extracted from turtle plastron and is not vegan. However, many modern commercial versions use plant-based starches or grass jelly extracts as their primary gelling agents. Always check the ingredient label for animal derivatives."

@@ -424,3 +424,11 @@ a.col-card:hover,a.col-card:focus-visible{border-color:var(--accent2);box-shadow
 .post-fig-duo img{width:100%;height:auto}
 .post-fig-duo figcaption{font-size:12px}
 @media (max-width:600px){.post-fig-duo{flex-direction:column;gap:16px}}
+
+/* 文章页常见问题（_layouts/post.html 从 page.schema_faq 渲染，复用 .site-faq 结构） */
+.post-faq{max-width:none;margin:34px 0 0;text-align:left}
+.post-faq .site-faq__heading{
+  margin:0 0 10px;font-size:14px;text-align:left;letter-spacing:.02em;opacity:.6
+}
+.post-faq .site-faq__q{font-size:15px;line-height:1.75;opacity:.9;padding:12px 26px 12px 2px}
+.post-faq .site-faq__a p{font-size:14.5px;line-height:1.9;opacity:.78}

@@ -24,6 +24,7 @@ categories:
   - creation
 series: reading-notes
 author: "彭俊超"
+faq_in_body: true
 schema_faq:
   - question: "《诡秘之主》在海外有多火？"
     answer: "英文版在WebNovel阅读量超4600万，评分4.85/5，曾高居奇幻类完本作品人气第一，全球粉丝超1500万，被翻译成14种语言，2024年入藏大英图书馆。"

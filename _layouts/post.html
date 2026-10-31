@@ -58,6 +58,27 @@ layout: default
   </div>
 
   {%- comment -%}
+    文章级常见问题：schema.html 输出的 FAQPage JSON-LD 要求问答在页面上真实可见，
+    所以这里把同一份 page.schema_faq 渲染出来——数据只写一次，结构化数据与可见内容不会再走偏。
+    复用 .site-faq 样式（<details> 手风琴，零 JS、键盘可达）。
+  {%- endcomment -%}
+  {%- if page.schema_faq and page.faq_in_body != true %}
+  <section class="site-faq post-faq" aria-labelledby="post-faq-heading">
+    <h2 class="site-faq__heading" id="post-faq-heading">{% if page.lang == "en" %}Frequently asked questions{% else %}常见问题{% endif %}</h2>
+    <div class="site-faq__list">
+      {%- for item in page.schema_faq %}
+      <details class="site-faq__item">
+        <summary class="site-faq__q">{{ item.question | escape }}</summary>
+        <div class="site-faq__a">
+          <p>{{ item.answer | escape }}</p>
+        </div>
+      </details>
+      {%- endfor %}
+    </div>
+  </section>
+  {%- endif %}
+
+  {%- comment -%}
     划线说明：正文里用了 .post-mark（<mark> 高亮 / 下划线）的文章才在文末出现，
     标签不再贴在句子旁边，读者先读句子，最后再看约定。
   {%- endcomment -%}

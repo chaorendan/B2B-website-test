@@ -29,6 +29,7 @@ tags:
 categories:
   - culture
 author: "彭俊超"
+faq_in_body: true
 schema_faq:
   - question: "青金石为什么被称为“圣蓝”？"
     answer: "青金石在苏美尔、古埃及、巴比伦、文艺复兴欧洲和藏传佛教中被反复用作神圣的蓝色，从伊什塔尔门的釉砖到圣母玛利亚的长袍，从敦煌飞天到药师佛的身色，贯穿了人类几乎全部的文明史。"
