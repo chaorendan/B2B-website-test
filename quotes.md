@@ -2,7 +2,7 @@
 layout: page
 title: "每日一言 · 往期"
 seo_title: "每日一言 · 往期日历 | 超人蛋"
-description: "按日历回看每日一言：点任意日期，就能看到那天的中文、English 与 Français。共 60 条轮播，可按月翻阅。"
+description: "按日历回看每日一言：点任意日期，就能看到那天的中文、English 与 Français。可按月翻阅。"
 permalink: /quotes/
 lang: "zh"
 css: "/assets/css/quotes.css"
@@ -27,7 +27,7 @@ css: "/assets/css/quotes.css"
   </div>
 
   <div class="qa-card" id="qa-card" aria-live="polite">
-    <noscript><p class="qa-card__empty">日历需要开启 JavaScript。下方向下滚动可直接阅读全部 60 条。</p></noscript>
+    <noscript><p class="qa-card__empty">日历需要开启 JavaScript。下方向下滚动可直接阅读全部 {{ site.data.quotes.items | size }} 条。</p></noscript>
   </div>
 </div>
 
