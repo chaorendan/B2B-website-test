@@ -12,6 +12,11 @@ keywords:
   - 萨温节
   - 宗教节日商业化
 date: 2026-11-01 10:00:00 +0800
+cover: "/assets/images/blog/all-saints-halloween-cover.webp"
+cover_alt: "灰色背景前，一位披白色兜帽长袍、嘴唇涂成深色的年轻人一手摊开、一手捧着翻开的书；桌上摆着骷髅头、空白相框、点燃的紫色蜡烛、南瓜与松果"
+cover_caption: "一个本该用来预备第二天的夜晚，最后自己变成了节日"
+cover_width: 1036
+cover_height: 583
 lang: "zh"
 tags:
   - 诸圣日
