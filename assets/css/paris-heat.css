@@ -1,0 +1,103 @@
+/* 巴黎热浪应急空间 WebGIS · 成果展示页
+ * 独立浅色展台（纸张 + 陶土色），不依赖站点日夜主题，避免夜间模式下地图面板配色失配。
+ */
+
+.phw{
+  --phw-bg:#faf7f1; --phw-panel:#fffdf9; --phw-line:rgba(92,70,42,.22);
+  --phw-text:#2b2118; --phw-muted:#7c6a54; --phw-accent:#b6491a;
+  --phw-good:#1b5e20; --phw-warm:#a63603;
+  background:var(--phw-bg);color:var(--phw-text);
+  border:1px solid var(--phw-line);border-radius:16px;padding:14px;margin:20px 0 8px;
+  font-size:14px;line-height:1.65;
+}
+.phw [hidden]{display:none !important}
+.phw a{color:var(--phw-accent)}
+
+/* 工具条：变量切换 + 设施开关 */
+.phw-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:12px}
+.phw-tabs{display:flex;flex-wrap:wrap;gap:6px}
+.phw-tab{
+  font-family:inherit;font-size:13px;cursor:pointer;
+  background:var(--phw-panel);color:var(--phw-muted);
+  border:1px solid var(--phw-line);border-radius:999px;padding:6px 13px;
+}
+.phw-tab:hover{color:var(--phw-text)}
+.phw-tab[aria-pressed="true"]{
+  background:#2b2118;color:#fff8ef;border-color:#2b2118;
+}
+.phw-switch{margin-left:auto;display:flex;align-items:center;gap:6px;font-size:13px;color:var(--phw-muted);cursor:pointer}
+.phw-switch input{accent-color:var(--phw-accent);width:15px;height:15px;margin:0}
+
+/* 地图 + 侧栏 */
+.phw-body{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:12px}
+.phw-mapwrap{position:relative;min-width:0}
+.phw-map{
+  height:clamp(360px,58vh,520px);border-radius:12px;overflow:hidden;
+  border:1px solid var(--phw-line);background:#eae3d8;
+}
+.phw-map:focus-visible{outline:2px solid var(--phw-accent);outline-offset:2px}
+.phw-map .leaflet-container{border-radius:12px;font-family:inherit}
+.phw-map .leaflet-container:focus{outline:none}
+
+/* 加载态 */
+.phw-load{
+  position:absolute;inset:0;z-index:500;display:flex;align-items:center;justify-content:center;
+  border-radius:12px;background:#f3ede3;color:var(--phw-muted);font-size:13px;text-align:center;padding:20px;
+}
+.phw-load__hint{display:block;margin-top:4px;font-size:12px;opacity:.75}
+
+/* 图例 */
+.phw-legend{
+  position:absolute;left:10px;bottom:10px;z-index:600;max-width:230px;
+  background:rgba(255,253,249,.94);border:1px solid var(--phw-line);border-radius:10px;
+  padding:8px 10px;font-size:12px;line-height:1.55;box-shadow:0 2px 8px rgba(60,40,20,.08);
+}
+.phw-legend__title{font-weight:600;margin:0 0 5px;font-size:12px}
+.phw-legend:empty{display:none}
+.phw-legend__row{display:flex;align-items:center;gap:6px;white-space:nowrap}
+.phw-legend__sw{width:22px;height:9px;border-radius:2px;border:1px solid rgba(0,0,0,.12);flex:0 0 auto}
+.phw-legend__dots{margin-top:6px;padding-top:6px;border-top:1px dashed var(--phw-line);display:flex;flex-wrap:wrap;gap:3px 8px}
+.phw-legend__dot{display:inline-flex;align-items:center;gap:4px;font-size:11.5px;color:var(--phw-muted)}
+.phw-legend__dot i{width:7px;height:7px;border-radius:50%;display:inline-block}
+
+/* 侧卡 */
+.phw-card{
+  background:var(--phw-panel);border:1px solid var(--phw-line);border-radius:12px;
+  padding:12px 13px;min-width:0;overflow:auto;
+}
+.phw-card__eyebrow{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--phw-muted);margin:0}
+.phw-card__title{margin:2px 0 2px;font-size:18px;line-height:1.35}
+.phw-card__sub{margin:0 0 10px;font-size:12.5px;color:var(--phw-muted)}
+.phw-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+.phw-stat{background:#f6f0e6;border-radius:9px;padding:7px 9px}
+.phw-stat__k{font-size:11.5px;color:var(--phw-muted);display:block}
+.phw-stat__v{font-size:19px;font-variant-numeric:tabular-nums;line-height:1.3}
+.phw-stat__v small{font-size:11.5px;font-weight:400;color:var(--phw-muted);margin-left:2px}
+.phw-delta{margin:0 0 10px;font-size:12.5px;border-left:2px solid var(--phw-line);padding-left:8px;color:var(--phw-muted)}
+.phw-delta b{color:var(--phw-text)}
+
+.phw-bars{list-style:none;margin:0;padding:0}
+.phw-bars li{margin:0 0 5px;font-size:12px}
+.phw-bars__top{display:flex;justify-content:space-between;gap:8px}
+.phw-bars__top span:last-child{color:var(--phw-muted);font-variant-numeric:tabular-nums}
+.phw-bars__track{height:5px;background:rgba(90,70,40,.12);border-radius:99px;overflow:hidden;margin-top:3px}
+.phw-bars__fill{height:100%;border-radius:99px}
+.phw-card__note{margin:10px 0 0;font-size:12px;color:var(--phw-muted);border-top:1px dashed var(--phw-line);padding-top:8px}
+
+/* Leaflet 细节：夜间不接管，站点主色偏暖 */
+.phw .leaflet-popup-content-wrapper{background:#fffdf9;color:#2b2118;border-radius:9px;box-shadow:0 3px 14px rgba(50,30,10,.18)}
+.phw .leaflet-popup-content{margin:10px 12px;font-size:12.5px;line-height:1.6}
+.phw .leaflet-popup-content b{display:block;font-size:13.5px;margin-bottom:2px}
+.phw .leaflet-popup-tip{background:#fffdf9}
+.phw .leaflet-control-attribution{background:rgba(255,253,249,.85);color:#5d4c36;font-size:10.5px}
+.phw .leaflet-control-zoom a{color:#2b2118}
+
+@media (max-width:760px){
+  .phw{padding:11px}
+  .phw-switch{margin-left:0}
+  .phw-body{grid-template-columns:1fr}
+  .phw-map{height:60vh;min-height:320px}
+  .phw-legend{max-width:190px;font-size:11.5px}
+  .phw-legend__dots{display:none}
+  .phw-card{max-height:none}
+}

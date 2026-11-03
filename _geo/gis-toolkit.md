@@ -33,6 +33,9 @@ Mapbox、百度地图、Google Maps、Google Ads API 的 Key 申请与安全配�
 ### [提示词模板库](prompt-templates/)
 可下载的 API 接入提示词模板，覆盖地理编码、热力图、商户管理、GEO × Ads 协同等场景。
 
+### [巴黎热浪应急空间 WebGIS（案例）](/projects/paris-heat-webgis/)
+把 20 个行政区与 535 个公共降温设施做成可交互地图：EPSG:2154 → WGS84 反投影、GeoJSON 几何简化、分级设色与按区统计，全部离线预处理，前端只负责交互。可作为「空间数据 → 网页地图」的最小完整管线参考。
+
 ---
 
 ## API 选型策略：免费优先

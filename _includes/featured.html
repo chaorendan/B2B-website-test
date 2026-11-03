@@ -1,7 +1,7 @@
 {% comment %} 首页「精选内容」：精选知识库条目（front matter 里 featured: true）+ 代表案例 {% endcomment %}
 {% assign kb_featured = site.knowledge | where: "featured", true | sort: "featured_order" %}
 {% assign geo_featured = site.geo | where: "featured", true | sort: "featured_order" %}
-{% assign proj_featured = site.projects | sort: "date" | reverse %}
+{% assign proj_featured = site.projects | where: "featured", true | sort: "date" | reverse %}
 
 {% if kb_featured.size > 0 or geo_featured.size > 0 or proj_featured.size > 0 %}
 <section class="featured" aria-label="精选内容">
