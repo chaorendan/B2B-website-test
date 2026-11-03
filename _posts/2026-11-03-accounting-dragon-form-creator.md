@@ -210,4 +210,4 @@ AI 的出现，不是在淘汰创作者，更像在逼我们幸福。
 
 ---
 
-**延伸阅读**：[聊聊我的 AI 创作工作流：AI 替代不了的活人感](/blog/ai-workflow-huorenkan/) ｜ [《文明是一束光》：在 AI 算尽一切的黑铁时代，去犯一个前无古人的错误](/blog/civilization-is-a-beam-of-light/) ｜ [关于我](/about/)
+**延伸阅读**：[诸圣日的失败，和万圣节的胜利](/blog/all-saints-day-vs-halloween/) ｜ [聊聊我的 AI 创作工作流：AI 替代不了的活人感](/blog/ai-workflow-huorenkan/) ｜ [《文明是一束光》：在 AI 算尽一切的黑铁时代，去犯一个前无古人的错误](/blog/civilization-is-a-beam-of-light/) ｜ [关于我](/about/)
