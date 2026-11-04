@@ -13,8 +13,8 @@ keywords:
   - 餐饮商业
 date: 2026-11-04 10:00:00 +0800
 cover: "/assets/images/blog/michelin-journey-cover.webp"
-cover_alt: "深色底的中文排版海报：顶部金色小字「MICHELIN GUIDE 1936」与右上三颗金星，中央是巨型宋体的「值得专程前往」五个字，下方一行副题「判据不是这盘菜有多好，是这趟路值不值得走」"
-cover_caption: "三星的定义里藏着一个关于旅行的判断"
+cover_alt: "左半幅是深墨色竖栏，竖排宋体大字「值得专程前往」，上方一行金色小字「MICHELIN GUIDE 1936」，下方是副题「米其林评的从来不是菜」；右半幅是餐厅内景照片，白色桌布的长桌、深棕色皮椅、黑色窗棂与暖色灯带，角落里有一位侍者的侧影"
+cover_caption: "一张空着的桌子在等人——三星卖的不是菜，是这趟路"
 cover_width: 1036
 cover_height: 583
 lang: "zh"
