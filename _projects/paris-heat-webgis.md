@@ -213,6 +213,7 @@ districts.geojson (16.7KB) + facilities.geojson (120KB)
 
 ## 延伸阅读 · 与本案例直接相关的页面
 
+- **删掉的那一半**：[走十分钟，能找到凉快的地方吗](/blog/paris-heat-cooling-walk/)——这一页讲结果，那篇讲删除：被砍掉的 16MB 是什么，以及为什么敢砍
 - **方法底座**：[GIS 特色板块](/geo/gis-toolkit/)——空间分析、地图渲染与 API 自动化的工具选型
 - **同类案例**：[本站从 0 到被 Google 收录的 7 天](/projects/site-build-7-days/)——同样按「问题 → 做法 → 数据 → 结论」组织
 - **选型对照**：[Mapbox 地图可视化](/geo/mapbox-integration/)——商业底图与 Leaflet + CARTO 的取舍
