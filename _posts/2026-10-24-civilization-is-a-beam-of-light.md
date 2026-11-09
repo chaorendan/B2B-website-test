@@ -929,4 +929,4 @@ AI：「您渴望什么？
 
 ---
 
-**延伸阅读**：[聊聊我的AI创作工作流：AI替代不了的活人感](/blog/ai-workflow-huorenkan/) ｜ [荆州之行：在AI狂飙的时代，去博物馆寻找「宁静力」](/blog/jingzhou-museum-ningjingli/) ｜ [知乎：基础科学长期停滞的讨论](https://www.zhihu.com/question/634189554/answer/1934639352614492128)
+**延伸阅读**：[聊聊我的AI创作工作流：AI替代不了的活人感](/blog/ai-workflow-huorenkan/) ｜ [荆州之行：在AI狂飙的时代，去博物馆寻找「宁静力」](/blog/jingzhou-museum-ningjingli/) ｜ [静海之下：一个拒绝意识跃迁的人](/blog/under-the-quiet-sea/) ｜ [知乎：基础科学长期停滞的讨论](https://www.zhihu.com/question/634189554/answer/1934639352614492128)

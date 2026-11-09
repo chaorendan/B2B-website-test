@@ -145,3 +145,5 @@ schema_faq:
 - [动物园规则怪谈 — 都市传说维基](https://urban-legend.fandom.com/zh/wiki/%E5%8A%A8%E7%89%A9%E5%9B%AD%E8%A7%84%E5%88%99%E6%80%AA%E8%B0%88)——2021-11-25「十六椰子」（phKeaLx）原帖与各则守则全文
 - [Analog horror — Wikipedia](https://en.wikipedia.org/wiki/Analog_horror)——VHS、公共接入电视与「伪造档案」这一支的谱系
 - [为什么「动物园」成了今年中文互联网最佳恐怖故事？（塔门，2021-12-18）](https://www.sohu.com/a/509618867_220034/)——规则怪谈在中文网络的扩散，以及「用说明书体写恐怖」的早期评论
+
+**相关阅读**：[静海之下](/blog/under-the-quiet-sea/)——如果一段声音能被合成到连采集者自己都听不出差别，「到场」还剩下什么。短篇科幻，写的是同一件事的另一面。
