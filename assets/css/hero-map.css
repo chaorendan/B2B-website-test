@@ -3,6 +3,24 @@
    1) 日/夜主题变量（自定义属性，不触碰 minima 的 header/nav 结构）
    2) minima 夜间模式覆盖（首页之外的正文区块也能跟随主题）
    3) 首页晨昏线 Hero、作者卡、入口磁贴
+
+   ── 令牌纪律（全站 CSS 的唯一取色来源）────────────────────
+   本文件的 :root / html[data-theme="night"] 是站点色板的唯一事实来源；
+   blog.css、site.css、pcfs.css 等只消费 var()，不再自造颜色字面量。
+   命名分三层：
+     · 底与字    --bg --panel --text --muted --line
+     · 强调      --accent --accent2 --btn-bg
+     · 压在某底上 --on-accent（强调色实底）  --on-scrim（半透明深色遮罩）
+   页面若自带独立色板（paris-heat 的 --phw-*、attention 的 --c-*），
+   变量必须声明在该页根选择器内，不外溢、不复用站点变量。
+
+   ── 尚未收敛的项（刻意保留，合并会改变像素，需逐屏确认）────
+     font-size 212 处 / 21 档（13px×38、12.5px×32、12px×27、13.5px×26、14px×26…）
+     border-radius 104 处 / 16 档（999px 胶囊、50% 圆形属语义值，不算冗余）
+     box-shadow 20 处（几乎两两不同，多为一次性装饰）
+     transition 33 处 / 26 种组合
+     rgba() 硬编码 70 处（其中 site.css 的 rgba(128,128,128,*) 共 18 处，是可收敛的灰阶族）
+   收敛顺序建议：灰阶族 → 字号线 → 圆角线 → 阴影/动效；每步单独提交、逐屏比对。
    ============================================================ */
 
 /* ---------- 主题变量 ---------- */
@@ -15,6 +33,9 @@
   --art:#16324f; --art-line:rgba(22,50,79,.22);
   --art-shadow:0 1px 0 rgba(255,255,255,.85),0 2px 10px rgba(22,50,79,.12);
   --motto:#8a3a24; --btn-bg:#fff;
+  /* 语义色：不随主题变，只随「压在什么底上」变 */
+  --on-accent:#fff;   /* 压在强调色实底上的文字/图标（主按钮、搜索提交、激活胶囊） */
+  --on-scrim:#fff;    /* 压在半透明深色遮罩上的文字（博客卡系列角标） */
 }
 html[data-theme="night"]{
   color-scheme:dark;
@@ -26,26 +47,31 @@ html[data-theme="night"]{
   --art:#dce6f2; --art-line:rgba(220,230,242,.25);
   --art-shadow:0 1px 0 rgba(13,22,38,.6),0 2px 10px rgba(0,0,0,.35);
   --motto:#c9a08e; --btn-bg:#152238;
+  /* 夜间专属色阶：全部集中于此，正文覆盖规则一律走 var()，不再散落字面量 */
+  --link:#79b0e8; --link-visited:#9ab8e8; --link-hover:#ffffff;
+  --code-bg:#17233a; --code-line:#22314a; --code-text:#e2ecf6;
+  --header-line:#2b3b55; --quote-line:#2a3b55;
+  --mark-fg:#ffe8e0;  /* 正文 <mark> 高亮文字（仅夜间需要覆盖，日间继承正文色） */
 }
 
 body{background:var(--bg);color:var(--text);transition:background-color .35s ease,color .35s ease}
 
 /* ---------- minima 夜间覆盖 ---------- */
-html[data-theme="night"] .site-header{border-top-color:#2b3b55;border-bottom-color:var(--line);background:var(--header-bg)}
+html[data-theme="night"] .site-header{border-top-color:var(--header-line);border-bottom-color:var(--line);background:var(--header-bg)}
 html[data-theme="night"] .site-title,
 html[data-theme="night"] .site-title:visited,
 html[data-theme="night"] .site-nav .page-link{color:var(--text)}
-html[data-theme="night"] a{color:#79b0e8}
-html[data-theme="night"] a:visited{color:#9ab8e8}
-html[data-theme="night"] a:hover{color:#ffffff}
-html[data-theme="night"] blockquote{color:var(--muted);border-left-color:#2a3b55}
+html[data-theme="night"] a{color:var(--link)}
+html[data-theme="night"] a:visited{color:var(--link-visited)}
+html[data-theme="night"] a:hover{color:var(--link-hover)}
+html[data-theme="night"] blockquote{color:var(--muted);border-left-color:var(--quote-line)}
 html[data-theme="night"] code,
-html[data-theme="night"] pre{background:#17233a;border-color:#22314a;color:#e2ecf6}
-html[data-theme="night"] .highlight{background:#17233a}
+html[data-theme="night"] pre{background:var(--code-bg);border-color:var(--code-line);color:var(--code-text)}
+html[data-theme="night"] .highlight{background:var(--code-bg)}
 html[data-theme="night"] hr{border-top-color:var(--line)}
 html[data-theme="night"] .site-footer{border-top-color:var(--line);color:var(--muted)}
 html[data-theme="night"] th,
-html[data-theme="night"] td{border-color:#22314a}
+html[data-theme="night"] td{border-color:var(--code-line)}
 
 /* ---------- 主题切换按钮 ---------- */
 /* minima 的 header 用 float 布局，改为 flex 才能让按钮与标题、导航同行 */
@@ -126,7 +152,7 @@ html[data-theme="night"] td{border-color:#22314a}
 }
 /* 夜间模式下汉堡菜单下拉底色与图标跟随主题 */
 html[data-theme="night"] .site-nav{background:var(--panel);border-color:var(--line)}
-html[data-theme="night"] .menu-icon>svg{fill:#dce6f2}
+html[data-theme="night"] .menu-icon>svg{fill:var(--text)}
 @media (max-width:600px){
   /* 汉堡键绝对定位在最右，主题钮/语言钮让出 52px 避免重叠 */
   .site-header .theme-toggle{margin-right:52px}
@@ -173,7 +199,7 @@ html{overflow-x:hidden}
 .cta{display:flex;gap:14px;margin-top:26px;flex-wrap:wrap}
 .btn{display:inline-block;padding:11px 22px;border-radius:10px;font-size:14px;
   border:1px solid var(--line);background:var(--btn-bg);color:var(--text)}
-.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent);font-weight:600}
 .btn.ghost{color:var(--text)}
 .btn:hover{filter:brightness(1.05)}
 
@@ -257,10 +283,10 @@ html{overflow-x:hidden}
 
 /* ---------- 立体按压按钮（借鉴 lk-energy.com.ua 的 3D CTA） ---------- */
 .btn-3d{display:inline-block;padding:12px 24px;border-radius:12px;font-weight:700;font-size:15px;
-  color:#fff;background:linear-gradient(180deg,var(--accent2),var(--accent,#2f6fb3));
+  color:var(--on-accent);background:linear-gradient(180deg,var(--accent2),var(--accent,#2f6fb3));
   box-shadow:0 4px 0 rgba(28,43,58,.32),0 8px 18px rgba(28,43,58,.16);
   transition:transform .08s ease,box-shadow .08s ease,filter .2s ease;text-decoration:none}
-.btn-3d:hover{transform:translateY(-1px);filter:brightness(1.06);color:#fff}
+.btn-3d:hover{transform:translateY(-1px);filter:brightness(1.06);color:var(--on-accent)}
 .btn-3d:active{transform:translateY(3px);box-shadow:0 1px 0 rgba(28,43,58,.32),0 3px 8px rgba(28,43,58,.14)}
 
 /* ---------- 名片 · 连续打卡（素问快照，_data/card-stats.yml） ----------

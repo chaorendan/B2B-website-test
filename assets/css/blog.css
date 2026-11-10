@@ -231,7 +231,7 @@ html[data-theme="night"] .post-legend__swatch--verdict{
   background:rgba(18,20,24,.58);
   -webkit-backdrop-filter:blur(8px) saturate(1.2);
   backdrop-filter:blur(8px) saturate(1.2);
-  color:#fff;
+  color:var(--on-scrim,#fff);
   font-size:10.5px;line-height:1.25;letter-spacing:.02em;
   box-shadow:inset 0 0 0 1px rgba(255,255,255,.14), 0 1px 3px rgba(0,0,0,.28);
   pointer-events:none;

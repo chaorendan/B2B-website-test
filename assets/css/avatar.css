@@ -3,6 +3,12 @@
    引入位置：_includes/head.html （在 minima 的 main.css 之后）
    ========================================================================== */
 
+/* ---------- 头像占位底色 ----------
+   图片未加载/加载失败时露出的底色。此处沿用「系统深色偏好」判定，
+   与站点手动主题开关（data-theme）不是同一套信号，属既有行为，暂不改动。 */
+:root{--avatar-ph:#eee}
+@media (prefers-color-scheme: dark){:root{--avatar-ph:#2a2a2a}}
+
 /* ---------- 0. 霞鹜文楷 LXGW WenKai（仅标题栏用字子集，自托管 woff2）
    主标题用 Medium(500)，副标题用 Regular(400)；
    每档仅含标题实际用字（~41 字形 / 8.8KB），font-display:swap 不阻塞渲染。
@@ -50,7 +56,7 @@
   border-radius: 50%;   /* 圆形头像 */
   object-fit: cover;    /* 兜底：若将来换非正方形图也不拉伸 */
   object-position: center 20%; /* 裁剪时偏向人像上方，避免切到下巴 */
-  background-color: #eee; /* 图片未加载时的占位 */
+  background-color: var(--avatar-ph, #eee); /* 图片未加载时的占位 */
   /* 浅色描边：在深色背景上也能看清边界 */
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
 }
@@ -113,7 +119,7 @@
   .site-title--with-avatar .site-avatar {
     /* 深色下改用浅色描边，若图片有深色边缘也不会糊进背景 */
     box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.28);
-    background-color: #2a2a2a;
+    background-color: var(--avatar-ph, #2a2a2a);
   }
 }
 

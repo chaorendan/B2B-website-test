@@ -24,7 +24,7 @@
   background:var(--panel);color:var(--text);font-size:14px;font-family:inherit}
 .pcfs-submit{
   height:38px;border:1px solid transparent;border-radius:999px;
-  background:var(--accent2);color:#fff;font-size:14px;font-weight:500;cursor:pointer}
+  background:var(--accent2);color:var(--on-accent,#fff);font-size:14px;font-weight:500;cursor:pointer}
 .pcfs-submit:hover{opacity:.9}
 
 /* 工具栏 */

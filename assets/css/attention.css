@@ -7,6 +7,10 @@
   --c-line:rgba(140,170,200,.18);
   --c-text:#dbe6f2; --c-muted:#8ba0ba;
   --c-build:#4ea8de; --c-drain:#e0563c; --c-warn:#e8b84b; --c-ok:#3fb98a;
+  /* 压在功能色实底/淡底上的前景色与底色 */
+  --c-on-build:#04202f;             /* 亮蓝实底上的文字：必须深色才够对比度 */
+  --c-warn-bg:rgba(232,184,75,.12); /* 警示条淡底 */
+  --c-warn-fg:#f0d79a;              /* 警示条文字 */
   background:var(--c-bg);color:var(--c-text);
   border:1px solid var(--c-line);border-radius:14px;position:relative;
   padding:16px;margin:18px 0 10px;font-size:14px;line-height:1.6}
@@ -45,7 +49,7 @@
   background:var(--c-panel);color:var(--c-text);border:1px solid var(--c-line);border-radius:9px}
 .att-form input:focus,.att-form select:focus{outline:1px solid var(--c-build)}
 .att-form__submit{
-  height:38px;border:none;border-radius:9px;background:var(--c-build);color:#04202f;
+  height:38px;border:none;border-radius:9px;background:var(--c-build);color:var(--c-on-build);
   font-size:13.5px;font-weight:500;cursor:pointer;font-family:inherit}
 /* 关联项目独占第二行前四列，提交按钮落在第五列（时间块正下方） */
 .att-form__futures{grid-column:1 / 5}
@@ -113,7 +117,7 @@
 .att-kpi b.is-build{color:var(--c-build)}
 .att-kpi b.is-drain{color:var(--c-drain)}
 .att-alert{
-  background:rgba(232,184,75,.12);border:1px solid var(--c-warn);color:#f0d79a;
+  background:var(--c-warn-bg);border:1px solid var(--c-warn);color:var(--c-warn-fg);
   border-radius:10px;padding:10px 12px;font-size:13px;margin-bottom:10px}
 
 /* 五维打分 */
@@ -137,7 +141,7 @@
   height:36px;padding:0 16px;border:1px solid var(--c-line);border-radius:999px;
   background:var(--c-panel);color:var(--c-text);font-size:13px;cursor:pointer;font-family:inherit}
 .att-btn:hover{border-color:var(--c-build)}
-.att-btn--primary{background:var(--c-build);border-color:var(--c-build);color:#04202f;font-weight:500}
+.att-btn--primary{background:var(--c-build);border-color:var(--c-build);color:var(--c-on-build);font-weight:500}
 .att-btn--ghost{background:transparent;color:var(--c-muted)}
 .att-import{display:inline-flex;align-items:center;height:36px;padding:0 14px;border:1px dashed var(--c-line);
   border-radius:999px;color:var(--c-muted);font-size:13px;cursor:pointer}
