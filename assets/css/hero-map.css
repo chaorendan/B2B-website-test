@@ -44,49 +44,81 @@
 
 /* ---------- 主题变量 ---------- */
 :root, html[data-theme="day"]{
-  --bg:#eef4f9; --panel:#ffffff; --line:rgba(28,43,58,.12);
-  --card-warm:#faf7f0; --card-warm-line:rgba(120,100,70,.20); --card-warm-shadow:0 6px 24px rgba(90,70,40,.10);
-  --text:#1c2b3a; --muted:#5f7186; --accent:#c23d24; --accent2:#2f6db3;
+  /* 2026-11-12 换肤：整页底由冷蓝白 #eef4f9 改为极淡黄 #faf5e5（色相 43°），
+     正文页再用同色相深一档的 --card-warm 拉开层次（色相 42°，明度差 13）。
+     墨色同步转暖（棕褐 #2f2619），冷调墨压暖纸会发脏。 */
+  --bg:#faf5e5; --panel:#fffdf6; --line:rgba(92,70,42,.22);
+  --card-warm:#f0e4c8; --card-warm-line:rgba(92,70,42,.24); --card-warm-shadow:0 6px 24px rgba(70,50,26,.13);
+  --text:#2f2619; --muted:#5f5646; --accent:#a8331c; --accent2:#255c97;
   /* 强调色分两用：--accent* 作文字/描边（要与页面底拉开对比），
      --accent*-solid 作实底（要能承载反白字）。日间两者同值，夜间必须分开：
      夜间强调色要够亮才配深底，但够亮就撑不住白字，物理互斥。 */
-  --accent-solid:#c23d24; --accent2-solid:#2f6db3;
+  --accent-solid:#a8331c; --accent2-solid:#255c97;
   /* RGB 三元组，供 rgba() 里引用 var(--accent-rgb) 这种带透明度的用法。
      高亮/下划线/光晕这类「强调色 + 透明度」的效果一律走它，
      改品牌色时不用再去每处追 rgba 字面量。 */
-  --accent-rgb:194,61,36; --accent2-rgb:47,109,179;
-  --header-bg:rgba(255,255,255,.9);
-  --veil:linear-gradient(90deg,rgba(238,244,249,.94) 0%,rgba(238,244,249,.72) 38%,rgba(238,244,249,.06) 72%);
+  --accent-rgb:168,51,28; --accent2-rgb:37,92,151;
+  --header-bg:rgba(250,245,229,.90);
+  --veil:linear-gradient(90deg,rgba(250,245,229,.94) 0%,rgba(250,245,229,.72) 38%,rgba(250,245,229,.06) 72%);
   --art:#16324f; --art-line:rgba(22,50,79,.22);
-  --art-shadow:0 1px 0 rgba(255,255,255,.85),0 2px 10px rgba(22,50,79,.12);
-  --motto:#8a3a24; --btn-bg:#fff;
+  --art-shadow:0 1px 0 rgba(255,253,246,.85),0 2px 10px rgba(70,50,26,.12);
+  --motto:#8a3a24; --btn-bg:#fffdf6;
   /* 语义色：不随主题变，只随「压在什么底上」变 */
   --on-accent:#fff;   /* 压在强调色实底上的文字/图标（主按钮、搜索提交、激活胶囊） */
   --on-scrim:#fff;    /* 压在半透明深色遮罩上的文字（博客卡系列角标） */
 }
 html[data-theme="night"]{
   color-scheme:dark;
-  --bg:#0d1626; --panel:#152238; --line:rgba(180,200,225,.16);
-  --card-warm:#152238; --card-warm-line:rgba(180,200,225,.16); --card-warm-shadow:0 6px 18px rgba(0,0,0,.30);
-  --text:#dce6f2; --muted:#8ba0ba; --accent:#ff7a5c; --accent2:#7db3e8;
+  /* 夜间跟着日间一起转暖：日暖夜冷会让主题切换时整屏突然换色系。
+     #14100c 不是灰黑，是带黄的深暖近黑；正文页卡片再亮一档 #241c15。 */
+  --bg:#14100c; --panel:#221a13; --line:rgba(200,175,140,.20);
+  --card-warm:#241c15; --card-warm-line:rgba(200,175,140,.20); --card-warm-shadow:0 6px 18px rgba(0,0,0,.30);
+  --text:#e9dcc4; --muted:#b3a48c; --accent:#f08a68; --accent2:#8fc0f0;
   /* 实底专用：比 --accent/--accent2 暗一档，才能承载反白字（白字对比 5.16 / 5.30） */
   --accent-solid:#c04327; --accent2-solid:#2f6db3;
-  --accent-rgb:255,122,92; --accent2-rgb:125,179,232;
-  --header-bg:rgba(13,22,38,.92);
-  --veil:linear-gradient(90deg,rgba(13,22,38,.94) 0%,rgba(13,22,38,.72) 38%,rgba(13,22,38,.06) 72%);
-  --art:#dce6f2; --art-line:rgba(220,230,242,.25);
-  --art-shadow:0 1px 0 rgba(13,22,38,.6),0 2px 10px rgba(0,0,0,.35);
-  --motto:#c9a08e; --btn-bg:#152238;
+  --accent-rgb:240,138,104; --accent2-rgb:143,192,240;
+  --header-bg:rgba(20,16,12,.92);
+  --veil:linear-gradient(90deg,rgba(20,16,12,.94) 0%,rgba(20,16,12,.72) 38%,rgba(20,16,12,.06) 72%);
+  --art:#e9dcc4; --art-line:rgba(233,220,196,.25);
+  --art-shadow:0 1px 0 rgba(20,16,12,.6),0 2px 10px rgba(0,0,0,.35);
+  --motto:#e0b498; --btn-bg:#221a13;
   /* 夜间专属色阶：全部集中于此，正文覆盖规则一律走 var()，不再散落字面量 */
-  --link:#79b0e8; --link-visited:#9ab8e8; --link-hover:#ffffff;
-  --code-bg:#17233a; --code-line:#22314a; --code-text:#e2ecf6;
-  --header-line:#2b3b55; --quote-line:#2a3b55;
+  --link:#8fc0f0; --link-visited:#a8c8f0; --link-hover:#efe5d2;
+  --code-bg:#241c15; --code-line:#33271c; --code-text:#e9dcc4;
+  --header-line:#33271c; --quote-line:#33271c;
   --mark-fg:#ffe8e0;  /* 正文 <mark> 高亮文字（仅夜间需要覆盖，日间继承正文色） */
 }
 
-body{background:var(--bg);color:var(--text);transition:background-color .35s ease,color .35s ease}
+/* ---------- 纸材质 ----------
+   三层灰噪点，与主题无关（纯灰度，靠 opacity 调强度）：
+     mottle 低频大块斑驳 —— 只加深纸色不做这层的活，任何米黄都只是「染色的屏幕」
+     grain  高频细颗粒   —— 细砂纸触感
+     fiber  横向纤维     —— baseFrequency 前小后大 = 横向拉长；
+                            写成 '.86 .035' 会出来纵向木纹条痕（踩过这个坑）
+   soft 版给整页底用（大面积不宜太重），常规版给正文卡片用。
+   CSS 增量约 1.8KB，全部内联，不新增请求。 */
+:root{
+  --tex-mottle:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='900'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.011 .009' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='900' height='900' filter='url(%23m)' opacity='.070'/%3E%3C/svg%3E");
+  --tex-mottle-soft:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='900'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.011 .009' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='900' height='900' filter='url(%23m)' opacity='.039'/%3E%3C/svg%3E");
+  --tex-grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.78' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23g)' opacity='.105'/%3E%3C/svg%3E");
+  --tex-grain-soft:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.78' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23g)' opacity='.058'/%3E%3C/svg%3E");
+  --tex-fiber:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.014 .78' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23f)' opacity='.050'/%3E%3C/svg%3E");
+}
 
-/* ---------- minima 夜间覆盖 ---------- */
+body{
+  background-color:var(--bg);
+  /* 整页纸纹：只铺 soft 版两层，纹理钉在视口上（fixed），滚动时纸不动 */
+  background-image:var(--tex-mottle-soft),var(--tex-grain-soft);
+  background-attachment:fixed,fixed;
+  background-size:900px 900px,180px 180px;
+  color:var(--text);
+  transition:background-color .35s ease,color .35s ease;
+}
+
+/* ---------- minima 覆盖 ---------- */
+/* minima 给 .site-header 写死 background:#fff，日间不覆盖的话页头会是一条白条，
+   跟暖色页面底断开。夜间原本就覆盖了，这里补上日间。 */
+html[data-theme="day"] .site-header{background:var(--header-bg);border-top-color:transparent;border-bottom-color:var(--line)}
 html[data-theme="night"] .site-header{border-top-color:var(--header-line);border-bottom-color:var(--line);background:var(--header-bg)}
 html[data-theme="night"] .site-title,
 html[data-theme="night"] .site-title:visited,
@@ -127,7 +159,7 @@ html[data-theme="night"] td{border-color:var(--code-line)}
 .lang-menu[open] .lang-menu__caret{transform:rotate(180deg)}
 .lang-menu__list{position:absolute;right:0;top:calc(100% + 6px);z-index:60;margin:0;padding:6px;
   min-width:112px;list-style:none;border:1px solid var(--line);border-radius:12px;
-  background:var(--panel);box-shadow:0 6px 18px rgba(13,22,38,.14)}
+  background:var(--panel);box-shadow:0 6px 18px rgba(45,32,16,.14)}
 .lang-menu__list a{display:flex;align-items:center;justify-content:space-between;gap:10px;
   padding:7px 12px;border-radius:8px;font-size:13px;color:var(--text);white-space:nowrap}
 .lang-menu__list a:hover{background:var(--bg);text-decoration:none}
@@ -165,7 +197,7 @@ html[data-theme="night"] td{border-color:var(--code-line)}
 .tools-menu[open] .tools-menu__caret{transform:rotate(180deg)}
 .tools-menu__list{position:absolute;right:0;top:calc(100% + 8px);z-index:60;margin:0;padding:6px;
   min-width:168px;list-style:none;border:1px solid var(--line);border-radius:12px;
-  background:var(--panel);box-shadow:0 6px 18px rgba(13,22,38,.14)}
+  background:var(--panel);box-shadow:0 6px 18px rgba(45,32,16,.14)}
 .tools-menu__link{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;
   font-size:13.5px;color:var(--text);white-space:nowrap;text-decoration:none;
   transition:background-color .2s ease,color .2s ease}
@@ -246,9 +278,9 @@ html{overflow-x:hidden}
 /* ---------- 作者信息板块 ---------- */
 .wrap{max-width:860px;margin:0 auto;padding:40px 24px 80px}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:34px 28px 30px;
-  text-align:center;box-shadow:0 6px 24px rgba(28,43,58,.06);transition:background-color .35s ease}
+  text-align:center;box-shadow:0 6px 24px rgba(70,50,26,.06);transition:background-color .35s ease}
 .card img.avatar{width:80px;height:80px;border-radius:50%;border:3px solid var(--panel);
-  box-shadow:0 0 0 1px var(--line),0 4px 14px rgba(28,43,58,.12);margin:0 auto 14px;display:block}
+  box-shadow:0 0 0 1px var(--line),0 4px 14px rgba(70,50,26,.12);margin:0 auto 14px;display:block}
 .card .name{font-size:21px;font-weight:700;letter-spacing:.08em}
 .card .name .en{color:var(--accent);font-size:14px;font-weight:600;margin-left:8px;letter-spacing:.02em}
 .card .meta{font-size:13.5px;color:var(--muted);margin-top:6px}
@@ -314,10 +346,10 @@ html{overflow-x:hidden}
 /* ---------- 立体按压按钮（借鉴 lk-energy.com.ua 的 3D CTA） ---------- */
 .btn-3d{display:inline-block;padding:12px 24px;border-radius:12px;font-weight:700;font-size:15px;
   color:var(--on-accent);background:linear-gradient(180deg,var(--accent2-solid),var(--accent-solid,#c23d24));
-  box-shadow:0 4px 0 rgba(28,43,58,.32),0 8px 18px rgba(28,43,58,.16);
+  box-shadow:0 4px 0 rgba(70,50,26,.32),0 8px 18px rgba(70,50,26,.16);
   transition:transform .08s ease,box-shadow .08s ease,filter .2s ease;text-decoration:none}
 .btn-3d:hover{transform:translateY(-1px);filter:brightness(1.06);color:var(--on-accent)}
-.btn-3d:active{transform:translateY(3px);box-shadow:0 1px 0 rgba(28,43,58,.32),0 3px 8px rgba(28,43,58,.14)}
+.btn-3d:active{transform:translateY(3px);box-shadow:0 1px 0 rgba(70,50,26,.32),0 3px 8px rgba(70,50,26,.14)}
 
 /* ---------- 名片 · 连续打卡（素问快照，_data/card-stats.yml） ----------
    单指标小胶囊：数字放大 + 主题强调色，白天/夜间都靠变量取色保证对比度；

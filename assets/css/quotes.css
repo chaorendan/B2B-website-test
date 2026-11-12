@@ -21,7 +21,7 @@
 /* ---------- 月历 ---------- */
 .qa-cal{
   background:var(--panel);border:1px solid var(--line);border-radius:16px;
-  padding:14px 14px 12px;box-shadow:0 6px 24px rgba(28,43,58,.05)
+  padding:14px 14px 12px;box-shadow:0 6px 24px rgba(70,50,26,.05)
 }
 .qa-cal__bar{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}
 .qa-cal__title{margin:0;font-size:15px;letter-spacing:.04em;color:var(--text)}
@@ -67,7 +67,7 @@
 .qa-card{
   background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent2);
   border-radius:16px;padding:22px 26px 18px;min-height:236px;
-  box-shadow:0 6px 24px rgba(28,43,58,.05);
+  box-shadow:0 6px 24px rgba(70,50,26,.05);
   transition:background-color .35s ease,border-color .35s ease
 }
 @media (max-width:760px){ .qa-card{padding:18px 18px 14px;min-height:0} }
