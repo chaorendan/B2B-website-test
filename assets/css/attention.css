@@ -12,7 +12,7 @@
   --c-warn-bg:rgba(232,184,75,.12); /* 警示条淡底 */
   --c-warn-fg:#f0d79a;              /* 警示条文字 */
   background:var(--c-bg);color:var(--c-text);
-  border:1px solid var(--c-line);border-radius:14px;position:relative;
+  border:1px solid var(--c-line);border-radius:14px;position:relative;isolation:isolate;
   padding:16px;margin:18px 0 10px;font-size:14px;line-height:1.6}
 .att [hidden]{display:none !important}
 

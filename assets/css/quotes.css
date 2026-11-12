@@ -46,7 +46,7 @@
   transition:background-color .16s,color .16s,border-color .16s
 }
 .qa-cell--blank{cursor:default;pointer-events:none}
-.qa-cell:hover{background:rgba(47,109,179,.12)}
+.qa-cell:hover{background:rgba(var(--accent2-rgb),.12)}
 .qa-cell.is-today{border-color:var(--accent2);color:var(--accent2);font-weight:600}
 .qa-cell.is-selected{background:var(--accent2);color:var(--bg);border-color:var(--accent2);font-weight:600}
 .qa-cell.is-selected:hover{background:var(--accent2)}

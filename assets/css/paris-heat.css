@@ -38,7 +38,9 @@
 
 /* 地图 + 侧栏 */
 .phw-body{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:12px}
-.phw-mapwrap{position:relative;min-width:0}
+/* isolation:isolate 必须有：position:relative 且 z-index:auto 不创建层叠上下文，
+   没它的话 .phw-load(500) / .phw-legend(600) 会逃到根上下文，把导航下拉(60)压住。 */
+.phw-mapwrap{position:relative;min-width:0;isolation:isolate}
 .phw-map{
   height:clamp(360px,58vh,520px);border-radius:12px;overflow:hidden;
   border:1px solid var(--phw-line);background:var(--phw-map-bg);

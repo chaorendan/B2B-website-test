@@ -34,7 +34,7 @@
 }
 .site-search__field:focus-within{
   border-color:var(--accent);
-  box-shadow:0 0 0 3px rgba(232,89,60,.14);
+  box-shadow:0 0 0 3px rgba(var(--accent-rgb),.14);
 }
 .site-search__icon{
   width:18px;
@@ -63,7 +63,7 @@
   padding:8px 16px;
   border:none;
   border-radius:8px;
-  background:var(--accent);
+  background:var(--accent-solid);
   color:var(--on-accent,#fff);
   font-size:13.5px;
   font-weight:500;
@@ -94,8 +94,8 @@
 }
 .site-search__chip:hover{color:var(--accent);border-color:var(--accent)}
 .site-search__chip.is-active{
-  background:var(--accent);
-  border-color:var(--accent);
+  background:var(--accent-solid);
+  border-color:var(--accent-solid);
   color:var(--on-accent,#fff);
   font-weight:500;
 }
@@ -169,11 +169,11 @@
 mark{
   padding:0 1px;
   border-radius:3px;
-  background:rgba(232,89,60,.16);
+  background:rgba(var(--accent-rgb),.16);
   color:inherit;
 }
 html[data-theme="night"] mark{
-  background:rgba(255,122,92,.28);
+  background:rgba(var(--accent-rgb),.28);
   color:var(--mark-fg,#ffe8e0);
 }
 

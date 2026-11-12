@@ -23,8 +23,9 @@
      500  巴黎热浪地图加载遮罩 ┐对齐 Leaflet 自身 pane 标尺
      600  巴黎热浪地图图例     ┘（tile200/overlay400/shadow500/marker600/popup700），
                                  **不要归一成 20 或 60**，否则会被瓦片盖住
-   已确认但未修的隐患：.phw-mapwrap 与 .att 只有 position:relative、无 z-index，
-   不创建层叠上下文 → 500/600/5 实际在根上下文，导航下拉可能被地图压住。
+   层叠隐患（已修）：.phw-mapwrap 与 .att 曾有 position:relative 但无 z-index，
+   不创建层叠上下文 → 500/600/5 逃到根上下文，导航下拉(60)会被地图压住。
+   现两处均加 isolation:isolate 关回局部上下文。
 
    ── 尚未收敛的项（刻意保留，合并会改变像素，需逐屏确认）────
      font-size 212 处 / 21 档（13px×38、12.5px×32、12px×27、13.5px×26、14px×26…）
@@ -36,16 +37,24 @@
    每步单独提交、逐屏比对。
 
    ── 依据 ────────────────────────────────────────────────────
-   改任何颜色前先查仓库根的 CSS-TOKENS.md：全站 38 组前景/背景的对比度实测值、
-   4 处已知不达标（都在 --accent 上）与候选修法、z-index 层级表、复跑脚本。
-   已知不达标：日间 --accent 作小字 3.20:1、白字压 --accent 日 3.54 / 夜 2.56。
+   改任何颜色前先查仓库根的 CSS-TOKENS.md：全站 40 组前景/背景的对比度实测值、
+   令牌归属纪律、z-index 层级表、复跑脚本。
+   2026-11-12 已把 4 处不达标清零（拆出 --accent-solid / --accent2-solid），实测 0 项不达标。
    ============================================================ */
 
 /* ---------- 主题变量 ---------- */
 :root, html[data-theme="day"]{
   --bg:#eef4f9; --panel:#ffffff; --line:rgba(28,43,58,.12);
   --card-warm:#faf7f0; --card-warm-line:rgba(120,100,70,.20); --card-warm-shadow:0 6px 24px rgba(90,70,40,.10);
-  --text:#1c2b3a; --muted:#5f7186; --accent:#e8593c; --accent2:#2f6db3;
+  --text:#1c2b3a; --muted:#5f7186; --accent:#c23d24; --accent2:#2f6db3;
+  /* 强调色分两用：--accent* 作文字/描边（要与页面底拉开对比），
+     --accent*-solid 作实底（要能承载反白字）。日间两者同值，夜间必须分开：
+     夜间强调色要够亮才配深底，但够亮就撑不住白字，物理互斥。 */
+  --accent-solid:#c23d24; --accent2-solid:#2f6db3;
+  /* RGB 三元组，供 rgba() 里引用 var(--accent-rgb) 这种带透明度的用法。
+     高亮/下划线/光晕这类「强调色 + 透明度」的效果一律走它，
+     改品牌色时不用再去每处追 rgba 字面量。 */
+  --accent-rgb:194,61,36; --accent2-rgb:47,109,179;
   --header-bg:rgba(255,255,255,.9);
   --veil:linear-gradient(90deg,rgba(238,244,249,.94) 0%,rgba(238,244,249,.72) 38%,rgba(238,244,249,.06) 72%);
   --art:#16324f; --art-line:rgba(22,50,79,.22);
@@ -60,6 +69,9 @@ html[data-theme="night"]{
   --bg:#0d1626; --panel:#152238; --line:rgba(180,200,225,.16);
   --card-warm:#152238; --card-warm-line:rgba(180,200,225,.16); --card-warm-shadow:0 6px 18px rgba(0,0,0,.30);
   --text:#dce6f2; --muted:#8ba0ba; --accent:#ff7a5c; --accent2:#7db3e8;
+  /* 实底专用：比 --accent/--accent2 暗一档，才能承载反白字（白字对比 5.16 / 5.30） */
+  --accent-solid:#c04327; --accent2-solid:#2f6db3;
+  --accent-rgb:255,122,92; --accent2-rgb:125,179,232;
   --header-bg:rgba(13,22,38,.92);
   --veil:linear-gradient(90deg,rgba(13,22,38,.94) 0%,rgba(13,22,38,.72) 38%,rgba(13,22,38,.06) 72%);
   --art:#dce6f2; --art-line:rgba(220,230,242,.25);
@@ -217,7 +229,7 @@ html{overflow-x:hidden}
 .cta{display:flex;gap:14px;margin-top:26px;flex-wrap:wrap}
 .btn{display:inline-block;padding:11px 22px;border-radius:10px;font-size:14px;
   border:1px solid var(--line);background:var(--btn-bg);color:var(--text)}
-.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent);font-weight:600}
+.btn.primary{background:var(--accent-solid);border-color:var(--accent-solid);color:var(--on-accent);font-weight:600}
 .btn.ghost{color:var(--text)}
 .btn:hover{filter:brightness(1.05)}
 
@@ -301,7 +313,7 @@ html{overflow-x:hidden}
 
 /* ---------- 立体按压按钮（借鉴 lk-energy.com.ua 的 3D CTA） ---------- */
 .btn-3d{display:inline-block;padding:12px 24px;border-radius:12px;font-weight:700;font-size:15px;
-  color:var(--on-accent);background:linear-gradient(180deg,var(--accent2),var(--accent,#2f6fb3));
+  color:var(--on-accent);background:linear-gradient(180deg,var(--accent2-solid),var(--accent-solid,#c23d24));
   box-shadow:0 4px 0 rgba(28,43,58,.32),0 8px 18px rgba(28,43,58,.16);
   transition:transform .08s ease,box-shadow .08s ease,filter .2s ease;text-decoration:none}
 .btn-3d:hover{transform:translateY(-1px);filter:brightness(1.06);color:var(--on-accent)}

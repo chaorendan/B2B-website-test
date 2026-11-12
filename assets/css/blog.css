@@ -171,20 +171,20 @@
 .post-mark{margin:26px 0}
 .post-mark mark{
   color:inherit;padding:0 1px;
-  background:linear-gradient(to top,rgba(47,109,179,.22) 42%,transparent 42%);
+  background:linear-gradient(to top,rgba(var(--accent2-rgb),.22) 42%,transparent 42%);
   -webkit-box-decoration-break:clone;box-decoration-break:clone
 }
 .post-mark .post-mark__verdict{
   font-weight:600;background:transparent;
-  text-decoration:underline;text-decoration-color:rgba(232,89,60,.55);
+  text-decoration:underline;text-decoration-color:rgba(var(--accent-rgb),.55);
   text-decoration-thickness:2.5px;text-underline-offset:7px;
   -webkit-box-decoration-break:clone;box-decoration-break:clone
 }
 html[data-theme="night"] .post-mark mark{
-  background:linear-gradient(to top,rgba(125,179,232,.28) 42%,transparent 42%)
+  background:linear-gradient(to top,rgba(var(--accent2-rgb),.28) 42%,transparent 42%)
 }
 html[data-theme="night"] .post-mark .post-mark__verdict{
-  text-decoration-color:rgba(255,122,92,.6)
+  text-decoration-color:rgba(var(--accent-rgb),.6)
 }
 
 /* 文末「划线说明」：比正文小一档、低对比，读完正文才遇到，不抢句子 */
@@ -207,18 +207,18 @@ html[data-theme="night"] .post-mark .post-mark__verdict{
   flex:0 0 auto;width:18px;height:9px;border-radius:2px;transform:translateY(-1px);
 }
 .post-legend__swatch--insight{
-  background:linear-gradient(to top,rgba(47,109,179,.42) 52%,rgba(47,109,179,.12) 52%);
+  background:linear-gradient(to top,rgba(var(--accent2-rgb),.42) 52%,rgba(var(--accent2-rgb),.12) 52%);
 }
 .post-legend__swatch--verdict{
   height:0;border-radius:0;
-  border-bottom:2.5px solid rgba(232,89,60,.75);transform:translateY(-2px);
+  border-bottom:2.5px solid rgba(var(--accent-rgb),.75);transform:translateY(-2px);
 }
 .post-legend__foot{margin:8px 0 0;font-size:12px;opacity:.85}
 html[data-theme="night"] .post-legend__swatch--insight{
-  background:linear-gradient(to top,rgba(125,179,232,.5) 52%,rgba(125,179,232,.16) 52%);
+  background:linear-gradient(to top,rgba(var(--accent2-rgb),.5) 52%,rgba(var(--accent2-rgb),.16) 52%);
 }
 html[data-theme="night"] .post-legend__swatch--verdict{
-  border-bottom-color:rgba(255,122,92,.8);
+  border-bottom-color:rgba(var(--accent-rgb),.8);
 }
 
 /* 系列角标：叠在封面左上，深色玻璃底 + 白字，任何照片上都读得清 */
