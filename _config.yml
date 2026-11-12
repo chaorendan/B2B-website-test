@@ -133,4 +133,5 @@ exclude:
   - _ARCHITECTURE_DESIGN.md
   - _TEMPLATE.md
   - AGENTS.md
+  - CSS-TOKENS.md
   - growth-lab/
